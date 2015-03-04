@@ -1,14 +1,14 @@
+
+/* Colors */
+$offwhite   : #ecf0f1;
+$silver     : #bdc3c7;
+$orange     : #e74c3c;
+$blue       : #2c3e50;
+
 /*****************************************************************************/
-/*
 /* Common
-/*
 /*****************************************************************************/
-
-/* Global Reset */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain) */
-
+/* Global Reset http://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -36,10 +36,6 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
-
 ol, ul {
     list-style: none;
 }
@@ -57,6 +53,8 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    font-size: inherit;
+    font: 100%;
 }
 
 html, body {
@@ -64,9 +62,10 @@ html, body {
 }
 
 body {
-    background-color: white;
-    font: 13.34px helvetica, arial, clean, sans-serif;
-    *font-size: small;
+    line-height: 1;
+    background-color: $offwhite;
+    color: #222;
+    font: 400 16px/1.6 'Lora', Georgia, serif;
     text-align: center;
 }
 
@@ -83,26 +82,19 @@ p {
 }
 
 a {
-    color: #00a;
+    color: $orange;
 
     &:hover {
-        color: black;
+        color: darken( $orange, 10% );
     }
 
     &:visited {
-        color: #a0a;
+        color: lighten( $orange, 10% );
     }
 }
 
-table {
-    font-size: inherit;
-    font: 100%;
-}
-
 /*****************************************************************************/
-/*
 /* Home
-/*
 /*****************************************************************************/
 
 ul.posts {
@@ -115,47 +107,49 @@ ul.posts {
 
     span {
         color: #aaa;
-        font-family: Monaco, "Courier New", monospace;
         font-size: 80%;
     }
 }
 
 /*****************************************************************************/
-/*
 /* Site
-/*
 /*****************************************************************************/
 
 .site {
     font-size: 110%;
     text-align: justify;
-    width: 42em;
-    margin: 3em auto 2em auto;
+    width: 45em;
+    margin: 1em auto;
     line-height: 1.5em;
 }
 
 .title {
-    color: #a00;
-    font-weight: bold;
-    margin-bottom: 2em;
 
     a {
-        color: #a00;
+        color: $blue;
+        font: 400 72px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
+        opacity: 1.0;
+        transition: opacity 0.75s ease;
 
-        :hover {
-            color: black;
+        strong {
+            color: $orange;
+            font-weight: 800;
         }
 
-        &.extra {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 1em;
-
-            &:hover {
-                color: black;
-            }
+        &:hover {
+            opacity: 0.75;
         }
+    }
+}
+
+.horiz-nav {
+    padding: 1em 0;
+    float: right;
+    // background-color: darken( $offwhite, 5% );
+
+    a {
+        font: 400 24px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
     }
 }
 
@@ -163,29 +157,29 @@ ul.posts {
     color: #aaa;
 }
 
-.site .footer {
+.site footer {
     font-size: 80%;
-    color: #666;
-    border-top: 4px solid #eee;
+    color: #222;
+    border-top: 2px solid $blue;
     margin-top: 2em;
     overflow: hidden;
 
+    a {
+        color: $orange;
+    }
+
     .contact {
         float: left;
-        margin-right: 3em;
+    }
 
-        a {
-            color: #8085C1;
-        }
+    .links {
+        float: right;
     }
 }
 
 /*****************************************************************************/
-/*
 /* Posts
-/*
 /*****************************************************************************/
-
 #post {
 
 }

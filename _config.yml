@@ -1,1 +1,5 @@
+source: /home/will/jekyll
+destination: /var/www/willpresley.com/public_html
 exclude: [config.rb]
+keep_files: [admin, blog]
+timezone: America/New_York
