@@ -669,26 +669,27 @@ ul.posts span {
 /* line 201, ../_sass/screen.scss */
 .site footer .links {
   float: right;
+  text-align: right;
 }
 
 /*****************************************************************************/
 /* Posts
 /*****************************************************************************/
 /* standard */
-/* line 214, ../_sass/screen.scss */
+/* line 215, ../_sass/screen.scss */
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
 }
 
-/* line 220, ../_sass/screen.scss */
+/* line 221, ../_sass/screen.scss */
 #post ul,
 #post ol {
   margin-left: 1.35em;
 }
 
-/* line 225, ../_sass/screen.scss */
+/* line 226, ../_sass/screen.scss */
 #post code {
   border: 1px solid #ddd;
   background-color: #eef;
@@ -696,30 +697,30 @@ ul.posts span {
   padding: 0 .2em;
 }
 
-/* line 232, ../_sass/screen.scss */
+/* line 233, ../_sass/screen.scss */
 #post pre code {
   border: none;
 }
 
 /* terminal */
-/* line 238, ../_sass/screen.scss */
+/* line 239, ../_sass/screen.scss */
 #post pre.terminal {
   border: 1px solid black;
   background-color: #333;
   color: white;
 }
 
-/* line 244, ../_sass/screen.scss */
+/* line 245, ../_sass/screen.scss */
 #post pre.terminal code {
   background-color: #333;
 }
 
-/* line 248, ../_sass/screen.scss */
+/* line 249, ../_sass/screen.scss */
 #related {
   margin-top: 2em;
 }
 
-/* line 252, ../_sass/screen.scss */
+/* line 253, ../_sass/screen.scss */
 #related h2 {
   margin-bottom: 1em;
 }
