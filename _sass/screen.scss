@@ -4,6 +4,9 @@ $offwhite           : #ecf0f1;
 $silver             : #bdc3c7;
 $orange             : #e74c3c;
 $blue               : #2c3e50;
+$light-grey         : #DDD;
+$mid-grey           : #898989;
+$dark-grey          : #323232;
 
 @import 'normalize';
 @import 'mixins';
@@ -19,10 +22,6 @@ html {
 /* Common
 /*****************************************************************************/
 
-html, body {
-    height: 100%;
-}
-
 body {
     line-height: 1;
     background-color: $offwhite;
@@ -33,10 +32,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
-}
-
-h1 {
-    margin-bottom: 1em;
+    margin: 0.5em 0;
 }
 
 p {
@@ -66,15 +62,20 @@ a {
 
 ul.posts {
     list-style-type: none;
-    margin-bottom: 2em;
+    margin: 0 0 2em 0;
+    padding: 0 0 0 1em;
 
     li {
         line-height: 1.75em;
-    }
 
-    span {
-        color: #aaa;
-        font-size: 80%;
+        .post-title {
+            font-size: 130%;
+        }
+
+        .post-meta {
+            font-size: 90%;
+            color: $mid-grey;
+        }
     }
 }
 
@@ -83,11 +84,52 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-    font-size: 110%;
-    text-align: justify;
+    font-size: 100%;
+    text-align: left;
     width: 75%;
     margin: 0.5em auto;
     line-height: 1.5em;
+
+    main,
+    section {
+        padding: 0 1.5%;
+    }
+
+    section {
+        margin: 2em 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-size: 160%;
+    }
+
+    h3 {
+        font-size: 140%;
+    }
+
+    h4 {
+        font-size: 120%;
+    }
+
+    h5 {
+        font-size: 110%;
+    }
+
+    h6 {
+        font-size: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.25;
+    }
 }
 
 .title {
@@ -119,7 +161,6 @@ ul.posts {
     padding: 1.75em 0 1em;
     float: right;
     position: relative;
-    // background-color: darken( $offwhite, 5% );
 
     a {
         font: 400 24px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
@@ -134,16 +175,17 @@ ul.posts {
         font-size: 20px;
         position: relative;
         top: -2px;
-        color: #aaa;
+        color: $light-grey;
     }
 }
 
 #post .highlighttable {
     display: block;
     width: 100%;
+    font-size: 85%;
 
     .linenos {
-        width: 31px;
+        width: 20px;
         vertical-align: top;
         display: inline-block;
 
@@ -153,10 +195,13 @@ ul.posts {
         }
 
         code {
-            float: right;
+            padding: 0 0.45em;
+            margin: 0.5em 0;
         }
 
         pre {
+            width: 100%;
+            padding: 0;
             border-radius: 0;
             border-right: 0;
             @include borderRadius( 3px, 0, 0, 3px );
@@ -164,13 +209,14 @@ ul.posts {
     }
 
     .code {
-        width: 96%;
+        width: 89%;
         display: inline-block;
 
         pre {
+            padding: 0.35em 0.5em 0.525em;
+            margin-bottom: 0;
             border-radius: 0;
             @include borderRadius( 0, 3px, 3px, 0 );
-            margin-bottom: 0;
         }
     }
 
@@ -179,15 +225,11 @@ ul.posts {
     }
 }
 
-.site .meta {
-    color: #aaa;
-}
-
 .site footer {
-    font-size: 80%;
-    color: #222;
-    border-top: 2px solid $blue;
-    margin-top: 2em;
+    font-size: 85%;
+    color: $dark-grey;
+    border-top: 1px solid $light-grey;
+    margin-top: 1em;
     overflow: hidden;
 
     a {
@@ -202,6 +244,38 @@ ul.posts {
         float: right;
         text-align: right;
     }
+
+    .credits {
+        text-align: center;
+        font-size: 110%;
+        color: $mid-grey;
+
+        p {
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+
+            a {
+                display: inline-block;
+
+                img {
+                    max-height: 24px;
+                    width: auto;
+                    vertical-align: text-bottom;
+                    @include cb-opacity( 0.65 );
+                    @include transition( opacity, 0.4s );
+                }
+
+                &:hover {
+
+                    img {
+                        @include cb-opacity( 1.0 );
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 /*****************************************************************************/
@@ -211,11 +285,8 @@ ul.posts {
 
 }
 
-    /* standard */
-    #post pre {
-        border: 1px solid #ddd;
-        background-color: #eef;
-        padding: 0 .4em;
+    #post .meta {
+        color: $mid-grey;
     }
 
     #post ul,
@@ -223,15 +294,25 @@ ul.posts {
         margin-left: 1.35em;
     }
 
+    /* standard */
+    #post pre,
     #post code {
         border: 1px solid #ddd;
         background-color: #eef;
-        font-size: 85%;
-        padding: 0 .2em;
+        padding: 0 0.5em;
+    }
+
+    #post code {
+        font-size: 90%;
+        display: inline-block;
     }
 
     #post pre code {
         border: none;
+    }
+
+    #post p code {
+        line-height: 1.35;
     }
 
   /* terminal */
@@ -244,12 +325,4 @@ ul.posts {
 
     #post pre.terminal code {
         background-color: #333;
-    }
-
-    #related {
-        margin-top: 2em;
-    }
-
-    #related h2 {
-        margin-bottom: 1em;
     }

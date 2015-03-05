@@ -6,18 +6,20 @@ title: WillPresley.com
 <main id="home">
                 <h1>Writing</h1>
                 <ul class="posts">
-                    {% for post in site.posts limit:3 %}
-                        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% for post in site.posts limit:4 %}
+                        <li><span class="post-title">&raquo; <a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />
+                        <span class="post-meta">&nbsp;&nbsp;&nbsp;&nbsp;<span class="date">{{ post.date | date_to_string }}</span>, <a href="{{ post.url }}#disqus_thread" class="comments-link" data-disqus-identifier="{{post.url}}"></a></span></li>
                     {% endfor %}
                 </ul>
 
                 <h1>Development</h1>
                 <ul class="posts">
-                    <li><span>2014</span> &raquo; <a href="/work/ev_cas.html">Ohio University - College of Arts & Sciences</a></li>
+                    <li><span class="post-title">&raquo; <a href="/work/ev_cas.html" class="post-link">Ohio University - College of Arts & Sciences</a></span><br />
+                    <span class="post-meta">&nbsp;&nbsp;&nbsp;&nbsp;<span class="date">2013-2014</span>, <a href="/work/ev_cas.html#disqus_thread" class="comments-link" data-disqus-identifier="/work/ev_cas.html"></a></span></li>
                 </ul>
 
                 <h1>Other</h1>
                 <ul class="posts">
-                    <li><span>XX Dec 201X</span> &raquo; <a href="#">Article: </a></li>
+                    <li><span class="date">XX Dec 201X</span> &raquo; <a href="#">Article: </a></li>
                 </ul>
             </main>

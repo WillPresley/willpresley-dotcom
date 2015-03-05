@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: Ohio University - College of Arts & Sciences
+comments: true
 ---
 
 <main id="work_ev-cas">

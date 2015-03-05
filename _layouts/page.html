@@ -1,9 +1,7 @@
 ---
 layout: default
 ---
-<main id="post">
-    <h1>{{ page.title }}</h1>
-
+<!-- <main id="page"> -->
     <p class="meta">
     {% assign d = page.date | date: "%-d"  %}
     {{ page.date | date: "%B" }}
@@ -15,16 +13,7 @@ layout: default
     {% endcase %},
     {{ page.date | date: "%Y" }}{% if page.location %} - {{ page.location }}{% endif %}{% if page.comments %}, <a href="#disqus_thread" class="comments-link" data-disqus-identifier="{{page.url}}"></a>{% endif %}</p>
     {{ content }}
-</main>
-
-<section id="related">
-    <h2>Related</h2>
-    <ul class="posts">
-        {% for post in site.related_posts limit:3 %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</section>
+<!-- </main> -->
 
 {% if page.comments %}
     <section id="comments">

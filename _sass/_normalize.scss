@@ -425,3 +425,10 @@ td,
 th {
     padding: 0;
 }
+
+/* Clearfix */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
