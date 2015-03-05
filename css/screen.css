@@ -737,15 +737,15 @@ ul.posts li .post-meta {
   max-height: 24px;
   width: auto;
   vertical-align: text-bottom;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
-  -moz-opacity: 0.65;
-  -khtml-opacity: 0.65;
-  opacity: 0.65;
-  -webkit-transition: opacity, 0.4s;
-  -moz-transition: opacity, 0.4s;
-  -o-transition: opacity, 0.4s;
-  transition: opacity, 0.4s;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  -webkit-transition: opacity, 0.3s;
+  -moz-transition: opacity, 0.3s;
+  -o-transition: opacity, 0.3s;
+  transition: opacity, 0.3s;
 }
 /* line 271, ../_sass/screen.scss */
 .site footer .credits p a:hover img {
