@@ -4,25 +4,20 @@ title: WillPresley.com
 ---
 
 <main id="home">
-                <h1>Blog Posts</h1>
+                <h1>Writing</h1>
                 <ul class="posts">
-                    {% for post in site.posts %}
+                    {% for post in site.posts limit:3 %}
                         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>
 
-                <h1>Highlighted Media</h1>
+                <h1>Development</h1>
                 <ul class="posts">
-                    <li><span>02 Sep 2013</span> &raquo; <a href="http://www.wired.com/wiredenterprise/2013/09/github-for-anything/all/">Article: WIRED - GitHub Is Going Mainstream</a></li>
+                    <li><span>2014</span> &raquo; <a href="/work/ev_cas.html">Ohio University - College of Arts & Sciences</a></li>
                 </ul>
 
-                <h1>Other Interviews, Talks, Etc</h1>
+                <h1>Other</h1>
                 <ul class="posts">
-                    <li><span>28 Dec 2012</span> &raquo; <a href="http://bits.blogs.nytimes.com/2012/12/28/github-has-big-dreams-for-open-source-software-and-more/">Article: NYTimes - Dreams of ‘Open’ Everything</a></li>
-                </ul>
-
-                <h1>Prominent Open Source Projects</h1>
-                <ul class="posts">
-                    <li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
+                    <li><span>XX Dec 201X</span> &raquo; <a href="#">Article: </a></li>
                 </ul>
             </main>

@@ -1,0 +1,66 @@
+/* Prefixes for loops */
+$prefixes: ( "-webkit-", "-moz-", "-o-", "" );
+
+/* Generic transition prefixer */
+@mixin transition($transition...) {
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/* Background-size (cross-browser) */
+@mixin cb-bg-size($width, $height) {
+  @each $prefix in $prefixes {
+    #{$prefix}background-size: $width $height;
+  }
+}
+
+/* Border-radius (cross-browser) */
+@mixin borderRadius($size...) {
+    @if length($size) == 1 {
+        @each $prefix in $prefixes {
+            #{$prefix}border-radius: $size;
+        }
+    } @else {
+        @include customBorderRadius($size...);
+    }
+}
+
+@mixin customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
+    @each $prefix in $prefixes {
+        @if $prefix == "-moz-" {
+            @if $topLeft != 0 { -moz-border-radius-topleft: $topLeft; }
+            @if $topRight != 0 { -moz-border-radius-topright: $topRight; }
+            @if $bottomRight != 0 { -moz-border-radius-bottomright: $bottomRight; }
+            @if $bottomLeft != 0 { -moz-border-radius-bottomleft: $bottomLeft; }
+        } @else {
+            @if $topLeft != 0 { #{$prefix}border-top-left-radius: $topLeft; }
+            @if $topRight != 0 { #{$prefix}border-top-right-radius: $topRight; }
+            @if $bottomRight != 0 { #{$prefix}border-bottom-right-radius: $bottomRight; }
+            @if $bottomLeft != 0 { #{$prefix}border-bottom-left-radius: $bottomLeft; }
+        }
+    }
+}
+
+/* Cross-browser opacity mixin */
+@mixin cb-opacity($alpha_val) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha_val * 100})";
+    filter: alpha(opacity=#{$alpha_val * 100});
+    -moz-opacity: $alpha_val;
+    -khtml-opacity: $alpha_val;
+    opacity: $alpha_val;
+}
+
+/* Background Alphas */
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+/* Forces the browser to render animation on the element with hardware acceleration */
+@mixin enable-hw-acceleration {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

@@ -6,6 +6,7 @@ $orange             : #e74c3c;
 $blue               : #2c3e50;
 
 @import 'normalize';
+@import 'mixins';
 
 html {
     box-sizing: border-box;
@@ -44,13 +45,18 @@ p {
 
 a {
     color: $orange;
+    @include transition( color, 0.3s );
 
     &:hover {
-        color: darken( $orange, 10% );
+        color: darken( $orange, 12% );
     }
 
     &:visited {
-        color: lighten( $orange, 10% );
+        color: $orange;
+
+        &:hover {
+            color: darken( $orange, 12% );
+        }
     }
 }
 
@@ -79,19 +85,20 @@ ul.posts {
 .site {
     font-size: 110%;
     text-align: justify;
-    width: 45em;
-    margin: 1em auto;
+    width: 75%;
+    margin: 0.5em auto;
     line-height: 1.5em;
 }
 
 .title {
+    display: inline-block;
+    @include transition( opacity, 0.75s );
 
     a {
         color: $blue;
         font: 400 72px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
         opacity: 1.0;
-        transition: opacity 0.75s ease;
 
         strong {
             color: $orange;
@@ -99,18 +106,76 @@ ul.posts {
         }
 
         &:hover {
-            opacity: 0.75;
+            color: $blue;
         }
+    }
+
+    &:hover {
+        opacity: 0.75;
     }
 }
 
 .horiz-nav {
-    padding: 1em 0;
+    padding: 1.75em 0 1em;
     float: right;
+    position: relative;
     // background-color: darken( $offwhite, 5% );
 
     a {
         font: 400 24px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu-separator {
+        font-size: 20px;
+        position: relative;
+        top: -2px;
+        color: #aaa;
+    }
+}
+
+#post .highlighttable {
+    display: block;
+    width: 100%;
+
+    .linenos {
+        width: 31px;
+        vertical-align: top;
+        display: inline-block;
+
+        code,
+        pre {
+            background-color: #E7E7E7;
+        }
+
+        code {
+            float: right;
+        }
+
+        pre {
+            border-radius: 0;
+            border-right: 0;
+            @include borderRadius( 3px, 0, 0, 3px );
+        }
+    }
+
+    .code {
+        width: 96%;
+        display: inline-block;
+
+        pre {
+            border-radius: 0;
+            @include borderRadius( 0, 3px, 3px, 0 );
+            margin-bottom: 0;
+        }
+    }
+
+    tbody, tr {
+        display: block;
     }
 }
 
