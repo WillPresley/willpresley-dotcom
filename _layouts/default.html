@@ -1,69 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ page.title }}</title>
-        <meta name="author" content="Will Presley" />
-        <meta name="description" content="Personal site for Will Presley, web developer.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="no-js" lang="en-US">
 
-        <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
-        <!-- Place favicon.ico in the root directory -->
+    {% include head.html %}
 
-        <!-- Google Webfonts -->
-        <link href="http://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-
-        <!-- Homepage CSS -->
-        <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-
-        <!-- Moderizr Custom Build -->
-        <script src="/js/modernizr-custom.min.js"></script>
-
-    </head>
     <body>
         <div class="site">
-            <nav class="horiz-nav">
-                <a href="/index.html">Home</a> <span class="menu-separator">/</span>
-                <a href="#">About</a> <span class="menu-separator">/</span>
-                <a href="/blog/">Blog</a> <span class="menu-separator">/</span>
-                <a href="#">Work</a>
-            </nav>
 
-            <header class="title">
-                <a href="/index.html">Will<strong>Presley</strong></a>
-            </header>
+            {% include nav.html %}
 
             {{ content }}
 
-            <footer class="site-foot">
-                <div class="information clearfix">
-                    <div class="contact">
-                        <p>
-                        Will Presley<br />
-                        Web Developer<br />
-                        <!-- <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#105;&#108;&#108;&#105;&#97;&#109;&#46;&#112;&#114;&#101;&#115;&#108;&#101;&#121;&#46;&#106;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">william.presley.jr | gmail</a> -->
-                        <span id="obf"><script>document.getElementById("obf").innerHTML="<n uers=\"znvygb:jvyyvnz.cerfyrl.we@tznvy.pbz\" gnetrg=\"_oynax\">jvyyvnz.cerfyrl.we | tznvy</n>".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});</script>
-                        <noscript><span style="unicode-bidi:bidi-override;direction:rtl;">moc.liamg@rj.yelserp.mailliw</span></noscript></span>
-                        </p>
-                    </div>
-                    <div class="links">
-                        <p>
-                            <a href="http://www.linkedin.com/in/willpresley" target="_blank"><strong>linkedin</strong>.com/in/willpresley</a><br />
-                            <a href="http://www.github.com/WillPresley" target="_blank"><strong>github</strong>.com/willpresley</a><br />
-                            <a href="http://www.twitter.com/cryptecks" target="_blank"><strong>twitter</strong>.com/cryptecks</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="credits">
-                    <p>&copy; {{ site.time | date: '%Y' }} Will Presley. Made with &hearts; and <a href="http://jekyllrb.com/" title="Jekyll" target="_blank"><img src="/images/small_jekyll-logo-transparent.png" alt="Jekyll" /></a></p>
-                </div>
-            </footer>
+            {% include foot.html %}
+
         </div>
+        <!-- Moderizr Custom Build -->
+        <script async src="/js/modernizr-custom.min.js"></script>
+
         <!-- Google Analytics -->
 
         <!-- Google Analytics end -->

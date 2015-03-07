@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Post
+title: Formatting Test Post
 location: Athens, Ohio
 comments: true
 ---

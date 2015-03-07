@@ -1,27 +1,36 @@
+/* Project Name:    WillPresley.com
+** Author:          Will Presley
+** Description:     Full SASS for a Jekyll-powered static responsive site.
+*/
 
-/* Colors */
-$offwhite           : #ecf0f1;
-$silver             : #bdc3c7;
-$orange             : #e74c3c;
-$blue               : #2c3e50;
-$light-grey         : #DDD;
-$mid-grey           : #898989;
-$dark-grey          : #323232;
+// Colors
+$offwhite                   : #ecf0f1;
+$silver                     : #bdc3c7;
+$orange                     : #e74c3c;
+$blue                       : #2c3e50;
+$light-grey                 : #DDD;
+$mid-grey                   : #898989;
+$dark-grey                  : #323232;
 
-@import 'normalize';
+// Variables
+$main-animation-timing      : 0.35s;
+$orange-link-darken         : 11%;
+
+// Imports
+@import 'normalize-min';
+@import 'media-queries';
 @import 'mixins';
 
+/* Global border-box sizing */
 html {
     box-sizing: border-box;
+    overflow-y: scroll; // Stupid scrollbars
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-/*****************************************************************************/
-/* Common
-/*****************************************************************************/
-
+/* Common */
 body {
     line-height: 1;
     background-color: $offwhite;
@@ -41,54 +50,126 @@ p {
 
 a {
     color: $orange;
-    @include transition( color, 0.3s );
+    @include transition( color, $main-animation-timing );
 
     &:hover {
-        color: darken( $orange, 12% );
+        color: darken( $orange, $orange-link-darken );
     }
 
     &:visited {
         color: $orange;
 
         &:hover {
-            color: darken( $orange, 12% );
+            color: darken( $orange, $orange-link-darken );
         }
     }
 }
 
-/*****************************************************************************/
-/* Home
-/*****************************************************************************/
+/* Site Header */
+.title {
+    display: block;
+    @include transition( opacity, $main-animation-timing );
 
+    a {
+        display: inline-block;
+        color: $blue;
+        font: 400 52px/1 'Istok Web', Verdana, Helvetica, sans-serif;
+        text-decoration: none;
+        opacity: 1.0;
+
+        strong {
+            display: inline-block;
+            color: $orange;
+            font-weight: 800;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+/* Site Navigation */
+.horiz-nav {
+    margin: 1em 0;
+    display: block;
+    position: relative;
+
+    a {
+        font: 400 20px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .menu-separator {
+        font-size: 20px;
+        position: relative;
+        top: -2px;
+        color: $light-grey;
+    }
+}
+
+/* Homepage */
 ul.posts {
     list-style-type: none;
     margin: 0 0 2em 0;
     padding: 0 0 0 1em;
 
     li {
-        line-height: 1.75em;
+        line-height: 1.1;
+        text-align: left;
+
+        &.title-item {
+            padding-left: 1em;
+            text-indent: -1em;
+            font-size: 135%;
+
+            &:before {
+                content: "\00BB";
+            }
+        }
+
+        &.the-excerpt {
+            padding: 0.75em 0 0.5em 1.4em;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
         .post-title {
-            font-size: 130%;
+            margin-left: 10px;
         }
 
         .post-meta {
-            font-size: 90%;
+            font-size: 80%;
             color: $mid-grey;
+            display: inline-block;
+            padding-top: 12px;
+            text-indent: 0;
         }
     }
 }
 
-/*****************************************************************************/
-/* Site
-/*****************************************************************************/
-
+/* General Site */
 .site {
     font-size: 100%;
     text-align: left;
-    width: 75%;
+    width: 95%;
     margin: 0.5em auto;
     line-height: 1.5em;
+    @include transition( width $main-animation-timing ease-in-out );
 
     main,
     section {
@@ -132,54 +213,55 @@ ul.posts {
     }
 }
 
-.title {
-    display: inline-block;
-    @include transition( opacity, 0.75s );
+/* Main Content Area */
+.main-content {
 
-    a {
-        color: $blue;
-        font: 400 72px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
-        text-decoration: none;
-        opacity: 1.0;
-
-        strong {
-            color: $orange;
-            font-weight: 800;
-        }
-
-        &:hover {
-            color: $blue;
-        }
-    }
-
-    &:hover {
-        opacity: 0.75;
-    }
 }
 
-.horiz-nav {
-    padding: 1.75em 0 1em;
-    float: right;
-    position: relative;
-
-    a {
-        font: 400 24px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+    .main-content .meta {
+        color: $mid-grey;
     }
 
-    .menu-separator {
-        font-size: 20px;
-        position: relative;
-        top: -2px;
-        color: $light-grey;
+    .main-content ul,
+    .main-content ol {
+        margin: 0.75em 2em 0.75em 0.5em;
+        padding: 0 0 0 2em;
     }
-}
 
-#post .highlighttable {
+    /* standard */
+    .main-content pre,
+    .main-content code {
+        border: 1px solid #ddd;
+        background-color: #eef;
+        padding: 0 0.5em;
+    }
+
+    .main-content code {
+        font-size: 90%;
+        display: inline-block;
+    }
+
+    .main-content pre code {
+        border: none;
+    }
+
+    .main-content p code {
+        line-height: 1.35;
+    }
+
+    /* terminal */
+    .main-content pre.terminal {
+        border: 1px solid black;
+        background-color: #333;
+        color: white;
+    }
+
+    .main-content pre.terminal code {
+        background-color: #333;
+    }
+
+/* Code Syntax Highlighting */
+.main-content .highlighttable {
     display: block;
     width: 100%;
     font-size: 85%;
@@ -225,8 +307,9 @@ ul.posts {
     }
 }
 
+/* Site Footer */
 .site footer {
-    font-size: 85%;
+    font-size: 95%;
     color: $dark-grey;
     border-top: 1px solid $light-grey;
     margin-top: 1em;
@@ -234,20 +317,26 @@ ul.posts {
 
     a {
         color: $orange;
+
+        &:hover {
+            color: darken( $orange, $orange-link-darken );
+        }
     }
 
     .contact {
-        float: left;
+        display: inline-block;
+        width: 50%;
     }
 
     .links {
-        float: right;
+        display: inline-block;
+        width: 49%;
         text-align: right;
     }
 
     .credits {
         text-align: center;
-        font-size: 110%;
+        font-size: 105%;
         color: $mid-grey;
 
         p {
@@ -263,7 +352,7 @@ ul.posts {
                     width: auto;
                     vertical-align: text-bottom;
                     @include cb-opacity( 0.7 );
-                    @include transition( opacity, 0.3s );
+                    // @include transition( opacity, $main-animation-timing );
                 }
 
                 &:hover {
@@ -278,51 +367,88 @@ ul.posts {
     }
 }
 
-/*****************************************************************************/
-/* Posts
-/*****************************************************************************/
-#post {
+/* Final Imports */
+@import 'syntax-min';
 
+/* Media Queries */
+@include min-screen(480px)  {
+    .horiz-nav a {
+        font-size: 24px;
+    }
+
+    .horiz-nav .menu-separator {
+        font-size: 16px;
+    }
+
+    .title a {
+        font-size: 64px;
+        line-height: 1.2;
+    }
+
+    .site {
+        width: 90%;
+    }
 }
 
-    #post .meta {
-        color: $mid-grey;
+@include min-screen(768px)  {
+    .title a {
+        font-size: 70px;
     }
 
-    #post ul,
-    #post ol {
-        margin-left: 1.35em;
+    .site {
+        width: 80%;
+    }
+}
+
+@include min-screen(940px) {
+    .horiz-nav {
+        float: right;
+        max-width: 50%;
+        margin: 2.4em 0 1em;
     }
 
-    /* standard */
-    #post pre,
-    #post code {
-        border: 1px solid #ddd;
-        background-color: #eef;
-        padding: 0 0.5em;
-    }
-
-    #post code {
-        font-size: 90%;
+    .title {
         display: inline-block;
+        max-width: 50%;
     }
 
-    #post pre code {
-        border: none;
+    .site {
+        width: 75%;
+    }
+}
+
+@include min-screen(1024px)  {
+    .title a {
+        font-size: 80px;
     }
 
-    #post p code {
-        line-height: 1.35;
+    .site {
+        width: 80%;
+    }
+}
+
+@include max-screen(455px) {
+    .site footer .contact,
+    .site footer .links {
+        display: block;
+        width: 100%;
+        text-align: left;
     }
 
-  /* terminal */
-
-    #post pre.terminal {
-        border: 1px solid black;
-        background-color: #333;
-        color: white;
+    .site footer .contact p {
+        margin: 0.5em 0 0 0;
+        line-height: 2;
     }
 
-    #post pre.terminal code {
-        background-color: #333;
+    .site footer .links p {
+        margin: 0 0 0.75em 0;
+        line-height: 2;
     }
+}
+
+@include max-screen(600px) {
+    .horiz-nav,
+    .title {
+        text-align: center;
+    }
+}

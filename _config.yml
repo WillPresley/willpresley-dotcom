@@ -1,7 +1,17 @@
+# Site Settings
+title: "Will Presley, Web Developer"
+email: william.presley.jr@gmail.com
+description: "The personal site of Will Presley, professional web developer, soccer player/fan, and hobbyist Android developer. Based in Athens, Ohio."
+baseurl: ""
+url: "http://willpresley.com"
+
+#Build Settings
 source: /home/will/jekyll
 destination: /var/www/willpresley.com/public_html
 exclude: [config.rb]
 keep_files: [admin]
 timezone: America/New_York
 markdown: redcarpet
+# markdown: kramdown
 highlighter: pygments
+permalink: /:year/:month/:title

@@ -1,21 +1,21 @@
-/* Prefixes for loops */
+// Prefixes for loops
 $prefixes: ( "-webkit-", "-moz-", "-o-", "" );
 
-/* Generic transition prefixer */
+// Generic transition prefixer
 @mixin transition($transition...) {
   @each $prefix in $prefixes {
     #{$prefix}transition: $transition;
   }
 }
 
-/* Background-size (cross-browser) */
+// Background-size (cross-browser)
 @mixin cb-bg-size($width, $height) {
   @each $prefix in $prefixes {
     #{$prefix}background-size: $width $height;
   }
 }
 
-/* Border-radius (cross-browser) */
+// Border-radius (cross-browser)
 @mixin borderRadius($size...) {
     @if length($size) == 1 {
         @each $prefix in $prefixes {
@@ -42,7 +42,7 @@ $prefixes: ( "-webkit-", "-moz-", "-o-", "" );
     }
 }
 
-/* Cross-browser opacity mixin */
+// Cross-browser opacity mixin
 @mixin cb-opacity($alpha_val) {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha_val * 100})";
     filter: alpha(opacity=#{$alpha_val * 100});
@@ -51,13 +51,12 @@ $prefixes: ( "-webkit-", "-moz-", "-o-", "" );
     opacity: $alpha_val;
 }
 
-/* Background Alphas */
+// Background Alphas
 @mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; /* The Fallback */
     background: rgba($color, $opacity);
 }
 
-/* Forces the browser to render animation on the element with hardware acceleration */
+// Forces the browser to render animation on the element with hardware acceleration
 @mixin enable-hw-acceleration {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
