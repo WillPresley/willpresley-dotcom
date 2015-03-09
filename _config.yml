@@ -8,7 +8,7 @@ url: "http://willpresley.com"
 
 #Build Settings
 source: /home/will/jekyll
-destination: /var/www/willpresley.com/public_html
+# destination: <HIDDEN IN BUILD SCRIPT>
 encoding: UTF-8
 exclude: [config.rb]
 keep_files: [admin]
