@@ -2,19 +2,19 @@
 layout: default
 ---
 <main class="main-content post" id="post_{{% page.date %}}">
-    <h1>{{ page.title }}</h1>
+                <h1>{{ page.title }}</h1>
 
-    {% include metainfo.html %}
-    {{ content }}
-</main>
+                {% include metainfo.html %}
+                {{ content }}
+            </main>
 
-<section id="related">
-    <h2>Related</h2>
-    <ul class="posts">
-        {% for post in site.related_posts limit:3 %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</section>
+            <section id="related">
+                <h2>Related</h2>
+                <ul class="posts">
+                    {% for post in site.related_posts limit:3 %}
+                    <li><span class="meta">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B " }}{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},{{ post.date | date: "%Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
 
 {% include comments.html %}

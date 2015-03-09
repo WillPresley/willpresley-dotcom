@@ -5,6 +5,8 @@ location: Athens, Ohio
 comments: true
 ---
 
+This is a test post that I am using to help style and format certain type of content for the site. It may change over time, but you can mostly ignore it.
+
 ##Ad quorum et cognitionem et usum iam corroborati natura ipsa praeeunte deducimur.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum dixisset, finem ille. Idemque diviserunt naturam hominis in animum et corpus. Tum Piso: Atqui, Cicero, inquit, ista studia, si ad imitandos summos viros spectant, ingeniosorum sunt; `Paria sunt igitur.` Duo Reges: constructio interrete. Ut optime, secundum naturam affectum esse possit.

@@ -1,25 +1,36 @@
-/* Project Name:    WillPresley.com
+/*
+** Project Name:    WillPresley.com
 ** Author:          Will Presley
 ** Description:     Full SASS for a Jekyll-powered static responsive site.
 */
 
 // Colors
-$offwhite                   : #ecf0f1;
+$offwhite                   : #ECECEC;
 $silver                     : #bdc3c7;
 $orange                     : #e74c3c;
 $blue                       : #2c3e50;
-$light-grey                 : #DDD;
+$light-grey                 : #D0D0D0;
 $mid-grey                   : #898989;
 $dark-grey                  : #323232;
+$near-black                 : #222;
 
 // Variables
 $main-animation-timing      : 0.35s;
 $orange-link-darken         : 11%;
+$body-text-color            : $near-black;
 
 // Imports
 @import 'normalize-min';
 @import 'media-queries';
 @import 'mixins';
+
+// Mixins to use:
+    // Transition Prefixer:         @mixin transition($transition...)
+    // Cross-Browser BG-Size:       @mixin cb-bg-size($width, $height)
+    // Cross-Browser Border-Radius: @mixin borderRadius($size...)
+    // Cross-Browser Opacity:       @mixin cb-opacity($alpha_val)
+    // BBG w Alpha & Fallback:      @mixin background-opacity($color, $opacity: 0.3)
+    // Forces HW Accel:             @mixin enable-hw-acceleration
 
 /* Global border-box sizing */
 html {
@@ -34,7 +45,7 @@ html {
 body {
     line-height: 1;
     background-color: $offwhite;
-    color: #222;
+    color: $body-text-color;
     font: 400 16px/1.6 'Lora', Georgia, serif;
     text-align: center;
 }
@@ -136,10 +147,6 @@ ul.posts {
             }
         }
 
-        &.the-excerpt {
-            padding: 0.75em 0 0.5em 1.4em;
-        }
-
         a {
             text-decoration: none;
 
@@ -156,8 +163,24 @@ ul.posts {
             font-size: 80%;
             color: $mid-grey;
             display: inline-block;
-            padding-top: 12px;
+            padding-top: 10px;
             text-indent: 0;
+        }
+    }
+
+    &.postlist-short {
+        li {
+            .post-meta {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &.postlist-long {
+        li {
+            &.the-excerpt {
+                padding: 0.5em 0 1.5em 1.4em;
+            }
         }
     }
 }
@@ -211,6 +234,10 @@ ul.posts {
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.25;
     }
+
+    .meta {
+        color: $mid-grey;
+    }
 }
 
 /* Main Content Area */
@@ -218,20 +245,16 @@ ul.posts {
 
 }
 
-    .main-content .meta {
-        color: $mid-grey;
-    }
-
     .main-content ul,
     .main-content ol {
         margin: 0.75em 2em 0.75em 0.5em;
-        padding: 0 0 0 2em;
+        padding: 0 0 0 1em;
     }
 
     /* standard */
     .main-content pre,
     .main-content code {
-        border: 1px solid #ddd;
+        border: 1px solid $light-grey;
         background-color: #eef;
         padding: 0 0.5em;
     }
@@ -249,22 +272,12 @@ ul.posts {
         line-height: 1.35;
     }
 
-    /* terminal */
-    .main-content pre.terminal {
-        border: 1px solid black;
-        background-color: #333;
-        color: white;
-    }
-
-    .main-content pre.terminal code {
-        background-color: #333;
-    }
-
 /* Code Syntax Highlighting */
 .main-content .highlighttable {
     display: block;
     width: 100%;
     font-size: 85%;
+    margin: 0 0 1.75em 0.75em;
 
     .linenos {
         width: 20px;
@@ -284,6 +297,7 @@ ul.posts {
         pre {
             width: 100%;
             padding: 0;
+            margin: 0;
             border-radius: 0;
             border-right: 0;
             @include borderRadius( 3px, 0, 0, 3px );
@@ -296,7 +310,7 @@ ul.posts {
 
         pre {
             padding: 0.35em 0.5em 0.525em;
-            margin-bottom: 0;
+            margin: 0;
             border-radius: 0;
             @include borderRadius( 0, 3px, 3px, 0 );
         }
