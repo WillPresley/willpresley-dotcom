@@ -1,4 +1,4 @@
-/*
+/*!
 ** Project Name:    WillPresley.com
 ** Author:          Will Presley
 ** Description:     Full SASS for a Jekyll-powered static responsive site.
@@ -16,7 +16,7 @@ $near-black                 : #222;
 
 // Variables
 $main-animation-timing      : 0.35s;
-$orange-link-darken         : 11%;
+$orange-link-darken         : 10%;
 $body-text-color            : $near-black;
 
 // Imports
@@ -31,6 +31,7 @@ $body-text-color            : $near-black;
     // Cross-Browser Opacity:       @mixin cb-opacity($alpha_val)
     // BBG w Alpha & Fallback:      @mixin background-opacity($color, $opacity: 0.3)
     // Forces HW Accel:             @mixin enable-hw-acceleration
+    // Fix Flicker:                 @mixin fix-flicker
 
 /* Global border-box sizing */
 html {
@@ -79,7 +80,7 @@ a {
 /* Site Header */
 .title {
     display: block;
-    @include transition( opacity, $main-animation-timing );
+    @include transition( opacity $main-animation-timing );
 
     a {
         display: inline-block;
@@ -113,9 +114,15 @@ a {
     a {
         font: 400 20px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
+        border-bottom: 1px solid transparent;
+        @include transition( border-bottom $main-animation-timing );
+
+        &.active {
+            border-bottom: 1px solid $light-grey;
+        }
 
         &:hover {
-            text-decoration: underline;
+            border-bottom: 1px solid darken( $orange, $orange-link-darken );
         }
     }
 
@@ -183,6 +190,10 @@ ul.posts {
             }
         }
     }
+
+    &.related-posts {
+        margin: 0 0 1em 0;
+    }
 }
 
 /* General Site */
@@ -194,37 +205,24 @@ ul.posts {
     line-height: 1.5em;
     @include transition( width $main-animation-timing ease-in-out );
 
-    main,
-    section {
-        padding: 0 1.5%;
-    }
-
-    section {
-        margin: 2em 0;
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-
     h1 {
-        font-size: 200%;
+        font-size: 250%;
     }
 
     h2 {
-        font-size: 160%;
+        font-size: 190%;
     }
 
     h3 {
-        font-size: 140%;
+        font-size: 160%;
     }
 
     h4 {
-        font-size: 120%;
+        font-size: 130%;
     }
 
     h5 {
-        font-size: 110%;
+        font-size: 115%;
     }
 
     h6 {
@@ -235,8 +233,58 @@ ul.posts {
         line-height: 1.25;
     }
 
+    main,
+    section {
+        padding: 0 1.5%;
+    }
+
+    main {
+        padding-bottom: 0.5em;
+
+        &.bordered {
+            margin-bottom: 1.5em;
+            border-bottom: 1px solid $light-grey;
+        }
+    }
+
+    section {
+        margin: 1em 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 150%;
+        }
+
+        &#comments {
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .meta {
         color: $mid-grey;
+    }
+
+    #post-tags {
+        margin: 0 1.65%;
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #disqus_thread {
+        max-width: 95%;
+        margin: 0 1.5%;
     }
 }
 
@@ -334,6 +382,7 @@ ul.posts {
 
         &:hover {
             color: darken( $orange, $orange-link-darken );
+            text-decoration: none;
         }
     }
 
@@ -365,8 +414,9 @@ ul.posts {
                     max-height: 24px;
                     width: auto;
                     vertical-align: text-bottom;
-                    @include cb-opacity( 0.7 );
-                    // @include transition( opacity, $main-animation-timing );
+                    @include cb-opacity( 0.6 );
+                    @include transition( opacity, $main-animation-timing );
+                    outline: 1px solid transparent;
                 }
 
                 &:hover {

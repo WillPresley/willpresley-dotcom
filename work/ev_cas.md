@@ -1,9 +1,9 @@
 ---
-layout: page
-title: Ohio University - College of Arts & Sciences
+layout: "page"
+title: "Ohio University - College of Arts & Sciences"
 comments: true
 page-id: work_ev-cas
-permalink: /work/ev_cas/
+permalink: "/work/ev_college-of-arts-and-sciences/"
 meta-description: "About work on the College of Arts & Sciences website for Ohio University"
 meta-robots: "noodp, noydir"
 ---

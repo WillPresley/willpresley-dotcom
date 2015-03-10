@@ -1,21 +1,20 @@
 ---
 layout: default
 title: Home
+page-id: home
+meta-robots: "noodp, noydir"
 ---
-
 <main id="home">
                 <h1>Writing</h1>
                 <ul class="posts postlist-short">
-                    {% for post in site.posts limit:5 %}
-                    <li class="title-item"><span class="post-title"><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />
-                    <span class="post-meta"><span class="date">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B " }}{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}</span>{% if post.comments %} &ndash; <a href="{{ post.url }}#disqus_thread" class="comments-link" data-disqus-identifier="{{post.url}}"></a>{% endif %}</span></li>
-                    {% endfor %}
+                    {% for post in site.posts limit:5 %}<li class="title-item"><span class="post-title"><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />
+                    <span class="post-meta"><span class="date">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B " }}{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}</span>{% if post.comments %} &ndash; <a href="{{ post.url }}#disqus_thread" class="comments-link" data-disqus-identifier="{{post.url}}"></a>{% endif %}</span></li>{% endfor %}
                 </ul>
 
                 <h1>Development</h1>
                 <ul class="posts">
-                    <li class="title-item"><span class="post-title"><a href="/work/ev_cas/" class="post-link">Ohio University - College of Arts & Sciences</a></span><br />
-                    <span class="post-meta"><span class="date">2013-2014</span> &ndash; <a href="/work/ev_cas/#disqus_thread" class="comments-link" data-disqus-identifier="/work/ev_cas/"></a></span></li>
+                    <li class="title-item"><span class="post-title"><a href="/work/ev_college-of-arts-and-sciences/" class="post-link">Ohio University - College of Arts & Sciences</a></span><br />
+                    <span class="post-meta"><span class="date">2013-2014</span> &ndash; <a href="//work/ev_college-of-arts-and-sciences/#disqus_thread" class="comments-link" data-disqus-identifier="/work/ev_college-of-arts-and-sciences/"></a></span></li>
                 </ul>
 
                 <h1>Other</h1>

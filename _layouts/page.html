@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-<main class="main-content page"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
+<main class="main-content page{% if page.comments %}{% unless page.hide-related %} bordered{% endunless %}{% endif %}"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
     <h1>{{ page.title }}</h1>
-
     {% include metainfo.html %}
     {{ content }}
 </main>
-
 {% include comments.html %}

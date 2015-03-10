@@ -16,5 +16,5 @@ timezone: America/New_York
 # markdown: redcarpet
 markdown: kramdown
 highlighter: pygments
-permalink: /:title
+permalink: /blog/:title
 lsi: true

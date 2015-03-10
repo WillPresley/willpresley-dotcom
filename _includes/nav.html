@@ -1,8 +1,8 @@
 <nav class="horiz-nav">
-                <a href="/">Home</a> <span class="menu-separator">/</span>
-                <a href="/about/">About</a> <span class="menu-separator">/</span>
-                <a href="/blog/">Blog</a> <span class="menu-separator">/</span>
-                <a href="#">Work</a>
+                {% assign current = page.url | downcase | split: '/' %}<a href="/" {% if current[1] == 'index.html' %}class='active'{% endif %}>Home</a> <span class="menu-separator">/</span>
+                <a href="/about/" {% if current[1] == 'about' %}class='active'{% endif %}>About</a> <span class="menu-separator">/</span>
+                <a href="/blog/" {% if current[1] == 'blog' %}class='active'{% endif %}>Blog</a> <span class="menu-separator">/</span>
+                <a href="/work/" {% if current[1] == 'work' %}class='active'{% endif %}>Work</a>
             </nav>
 
             <header class="title">
