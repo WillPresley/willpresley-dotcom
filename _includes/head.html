@@ -5,7 +5,8 @@
     <title>{{ page.title }} &ndash; WillPresley.com</title>
 
     <meta name="author" content="Will Presley" />
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
+    {% if page.meta-description %}<meta name="description" content="{{ page.meta-description }}">{% else %}<meta name="description" content="{{ site.meta-description }}">{% endif %}
+    {% if page.meta-robots %}<meta name="robots" content="{{ page.meta-robots }}">{% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#2c3e50">
 

@@ -1,7 +1,7 @@
 # Site Settings
 title: "Will Presley, Web Developer"
 email: william.presley.jr@gmail.com
-description: "The personal site of Will Presley, professional web developer, soccer player/fan, and hobbyist Android developer. Based in Athens, Ohio."
+meta-description: "The personal site of Will Presley, professional web developer, soccer player/fan, and hobbyist Android developer. Based in Athens, Ohio."
 location: "Athens, Ohio"
 baseurl: ""
 url: "http://willpresley.com"
@@ -10,11 +10,11 @@ url: "http://willpresley.com"
 source: /home/will/jekyll
 # destination: <HIDDEN IN BUILD SCRIPT>
 encoding: UTF-8
-exclude: [config.rb]
+exclude: [config.rb, README.md]
 keep_files: [admin]
 timezone: America/New_York
 # markdown: redcarpet
 markdown: kramdown
 highlighter: pygments
-permalink: /:year/:month/:title
+permalink: /:title
 lsi: true
