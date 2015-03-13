@@ -5,7 +5,7 @@
 */
 
 // Colors
-$offwhite                   : #ECECEC;
+$offwhite                   : #F9F9F9;
 $silver                     : #bdc3c7;
 $orange                     : #e74c3c;
 $blue                       : #2c3e50;
@@ -230,6 +230,7 @@ ul.posts {
     }
 
     h1, h2, h3, h4, h5, h6 {
+        color: $blue;
         line-height: 1.25;
     }
 
@@ -281,6 +282,15 @@ ul.posts {
             }
         }
     }
+
+    #related {}
+
+        .related-posts {
+
+            li {
+                margin-bottom: 0.5em;
+            }
+        }
 
     #disqus_thread {
         max-width: 95%;
@@ -409,6 +419,8 @@ ul.posts {
 
             a {
                 display: inline-block;
+                text-decoration: none;
+                color: $mid-grey;
 
                 img {
                     max-height: 24px;
@@ -420,6 +432,8 @@ ul.posts {
                 }
 
                 &:hover {
+                    color: darken( $mid-grey, 12% );
+                    text-decoration: underline;
 
                     img {
                         @include cb-opacity( 1.0 );
@@ -437,7 +451,7 @@ ul.posts {
 /* Media Queries */
 @include min-screen(480px)  {
     .horiz-nav a {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .horiz-nav .menu-separator {
@@ -468,12 +482,30 @@ ul.posts {
     .horiz-nav {
         float: right;
         max-width: 50%;
-        margin: 2.4em 0 1em;
+        margin: 2em 0 1em;
     }
 
     .title {
         display: inline-block;
         max-width: 50%;
+
+        a {
+            font-size: 64px;
+        }
+    }
+
+    .site {
+        width: 70%;
+    }
+}
+
+@include min-screen(1024px)  {
+    .horiz-nav {
+        margin: 2.5em 0 1em;
+    }
+
+    .title a {
+        font-size: 76px;
     }
 
     .site {
@@ -481,13 +513,9 @@ ul.posts {
     }
 }
 
-@include min-screen(1024px)  {
-    .title a {
-        font-size: 80px;
-    }
-
+@include min-screen(1240px)  {
     .site {
-        width: 80%;
+        width: 65%;
     }
 }
 
