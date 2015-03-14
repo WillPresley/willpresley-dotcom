@@ -1,12 +1,12 @@
 // Prefixes for loops
-$prefixes: ( "-webkit-", "-moz-", "-o-", "" );
+$prefixes: ( "-webkit-", "" );
 
-// Generic transition prefixer
-@mixin transition($transition...) {
-  @each $prefix in $prefixes {
-    #{$prefix}transition: $transition;
-  }
-}
+// Generic transition prefixer - DEPRECATED FOR AUTOPREFIXIER
+// @mixin transition($transition...) {
+//   @each $prefix in $prefixes {
+//     #{$prefix}transition: $transition;
+//   }
+// }
 
 // Background-size (cross-browser)
 @mixin cb-bg-size($width, $height) {
@@ -45,14 +45,12 @@ $prefixes: ( "-webkit-", "-moz-", "-o-", "" );
 // Cross-browser opacity mixin
 @mixin cb-opacity($alpha_val) {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha_val * 100})";
-    filter: alpha(opacity=#{$alpha_val * 100});
-    -moz-opacity: $alpha_val;
-    -khtml-opacity: $alpha_val;
     opacity: $alpha_val;
 }
 
 // Background Alphas
 @mixin background-opacity($color, $opacity: 0.3) {
+    background: $color;
     background: rgba($color, $opacity);
 }
 

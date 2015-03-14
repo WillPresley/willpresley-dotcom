@@ -62,7 +62,7 @@ p {
 
 a {
     color: $orange;
-    @include transition( color, $main-animation-timing );
+    transition: color, $main-animation-timing;
 
     &:hover {
         color: darken( $orange, $orange-link-darken );
@@ -77,10 +77,15 @@ a {
     }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Site Header */
 .title {
     display: block;
-    @include transition( opacity $main-animation-timing );
+    transition: opacity $main-animation-timing;
 
     a {
         display: inline-block;
@@ -115,7 +120,7 @@ a {
         font: 400 20px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
         border-bottom: 1px solid transparent;
-        @include transition( border-bottom $main-animation-timing );
+        transition: border-bottom $main-animation-timing;
 
         &.active {
             border-bottom: 1px solid $light-grey;
@@ -131,6 +136,113 @@ a {
         position: relative;
         top: -2px;
         color: $light-grey;
+    }
+}
+
+/* General Site */
+.site {
+    font-size: 100%;
+    text-align: left;
+    width: 95%;
+    margin: 0.5em auto;
+    line-height: 1.25;
+    transition: width $main-animation-timing ease-in-out;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $blue;
+        line-height: 1.25;
+    }
+
+    h1 {
+        font-size: 240%;
+    }
+
+    h2 {
+        font-size: 200%;
+    }
+
+    h3 {
+        font-size: 160%;
+        color: $orange;
+    }
+
+    h4 {
+        font-size: 130%;
+    }
+
+    h5 {
+        font-size: 115%;
+    }
+
+    h6 {
+        font-size: 100%;
+    }
+
+    main,
+    section {
+        padding: 0 1.5%;
+    }
+
+    main {
+        padding-bottom: 0.5em;
+
+        &.bordered {
+            margin-bottom: 1.5em;
+            border-bottom: 1px solid $light-grey;
+        }
+    }
+
+    section {
+        margin: 1em 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 150%;
+        }
+
+        &#comments {
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .meta {
+        color: $mid-grey;
+    }
+
+    .img_center {
+        text-align: center;
+    }
+
+    #post-tags {
+        margin: 0 1.65%;
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #related {}
+
+        .related-posts {
+
+            li {
+                margin-bottom: 0.5em;
+            }
+        }
+
+    #disqus_thread {
+        max-width: 95%;
+        margin: 0 1.5%;
     }
 }
 
@@ -196,108 +308,6 @@ ul.posts {
     }
 }
 
-/* General Site */
-.site {
-    font-size: 100%;
-    text-align: left;
-    width: 95%;
-    margin: 0.5em auto;
-    line-height: 1.5em;
-    @include transition( width $main-animation-timing ease-in-out );
-
-    h1 {
-        font-size: 250%;
-    }
-
-    h2 {
-        font-size: 190%;
-    }
-
-    h3 {
-        font-size: 160%;
-    }
-
-    h4 {
-        font-size: 130%;
-    }
-
-    h5 {
-        font-size: 115%;
-    }
-
-    h6 {
-        font-size: 100%;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        color: $blue;
-        line-height: 1.25;
-    }
-
-    main,
-    section {
-        padding: 0 1.5%;
-    }
-
-    main {
-        padding-bottom: 0.5em;
-
-        &.bordered {
-            margin-bottom: 1.5em;
-            border-bottom: 1px solid $light-grey;
-        }
-    }
-
-    section {
-        margin: 1em 0;
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 150%;
-        }
-
-        &#comments {
-            h2 {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .meta {
-        color: $mid-grey;
-    }
-
-    #post-tags {
-        margin: 0 1.65%;
-        font-size: 20px;
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    #related {}
-
-        .related-posts {
-
-            li {
-                margin-bottom: 0.5em;
-            }
-        }
-
-    #disqus_thread {
-        max-width: 95%;
-        margin: 0 1.5%;
-    }
-}
-
 /* Main Content Area */
 .main-content {
 
@@ -309,12 +319,17 @@ ul.posts {
         padding: 0 0 0 1em;
     }
 
+    .main-content li {
+        margin-bottom: 0.75em;
+    }
+
     /* standard */
     .main-content pre,
     .main-content code {
         border: 1px solid $light-grey;
         background-color: #eef;
-        padding: 0 0.5em;
+        padding: 0 0.4em;
+        margin: 0 0.1em;
     }
 
     .main-content code {
@@ -327,7 +342,7 @@ ul.posts {
     }
 
     .main-content p code {
-        line-height: 1.35;
+        line-height: 1.25;
     }
 
 /* Code Syntax Highlighting */
@@ -353,12 +368,12 @@ ul.posts {
         }
 
         pre {
+            border-radius: 0;
+            @include borderRadius( 3px, 0, 0, 3px );
             width: 100%;
             padding: 0;
             margin: 0;
-            border-radius: 0;
             border-right: 0;
-            @include borderRadius( 3px, 0, 0, 3px );
         }
     }
 
@@ -367,10 +382,10 @@ ul.posts {
         display: inline-block;
 
         pre {
-            padding: 0.35em 0.5em 0.525em;
-            margin: 0;
             border-radius: 0;
             @include borderRadius( 0, 3px, 3px, 0 );
+            padding: 0.35em 0.5em 0.525em;
+            margin: 0;
         }
     }
 
@@ -423,12 +438,12 @@ ul.posts {
                 color: $mid-grey;
 
                 img {
+                    @include cb-opacity( 0.6 );
                     max-height: 24px;
                     width: auto;
                     vertical-align: text-bottom;
-                    @include cb-opacity( 0.6 );
-                    @include transition( opacity, $main-animation-timing );
                     outline: 1px solid transparent;
+                    transition: opacity, $main-animation-timing;
                 }
 
                 &:hover {
