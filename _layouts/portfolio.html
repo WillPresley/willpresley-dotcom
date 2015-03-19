@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Work"
+permalink: "/work/"
+page-id: work
+meta-description: "A portfolio of projects I have worked on for my day-job, for my freelance work, and as a hobby."
+meta-robots: "noodp, noydir"
+---
+<main class="main-content page portfolio"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
+    <h1>{{ page.title }}</h1>
+    <ul class="project-list">
+        {% for project in page.projects %}
+        <li class="project-item">
+            <a href="/work/{{ project[0] }}">
+                {% if project[1].image_small %}
+                <img src="{{ project[1].image_small.url }}" title="{{ project[1].image_small.title }}" alt="{{ project[1].image_small.alt }}" />
+                {% endif %}
+
+                <p>{{ project[1].short }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</main>

@@ -13,6 +13,7 @@ $light-grey                 : #D0D0D0;
 $mid-grey                   : #898989;
 $dark-grey                  : #323232;
 $near-black                 : #222;
+$code-grey                  : #E0E0E0;
 
 // Variables
 $main-animation-timing      : 0.35s;
@@ -25,13 +26,13 @@ $body-text-color            : $near-black;
 @import 'mixins';
 
 // Mixins to use:
-    // Transition Prefixer:         @mixin transition($transition...)
-    // Cross-Browser BG-Size:       @mixin cb-bg-size($width, $height)
-    // Cross-Browser Border-Radius: @mixin borderRadius($size...)
-    // Cross-Browser Opacity:       @mixin cb-opacity($alpha_val)
-    // BBG w Alpha & Fallback:      @mixin background-opacity($color, $opacity: 0.3)
-    // Forces HW Accel:             @mixin enable-hw-acceleration
-    // Fix Flicker:                 @mixin fix-flicker
+    // Transition Prefixer:         @include transition($transition...)
+    // Cross-Browser BG-Size:       @include cb-bg-size($width, $height)
+    // Cross-Browser Border-Radius: @include borderRadius($size...)
+    // Cross-Browser Opacity:       @include cb-opacity($alpha_val)
+    // BBG w Alpha & Fallback:      @include background-opacity($color, $opacity: 0.3)
+    // Forces HW Accel:             @include enable-hw-acceleration
+    // Fix Flicker:                 @include fix-flicker
 
 /* Global border-box sizing */
 html {
@@ -97,16 +98,12 @@ img {
         strong {
             display: inline-block;
             color: $orange;
-            font-weight: 800;
         }
 
         &:hover {
             color: $blue;
+            opacity: 0.75;
         }
-    }
-
-    &:hover {
-        opacity: 0.75;
     }
 }
 
@@ -150,28 +147,28 @@ img {
 
     h1, h2, h3, h4, h5, h6 {
         color: $blue;
-        line-height: 1.25;
+        line-height: 1.1;
     }
 
     h1 {
-        font-size: 240%;
+        font-size: 175%;
     }
 
     h2 {
-        font-size: 200%;
+        font-size: 150%;
     }
 
     h3 {
-        font-size: 160%;
+        font-size: 130%;
         color: $orange;
     }
 
     h4 {
-        font-size: 130%;
+        font-size: 120%;
     }
 
     h5 {
-        font-size: 115%;
+        font-size: 110%;
     }
 
     h6 {
@@ -315,8 +312,13 @@ ul.posts {
 
     .main-content ul,
     .main-content ol {
-        margin: 0.75em 2em 0.75em 0.5em;
+        margin: 0.75em 0.5em;
         padding: 0 0 0 1em;
+
+        ul,
+        ol {
+            margin-right: 0;
+        }
     }
 
     .main-content li {
@@ -327,13 +329,13 @@ ul.posts {
     .main-content pre,
     .main-content code {
         border: 1px solid $light-grey;
-        background-color: #eef;
+        background-color: $code-grey;
         padding: 0 0.4em;
         margin: 0 0.1em;
     }
 
     .main-content code {
-        font-size: 90%;
+        font-size: 95%;
         display: inline-block;
     }
 
@@ -359,12 +361,13 @@ ul.posts {
 
         code,
         pre {
-            background-color: #E7E7E7;
+            background-color: $code-grey;
         }
 
         code {
             padding: 0 0.45em;
-            margin: 0.5em 0;
+            margin: 0.4em 0;
+            line-height: 1.35;
         }
 
         pre {
@@ -391,6 +394,38 @@ ul.posts {
 
     tbody, tr {
         display: block;
+    }
+}
+
+/* Blog by Tags */
+.list-group-link-item {
+    font-weight: normal;
+}
+
+/* Portfolio Page */
+.project-list {
+    list-style: none;
+}
+
+.project-item {
+    display: inline-block;
+    width: 33%;
+
+    img {
+        border: 1px solid $light-grey;
+    }
+}
+
+/* Individual Project Page */
+
+
+.project-image_large {
+
+    img {
+
+        &.bordered {
+            border: 1px solid $light-grey;
+        }
     }
 }
 
@@ -490,6 +525,35 @@ ul.posts {
 
     .site {
         width: 80%;
+
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: 240%;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+
+        h3 {
+            font-size: 160%;
+        }
+
+        h4 {
+            font-size: 130%;
+        }
+
+        h5 {
+            font-size: 115%;
+        }
+    }
+
+    .main-content ul,
+    .main-content ol {
+        margin: 0.75em 2em 0.75em 0.5em;
     }
 }
 

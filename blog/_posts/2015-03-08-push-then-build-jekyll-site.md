@@ -27,20 +27,22 @@ This entire workflow is probably too specific to be a huge help to anyone out th
 
 My current setup and situation (for this site actually) for using Jekyll is this:
 
-* My site's source is kept in a [BitBucket repository](https://bitbucket.org/willpresley/willpresley-dotcom){:target="_blank"} that I keep push and pull from on my main development machine, a **Windows 7 PC** at home. I have Cygwin installed and generally have a very solid Windows development workstation.
+* My site's source is kept in a [BitBucket repository](https://bitbucket.org/willpresley/willpresley-dotcom){:target="_blank"} that I push to and pull from on my main development machine, a **Windows 7 PC** at home. I have Cygwin installed and have a very solid Windows development workstation.
 * My server is hosted on a small VPS (shout-out to [MPServ/OrbitServers](https://clients.mpserv.net/cart.php?gid=25){:target="_blank"} for the amazing deal) running Debian 7 (Wheezy) and Nginx.
-* I came to find out that it is quite a bit simpler to build with Jekyll using Linux/Unix or OS X than it is with Windows, and I am perfectly comfortable in the *nix environment.
+* I came to find out that it is quite a bit easier to build with Jekyll using Linux/Unix or OS X than it is with Windows, and I am perfectly comfortable in the *nix environment.
 * My Jekyll assets are stored on the server at *user home*/jekyll, and at build time the generated site is put straight into my Nginx public site root (using the \-\-destination flag).
 * I got tired of using SFTP to move the files over that I had modified, then running the build command from a terminal, then checking for results.
+* I had a **HUGE** amount of trouble getting Jekyll's built-in `--watch` flag to work. It would properly watch the files for about 10 minutes, then I would upload changes through SFTP without seeing a result.
 
 ## How I Streamlined My Workflow {#streamline}
 
 My solution to speeding my build and deploy process, in a general sense, was to:
+
 1. Start by using Cygwin (and its built-in cygdrive symbolic links, allowing full access to the file system from the command line) to switch into my local git repository on my Windows machine.
 2. Then run the `rsync` command (along with flags for transfer efficiency and excludes for local/unnecessary files for the build) from within the git repository.
 3. Lastly use some remote SSH commands to switch into my remote Jekyll directory and run the build command (including the `--destination` flag).
 
-So finally, here is the script, my attempt at solving this issue for myself.
+So finally, here is the script, my attempt at solving this issue for myself. Instead of having to use SFTP or the \-\-watch flag, I rolled my file updates, build commands, etc into one simple to use script.
 
 ### My Jekyll Build-Site Bash Script {#the-script}
 
@@ -65,7 +67,7 @@ ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache 
         - \-\-exclude : Exclude files or directories. *See the man page link for more options. If you have a lot, you can use a separate file, I only have these few.*
     * **With the "." dot**: The first command should have the script in the proper git repository that you want to sync, so nothing else needed here except a period/dot.
     * **user@site.tld**: Replace with your SSH username and IP/hostname/domain.
-    * **:jekyll/**: This is the remote location of your <u>pre-build</u> Jekyll assets. In my case it is *\<user home>/jekyll*, so this part is simple.
+    * **:jekyll/**: This is the remote location of your <u>pre-build</u> Jekyll assets. In my case it is *\<user home>/jekyll*, so this part is simple. Be sure you include the colon at the beginning!
 3. SSH into the remote server (using the correct port, user name, and IP/hostname/domain) and run the following commands:
     * **cd jekyll/**: Switch into the remote Jekyll assets directory (again, for me it is just ~/jekyll/)
     * **jekyll build \-\-destination <nginx/Apache directory>/public_html**: Run the Jekyll build command, with a flag pointing to your site's publicly available directory. Feel free to add your other build flags here as well.
@@ -74,9 +76,12 @@ ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache 
 
 ## The Results {#results}
 
-I have added the script to my Cygwin home directory, and created an alias for the command `bs` to run this: `bash ~/build-site.sh`. The results are fantastic. Only the absolute minimum number of files are sent to the remote server, and they are also compressed for even more speed.
+I have added the script to my Cygwin home directory, given it executable permissions, and created an alias for the command `bs` to run this: `bash ~/build-site.sh`. The results are fantastic, and exactly what I was looking for when I set out on this experiment. Only the absolute minimum number of files are sent to the remote server, and they are also compressed for even more speed.
 
 {:.img_center}
 <img class="img_no-expand" src="/uploads/2015-03/push-build-jekyll-site-results.png" alt="Results of the build." title="Results of the build." />
 
 I would love to hear how I could improve this whole system, or how you've solved a similar problem for yourself, just head down to the comments!
+
+More Reading: [Nathan Grigg - Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank"}, [ThorneLabs - Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank"}
+

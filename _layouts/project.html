@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<main class="main-content page project"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
+    {% if page.image_large %}
+    <div class="project-image_large">
+        <img src="{{ page.image_large.url }}" title="{{ page.image_large.title }}" alt="{{ page.image_large.alt }}"{% if page.image_large.bordered %} class="bordered"{% endif %} />
+    </div>
+    {% endif %}
+
+    <div class="project-general-info">
+        <h1>{{ page.title }}</h1>
+        {% if page.website %}
+            <p class="website-wrap"><strong>Visit this site:</strong> <a href="{{ page.website }}" target="_blank" class="website-link">{{ page.website }}</a></p>
+        {% endif %}
+        {{ page.description }}
+    </div>
+
+    <div class="project-specific-info">
+        <h3>What I did for this project:</h3>
+        {{ page.project_description }}
+    </div>
+
+    {% if page.endorsements %}
+    <div class="project-endorsements">
+        <h3>What {{ page.title }} had to say about us:</h3>
+
+        {% for endorsement in page.endorsements %}
+        <blockquote>
+            {{ endorsement.body }}
+            <small>{{ endorsement.from }}, {{ endorsement.role }}</small>
+        </blockquote>
+        {% endfor %}
+    </div>
+    {% endif %}
+</main>
