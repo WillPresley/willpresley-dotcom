@@ -1,19 +1,23 @@
-layout: project
+layout:       project
+published:    true
+short:        "A responsive, CommonSpot-powered site for Ohio University's largest college."
+title:        "Ohio University - College of Arts & Sciences"
+website:      http://www.ohio.edu/cas/
+image_small:
+  url:        "/uploads/projects/ev-ou-cas-small.jpg"
+  title:      "Ohio University - College of Arts & Sciences"
+  alt:        "Ohio University - College of Arts & Sciences"
+image_large:
+  url:        "/uploads/projects/ev-ou-cas-large_1.jpg"
+  title:      "Ohio University - College of Arts & Sciences"
+  alt:        "Ohio University - College of Arts & Sciences"
+  bordered:   true
 description:
   "
   <p><em>Project for Electronic Vision.</em></p>
   <p>A rebuild of the entire website for the College of Arts & Sciences at Ohio University, including its many departments, in the CommonSpot CMS. CommonSpot is a Cold-Fusion powered CMS that is jointly controlled by both the software vendor and the University IT staff. The site is fully responsive, and also features a management dashboard so that individuals from varying academic units can update various parts of their sites easily.</p>
   "
-image_small:
-  url: "/uploads/projects/ev-ou-cas-small.jpg"
-  title: "Ohio University - College of Arts & Sciences"
-  alt: "Ohio University - College of Arts & Sciences"
-image_large:
-  url: "/uploads/projects/ev-ou-cas-large_1.jpg"
-  title: "Ohio University - College of Arts & Sciences"
-  alt: "Ohio University - College of Arts & Sciences"
-  bordered: true
-project_description:
+what_was_done:
   "
   <ul>
   <li>Created a set of templates in CommonSpot that start with a base, and are abstracted out for specific page types.</li>
@@ -23,7 +27,3 @@ project_description:
   <li>Organize and conduct training sessions for University staff who will be updating various parts of the site.</li>
   </ul>
   "
-published: true
-short:     "This is a sample short description."
-title:     "Ohio University - College of Arts & Sciences"
-website:   http://www.ohio.edu/cas/
