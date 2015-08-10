@@ -83,5 +83,8 @@ I have added the script to my Cygwin home directory, given it executable permiss
 
 I would love to hear how I could improve this whole system, or how you've solved a similar problem for yourself, just head down to the comments!
 
-More Reading: Nathan Grigg - [Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank"}; ThorneLabs - [Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank"}
+## More Reading
+
+* Nathan Grigg - [Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank"}
+* ThorneLabs - [Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank"}
 
