@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "Work"
-permalink: "/work/"
-page-id: work
+title: "Projects"
+permalink: "/projects/"
+page-id: projects
 meta-description: "A portfolio of projects I have worked on for my day-job, for my freelance work, and as a hobby."
 meta-robots: "noodp, noydir"
 ---
 <main class="main-content page portfolio"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
     <h1>{{ page.title }}</h1>
+    <p>Projects are listed newest-first. Click on the image or title to learn more!</p>
     <ul class="project-list">
-        {% for project in page.projects %}
+        {% assign items = site.projects | sort: 'date' | reverse %}
+        {% for project in items %}
+        {% if project.published %}
         <li class="project-item">
-            <a href="/work/{{ project[0] }}">
-                {% if project[1].image_small %}
-                <img src="{{ project[1].image_small.url }}" title="{{ project[1].image_small.title }}" alt="{{ project[1].image_small.alt }}" />
+            <a class="project-image-link" href="{{ project.url }}">
+                {% if project.image-small %}
+                <img src="{{ project.image-small.url }}" title="{{ project.image-small.title }}" alt="{{ project.image-small.alt }}" />
                 {% endif %}
-
-                <p>{{ project[1].short }}</p>
             </a>
+            <p><strong><a href="{{ project.url }}">{{ project.title}}</a></strong></p>
+            <p>{{ project.short }}</p>
         </li>
+        {% endif %}
         {% endfor %}
     </ul>
 </main>

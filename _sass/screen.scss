@@ -69,13 +69,13 @@ a {
         color: darken( $orange, $orange-link-darken );
     }
 
-    &:visited {
-        color: $orange;
+    // &:visited {
+    //     color: $orange;
 
-        &:hover {
-            color: darken( $orange, $orange-link-darken );
-        }
-    }
+    //     &:hover {
+    //         color: darken( $orange, $orange-link-darken );
+    //     }
+    // }
 }
 
 img {
@@ -114,7 +114,7 @@ img {
     position: relative;
 
     a {
-        font: 400 20px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+        font: 400 18px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: border-bottom $main-animation-timing;
@@ -244,6 +244,20 @@ img {
 }
 
 /* Homepage */
+.home-more-link {
+    color: tint( $orange, 20% );
+    font: 400 18px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+    font-weight: normal;
+    vertical-align: middle;
+    margin-left: 1em;
+    text-decoration: none;
+
+    &:hover {
+        color: $orange;
+        text-decoration: underline;
+    }
+}
+
 ul.posts {
     list-style-type: none;
     margin: 0 0 2em 0;
@@ -257,6 +271,7 @@ ul.posts {
             padding-left: 1em;
             text-indent: -1em;
             font-size: 135%;
+            margin-bottom: 0.25em;
 
             &:before {
                 content: "\00BB";
@@ -285,7 +300,9 @@ ul.posts {
     }
 
     &.postlist-short {
+
         li {
+
             .post-meta {
                 margin-bottom: 20px;
             }
@@ -293,6 +310,7 @@ ul.posts {
     }
 
     &.postlist-long {
+
         li {
             &.the-excerpt {
                 padding: 0.5em 0 1.5em 1.4em;
@@ -308,6 +326,9 @@ ul.posts {
 /* Main Content Area */
 .main-content {
 
+    .image-link {
+        display: inline-block;
+    }
 }
 
     .main-content ul,
@@ -403,23 +424,31 @@ ul.posts {
 }
 
 /* Portfolio Page */
-.project-list {
+.main-content .project-list {
     list-style: none;
-}
+    margin: 0;
+    padding: 0;
 
-.project-item {
-    display: inline-block;
-    width: 33%;
+    .project-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 31%;
+        margin: 0 1%;
 
-    img {
-        border: 1px solid $light-grey;
+        img {
+            border: 1px solid $light-grey;
+        }
+    }
+
+    .project-image-link {
+        display: block;
     }
 }
 
 /* Individual Project Page */
 
 
-.project-image_large {
+.project-image-large {
     margin-top: 1em;
 
     img {
@@ -427,6 +456,13 @@ ul.posts {
         &.bordered {
             border: 1px solid $light-grey;
         }
+    }
+}
+
+.project-specific-info {
+
+    h2 {
+        color: $orange;
     }
 }
 
@@ -532,7 +568,7 @@ ul.posts {
         }
 
         h1 {
-            font-size: 240%;
+            font-size: 230%;
         }
 
         h2 {
@@ -561,13 +597,13 @@ ul.posts {
 @include min-screen(940px) {
     .horiz-nav {
         float: right;
-        max-width: 50%;
+        max-width: 48%;
         margin: 2em 0 1em;
     }
 
     .title {
         display: inline-block;
-        max-width: 50%;
+        max-width: 52%;
 
         a {
             font-size: 64px;

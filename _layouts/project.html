@@ -2,9 +2,9 @@
 layout: default
 ---
 <main class="main-content page project"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
-    {% if page.image_large %}
-    <div class="project-image_large">
-        <img src="{{ page.image_large.url }}" title="{{ page.image_large.title }}" alt="{{ page.image_large.alt }}"{% if page.image_large.bordered %} class="bordered"{% endif %} />
+    {% if page.image-large %}
+    <div class="project-image-large">
+        <img src="{{ page.image-large.url }}" title="{{ page.image-large.title }}" alt="{{ page.image-large.alt }}"{% if page.image-large.bordered %} class="bordered"{% endif %} />
     </div>
     {% endif %}
 
@@ -13,24 +13,9 @@ layout: default
         {% if page.website %}
             <p class="website-wrap"><strong>Visit this site:</strong> <a href="{{ page.website }}" target="_blank" class="website-link">{{ page.website }}</a></p>
         {% endif %}
-        {{ page.description }}
     </div>
 
     <div class="project-specific-info">
-        <h3>What I did on this project:</h3>
-        {{ page.what_was_done }}
+        {{ page.content }}
     </div>
-
-    {% if page.endorsements %}
-    <div class="project-endorsements">
-        <h3>What {{ page.title }} had to say about us:</h3>
-
-        {% for endorsement in page.endorsements %}
-        <blockquote>
-            {{ endorsement.body }}
-            <small>{{ endorsement.from }}, {{ endorsement.role }}</small>
-        </blockquote>
-        {% endfor %}
-    </div>
-    {% endif %}
 </main>

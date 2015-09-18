@@ -25,10 +25,15 @@ highlighter: pygments
 permalink: /blog/:title
 lsi: true
 
+collections:
+  projects:
+    refname: proj
+    output: true
+
 # Sitemap Settings
 sitemap:
-    exclude:
-        - "/feed.xml"
-    include_posts:
-        - "/index.html"
-        - "/blog.md"
+  exclude:
+    - "/feed.xml"
+  include_posts:
+    - "/index.html"
+    - "/blog.md"
