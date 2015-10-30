@@ -470,8 +470,8 @@ ul.posts {
 .site footer {
     font-size: 95%;
     color: $dark-grey;
-    border-top: 1px solid $light-grey;
-    margin-top: 1em;
+    // border-top: 1px solid $light-grey;
+    margin-top: 1.5em;
     overflow: hidden;
 
     a {
@@ -481,6 +481,18 @@ ul.posts {
             color: darken( $orange, $orange-link-darken );
             text-decoration: none;
         }
+    }
+
+    h4 {
+        font-size: 140%;
+        display: inline-block;
+        text-transform: lowercase;
+        border-bottom: 1px solid $light-grey;
+    }
+
+    .contact p,
+    .links p {
+        margin-top: 0;
     }
 
     .contact {
@@ -641,16 +653,15 @@ ul.posts {
         display: block;
         width: 100%;
         text-align: left;
+
+        p {
+            margin: 0 0 0.5em 0;
+            line-height: 2;
+        }
     }
 
-    .site footer .contact p {
-        margin: 0.5em 0 0 0;
-        line-height: 2;
-    }
-
-    .site footer .links p {
-        margin: 0 0 0.75em 0;
-        line-height: 2;
+    .site footer .credits {
+        margin-top: 1em;
     }
 }
 
@@ -658,5 +669,13 @@ ul.posts {
     .horiz-nav,
     .title {
         text-align: center;
+    }
+
+    .horiz-nav {
+        margin-bottom: 1.5em;
+    }
+
+    .site footer .credits p {
+        line-height: 2.5;
     }
 }

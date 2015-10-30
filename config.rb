@@ -7,11 +7,11 @@ javascripts_dir = "js"
 environment = :development
 relative_assets = true
 
-output_style = :expanded
+# output_style = :expanded
 
-# output_style = :compressed
+output_style = :compressed
 
-line_comments = true
+# line_comments = true
 
 # don't touch this
 preferred_syntax = :scss
