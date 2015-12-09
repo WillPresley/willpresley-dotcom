@@ -12,7 +12,7 @@ As can be clearly seen by the lack of updates on this site, the last 6 months ha
 
 ### March
 
-In March there was a tremendous snow storm here in Athens, and a couple days later we got <a href="https://www.facebook.com/electronic.vision.ev/posts/925654360812603" target="_blank">these pictures</a> of the town from the company quadcopter:
+In March there was a tremendous snow storm here in Athens, and a couple days later we got <a href="https://www.facebook.com/electronic.vision.ev/posts/925654360812603" target="_blank">these pictures</a> of our gorgeous town from the company quadcopter:
 
 <a class="image-link" href="https://www.facebook.com/electronic.vision.ev/posts/925654360812603" target="_blank"><img src="/uploads/2015-09/march-snowstorm.jpg" alt="March snowstorm in Athens" title="March snowstorm in Athens" /></a>
 
