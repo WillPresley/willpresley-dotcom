@@ -3,7 +3,6 @@
 ** Author:          Will Presley
 ** Description:     Full SASS for a Jekyll-powered static responsive site.
 */
-
 // Colors
 $offwhite                   : #F9F9F9;
 $silver                     : #bdc3c7;
@@ -83,6 +82,7 @@ img {
         color: $blue;
         font: 400 52px/1 'Istok Web', Verdana, Helvetica, sans-serif;
         text-decoration: none;
+        @include font-smoothing(on);
 
         strong {
             display: inline-block;
@@ -683,7 +683,7 @@ ul.posts {
     }
 
     .title a {
-        font-size: 76px;
+        font-size: 72px;
     }
 
     .site {
@@ -692,6 +692,10 @@ ul.posts {
 }
 
 @include min-screen(1240px)  {
+    .title a {
+        font-size: 76px;
+    }
+
     .site {
         width: 65%;
     }

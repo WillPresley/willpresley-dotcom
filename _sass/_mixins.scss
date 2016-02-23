@@ -67,3 +67,15 @@ $prefixes: ( "-webkit-", "" );
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
 }
+
+// Font smoothing
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
