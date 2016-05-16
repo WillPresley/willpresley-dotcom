@@ -9,7 +9,7 @@ meta-robots: "noodp, noydir"
 
 <img src="/uploads/2015-09/me-in-the-office.jpg" alt="Me in the office at EV in 2015" title="Me in the office at EV in 2015" />
 
-I think that my name is plastered on the site enough, but I'm Will. I'm currently {{ site.time | date: '%Y' | minus: 1989 }} years old and live in {{ site.location }}. I have long been obsessed with computers and technology, and have been making websites since I was 11 years old.
+I think that my name is plastered on the site enough, but I'm Will. I'm currently {{'now' | date: "%s" | minus : 620366400 | divided_by: 31536000}} years old and live in {{ site.location }}. I have long been obsessed with computers and technology, and have been making websites since I was 11 years old.
 
 ### How I Got Into Web Development
 
