@@ -6,10 +6,12 @@ module Jekyll
 
     def generate(site)
       site.collections.each do |name, collection|
-        Jekyll.logger.info "found metadata for collection #{name}: #{collection.metadata}"
-        generate_permalinks name, collection
-        assign_navigation_links collection
-        assign_asset_paths name, collection
+        if collection.label == "projects"
+          Jekyll.logger.info "found metadata for collection #{name}: #{collection.metadata}"
+          generate_permalinks name, collection
+          assign_navigation_links collection
+          assign_asset_paths name, collection
+        end
       end
     end
 
