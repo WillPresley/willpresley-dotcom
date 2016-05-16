@@ -22,7 +22,7 @@ timezone: America/New_York
 # markdown: redcarpet
 markdown: kramdown
 highlighter: pygments
-permalink: /blog/:title
+permalink: /blog/:title/
 lsi: true
 
 collections:
