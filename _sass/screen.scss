@@ -12,7 +12,7 @@ $light-grey                 : #D0D0D0;
 $mid-grey                   : #898989;
 $dark-grey                  : #323232;
 $near-black                 : #222;
-$code-grey                  : #E0E0E0;
+$code-grey                  : #E8E8E8;
 
 // Variables
 $main-animation-timing      : 0.35s;
@@ -20,7 +20,7 @@ $orange-link-darken         : 10%;
 $body-text-color            : $near-black;
 
 // Imports
-@import 'normalize-min';
+@import 'normalize';
 @import 'media-queries';
 @import 'mixins';
 
@@ -336,52 +336,52 @@ ul.posts {
 
 /* Code Syntax Highlighting */
 .main-content .highlighttable {
-    display: block;
-    width: 100%;
-    font-size: 85%;
-    margin: 0 0 1.75em 0.75em;
+    // display: block;
+    // width: 100%;
+    // font-size: 85%;
+    // margin: 0 0 1.75em 0.75em;
 
-    .linenos {
-        width: 20px;
-        vertical-align: top;
-        display: inline-block;
+    // .linenos {
+    //     width: 20px;
+    //     vertical-align: top;
+    //     display: inline-block;
 
-        code,
-        pre {
-            background-color: $code-grey;
-        }
+    //     code,
+    //     pre {
+    //         background-color: $code-grey;
+    //     }
 
-        code {
-            padding: 0 0.45em;
-            margin: 0.4em 0;
-            line-height: 1.35;
-        }
+    //     code {
+    //         padding: 0 0.45em;
+    //         margin: 0.4em 0;
+    //         line-height: 1.35;
+    //     }
 
-        pre {
-            border-radius: 0;
-            @include borderRadius( 3px, 0, 0, 3px );
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            border-right: 0;
-        }
-    }
+    //     pre {
+    //         border-radius: 0;
+    //         @include borderRadius( 3px, 0, 0, 3px );
+    //         width: 100%;
+    //         padding: 0;
+    //         margin: 0;
+    //         border-right: 0;
+    //     }
+    // }
 
-    .code {
-        width: 89%;
-        display: inline-block;
+    // .code {
+    //     width: 89%;
+    //     display: inline-block;
 
-        pre {
-            border-radius: 0;
-            @include borderRadius( 0, 3px, 3px, 0 );
-            padding: 0.35em 0.5em 0.525em;
-            margin: 0;
-        }
-    }
+    //     pre {
+    //         border-radius: 0;
+    //         @include borderRadius( 0, 3px, 3px, 0 );
+    //         padding: 0.35em 0.5em 0.525em;
+    //         margin: 0;
+    //     }
+    // }
 
-    tbody, tr {
-        display: block;
-    }
+    // tbody, tr {
+    //     display: block;
+    // }
 }
 
 /* Blog by Tags */
@@ -493,8 +493,23 @@ ul.posts {
     }
 }
 
+figure {
+
+    &.code-block {
+        margin: 1em 0.5em;
+    }
+
+    figure {
+        margin: 0;
+
+        code {
+            padding: 0.5em 0;
+        }
+    }
+}
+
 /* Final Imports */
-@import 'syntax-min';
+@import 'syntax';
 
 /* Media Queries */
 @include min-screen(480px)  {

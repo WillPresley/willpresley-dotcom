@@ -46,12 +46,14 @@ So finally, here is the script, my attempt at solving this issue for myself. Ins
 
 ### My Jekyll Build-Site Bash Script {#the-script}
 
-{% highlight bash linenos=table %}
-#!/bin/sh
+<figure class="lineno-container code-block">
+{% highlight bash linenos %}
+\#!/bin/sh
 cd '/cygdrive/c/<Path-to-Git-Repos>/'
 rsync -crvz -e "ssh -p 9999" --delete --exclude .git/ --exclude _psd/ --exclude _site/ --exclude "*.sublime-*" . user@site.tld:jekyll/
 ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache directory>/public_html'
 {% endhighlight %}
+</figure>
 
 ### What The Script Does {#explanation}
 

@@ -19,9 +19,10 @@ keep_files: [admin]
 timezone: America/New_York
 
 # Content Settings
-# markdown: redcarpet
 markdown: kramdown
-highlighter: pygments
+kramdown:
+  input: GFM
+highlighter: rouge
 permalink: /blog/:title/
 lsi: true
 
