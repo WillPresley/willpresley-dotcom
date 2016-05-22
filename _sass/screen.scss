@@ -12,7 +12,7 @@ $light-grey                 : #D0D0D0;
 $mid-grey                   : #898989;
 $dark-grey                  : #323232;
 $near-black                 : #222;
-$code-grey                  : #E8E8E8;
+$code-grey                  : #EEE;
 
 // Variables
 $main-animation-timing      : 0.35s;
@@ -313,7 +313,6 @@ ul.posts {
     }
 
     /* standard */
-    .main-content pre,
     .main-content code {
         border: 1px solid $light-grey;
         background-color: $code-grey;

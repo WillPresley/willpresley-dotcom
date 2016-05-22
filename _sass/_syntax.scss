@@ -1,11 +1,10 @@
-.lineno-container > figure > pre {
-    padding: 0px;
-}
-
 .highlight {
+
     pre.lineno {
+        padding-top: 0.45em;
         border: none;
-        opacity: 0.6;
+        opacity: 0.8;
+        width: 22px;
     }
 
     .lineno {
@@ -13,21 +12,26 @@
     }
 
     .gutter {
-        border-right: 1px solid #ccc;
+        width: 22px;
+        vertical-align: top;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
     }
 
     pre {
-        pre {
-            border: none;
-            margin-bottom: 0px;
-        }
+        border: 1px solid $light-grey;
+        background-color: $code-grey;
+        padding: 0.4em;
+        margin: 0 0.1em;
     }
 }
 
 /* github style pygments theme for jekyll */
 /* from https://github.com/aahan/pygments-github-style */
 
-.highlight pre, pre, .highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
 .highlight .c { color: #999988; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 .highlight .k { font-weight: bold; }
