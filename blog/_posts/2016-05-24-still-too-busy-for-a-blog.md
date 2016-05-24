@@ -48,11 +48,19 @@ Very early in December, we were lucky enough to be able to go to both Sleater-Ki
 
 ### January
 
+January was, unsurprisingly, a pretty cold and snowy month here in Athens. This led to some interesting trips and creations...
 
+<img src="/uploads/2016-05/yard-snowman.jpg" alt="Our front-yard snowman with his whiskey hat and stick-guitar." title="Our front-yard snowman with his whiskey hat and stick-guitar." />
+
+<img src="/uploads/2016-05/heather-waterfall.jpg" alt="It was actually about 60 degrees when we took these, it just really didn't look like it!" title="It was actually about 60 degrees when we took these, it just really didn't look like it!" />
 
 ### February
 
+February brought about more hiking! Later in the month, we went to the Sock-Hop at Rollerbowl Lanes which was definitely a new experience.
 
+<img src="/uploads/2016-05/heather-ridgeline.jpg" alt="Heather hiking a ridge in the Hocking Hills." title="Heather hiking a ridge in the Hocking Hills." />
+
+<a class="image-link" href="https://www.youtube.com/watch?v=TCU_ipJgYEM" target="_blank"><img src="/uploads/2016-05/sock-hop.jpg" alt="A crop from a Polaroid of our 'costumes' for the sock-hop." title="A crop from a Polaroid of our 'costumes' for the sock-hop." /></a>
 
 ## Spring
 
