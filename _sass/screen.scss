@@ -219,7 +219,8 @@ img {
 }
 
 /* Homepage */
-.home-more-link {
+.home-more-link,
+.archive-more-link {
     color: tint( $orange, 20% );
     font: 400 18px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
     font-weight: normal;
@@ -332,56 +333,6 @@ ul.posts {
     .main-content p code {
         line-height: 1.25;
     }
-
-/* Code Syntax Highlighting */
-.main-content .highlighttable {
-    // display: block;
-    // width: 100%;
-    // font-size: 85%;
-    // margin: 0 0 1.75em 0.75em;
-
-    // .linenos {
-    //     width: 20px;
-    //     vertical-align: top;
-    //     display: inline-block;
-
-    //     code,
-    //     pre {
-    //         background-color: $code-grey;
-    //     }
-
-    //     code {
-    //         padding: 0 0.45em;
-    //         margin: 0.4em 0;
-    //         line-height: 1.35;
-    //     }
-
-    //     pre {
-    //         border-radius: 0;
-    //         @include borderRadius( 3px, 0, 0, 3px );
-    //         width: 100%;
-    //         padding: 0;
-    //         margin: 0;
-    //         border-right: 0;
-    //     }
-    // }
-
-    // .code {
-    //     width: 89%;
-    //     display: inline-block;
-
-    //     pre {
-    //         border-radius: 0;
-    //         @include borderRadius( 0, 3px, 3px, 0 );
-    //         padding: 0.35em 0.5em 0.525em;
-    //         margin: 0;
-    //     }
-    // }
-
-    // tbody, tr {
-    //     display: block;
-    // }
-}
 
 /* Blog by Tags */
 .list-group-link-item {
@@ -609,7 +560,8 @@ figure {
         }
     }
 
-    .home-more-link {
+    .home-more-link,
+    .archive-more-link {
 
         &:hover {
             color: $orange;
