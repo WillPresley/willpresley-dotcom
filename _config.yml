@@ -15,7 +15,7 @@ source: /home/will/jekyll
 # destination: <HIDDEN IN BUILD SCRIPT>
 encoding: UTF-8
 exclude: [config.rb, README.md]
-keep_files: [google*.html]
+keep_files: [google1482399d71dc90a7.html]
 timezone: America/New_York
 
 # Content Settings
