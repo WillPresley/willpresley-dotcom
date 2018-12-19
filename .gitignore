@@ -46,4 +46,4 @@
 # Project files
 	*.sublime-project
 	*.sublime-workspace
-	*.code-workspace
+	#*.code-workspace # This is just a project path and (for us) SCSS settings
