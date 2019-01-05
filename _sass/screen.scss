@@ -1,8 +1,10 @@
-/*!
-** Project Name:    WillPresley.com
-** Author:          Will Presley
-** Description:     Full SASS for a Jekyll-powered static responsive site.
-*/
+/*
+ * Project Name: WillPresley.com
+ * Author: Will Presley
+ * Created: 2015/02/28 11:28:00
+ * Last modified: 2019/01/05 17:46:07
+ * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
+ */
 // Colors
 $offwhite                   : #F9F9F9;
 $silver                     : #bdc3c7;
@@ -30,7 +32,6 @@ $body-text-color            : $near-black;
     // Transition Prefixer:         @include transition($transition...)
     // Cross-Browser BG-Size:       @include cb-bg-size($width, $height)
     // Cross-Browser Border-Radius: @include borderRadius($size...)
-    // Cross-Browser Opacity:       @include cb-opacity($alpha_val)
     // BBG w Alpha & Fallback:      @include background-opacity($color, $opacity: 0.3)
     // Forces HW Accel:             @include enable-hw-acceleration
     // Fix Flicker:                 @include fix-flicker
@@ -606,7 +607,7 @@ figure {
                 a {
 
                     img {
-                        @include cb-opacity( 0.6 );
+                        opacity: 0.6;
                         transition: opacity, $main-animation-timing;
                     }
 
@@ -615,7 +616,7 @@ figure {
                         text-decoration: underline;
 
                         img {
-                            @include cb-opacity( 1.0 );
+                            opacity: 1.0;
                         }
                     }
                 }
