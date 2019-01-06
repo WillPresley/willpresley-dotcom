@@ -5,7 +5,7 @@ meta-description: "The personal site of Will Presley, professional web developer
 description: "The personal site of Will Presley, professional web developer, soccer player/fan, and hobbyist Android developer. Based in Athens, Ohio."
 location: "Athens, Ohio"
 baseurl: ""
-url: "http://willpresley.com"
+url: "https://willpresley.com"
 
 # RSS Feed Settings
 name: "WillPresley.com"

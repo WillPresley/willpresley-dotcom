@@ -4,13 +4,12 @@ published:    true
 date:         20150814
 short:        "Custom responsive Wordpress theme utilizing the Customizer API as well as custom plugins."
 title:        "Integrated Services for Behavioral Health"
-website:      http://www.integratedservice.org
 image-small:
-  url:        "/uploads/projects/integratedservice/integratedservice-small_1.jpg"
+  url:        "https://willpresley.com/uploads/projects/integratedservice/integratedservice-small_1.jpg"
   title:      "Integrated Services for Behavioral Health"
   alt:        "Integrated Services for Behavioral Health"
 image-large:
-  url:        "/uploads/projects/integratedservice/integratedservice-large_1.jpg"
+  url:        "https://willpresley.com/uploads/projects/integratedservice/integratedservice-large_1.jpg"
   title:      "Integrated Services for Behavioral Health"
   alt:        "Integrated Services for Behavioral Health"
   bordered:   true

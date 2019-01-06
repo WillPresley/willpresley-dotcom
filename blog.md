@@ -5,7 +5,7 @@ permalink: /blog/
 page-id: blog
 ---
 
-## Last 10 Posts <a class="archive-more-link" href="/blog/archive/">[more]</a>
+## Last 10 Posts <a class="archive-more-link" href="{{site.url}}/blog/archive/">[more]</a>
 <ul class="posts postlist-long">
     {% for post in site.posts limit:10 %}
         <li class="title-item"><span class="post-title"><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />

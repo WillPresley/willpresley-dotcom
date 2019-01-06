@@ -78,8 +78,8 @@ ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache 
 
 I have added the script to my Cygwin home directory, given it executable permissions, and created an alias for the command `bs` to run this: `bash ~/build-site.sh`. The results are fantastic, and exactly what I was looking for when I set out on this experiment. Only the absolute minimum number of files are sent to the remote server, and they are also compressed for even more speed.
 
-{:.img_center}
-<img class="img_no-expand" src="/uploads/2015-03/push-build-jekyll-site-results.png" alt="Results of the build." title="Results of the build." />
+{: .img_center}
+![Results of the build.]({{site.url}}/uploads/2015-03/push-build-jekyll-site-results.png "Results of the build."){: .img_no-expand}
 
 I would love to hear how I could improve this whole system, or how you've solved a similar problem for yourself, just head down to the comments!
 
@@ -87,4 +87,3 @@ I would love to hear how I could improve this whole system, or how you've solved
 
 * Nathan Grigg - [Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank"}
 * ThorneLabs - [Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank"}
-
