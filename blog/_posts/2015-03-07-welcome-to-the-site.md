@@ -8,7 +8,7 @@ tags: [meta]
 
 Welcome to the new and improved WillPresley.com!
 
-![Me in the office at EV in 2015]({{site.url}}/uploads/2015-09/me-in-the-office.jpg "Me in the office at EV in 2015")
+![Me in the office at EV in 2015]({{site.url}}/uploads/2015-09/me-in-the-office.jpg "Me in the office at EV in 2015"){: .fullwidth}
 
 I think that my name is plastered on the site enough, but I'm Will. I'm currently {{'now' | date: "%s" | minus : 620366400 | divided_by: 31536000}} years old and live in {{ site.location }}. I have long been obsessed with computers and technology, and have been making websites since I was 11 years old.
 
