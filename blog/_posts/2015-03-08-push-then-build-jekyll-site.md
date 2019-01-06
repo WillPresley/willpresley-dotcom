@@ -21,14 +21,14 @@ This entire workflow is probably too specific to be a huge help to anyone out th
 
 * Windows PC with Cygwin installed (and at least the ssh & rsync packages and their dependencies)
 * A working SSH key-based login with the remote server (or enter your password each time)
-* Server software, my preference right now is [nginx](http://nginx.org/en/){:target="_blank"}, but Apache is always a solid choice as well.
+* Server software, my preference right now is [nginx](http://nginx.org/en/){:target="_blank" rel="noreferrer"}, but Apache is always a solid choice as well.
 
 ## About My Setup {#about}
 
 My current setup and situation (for this site actually) for using Jekyll is this:
 
-* My site's source is kept in a [BitBucket repository](https://bitbucket.org/willpresley/willpresley-dotcom){:target="_blank"} that I push to and pull from on my main development machine, a **Windows 7 PC** at home. I have Cygwin installed and have a very solid Windows development workstation.
-* My server is hosted on a small VPS (shout-out to [MPServ/OrbitServers](https://clients.mpserv.net/cart.php?gid=25){:target="_blank"} for the amazing deal) running Debian 7 (Wheezy) and Nginx.
+* My site's source is kept in a [BitBucket repository](https://bitbucket.org/willpresley/willpresley-dotcom){:target="_blank" rel="noreferrer"} that I push to and pull from on my main development machine, a **Windows 7 PC** at home. I have Cygwin installed and have a very solid Windows development workstation.
+* My server is hosted on a small VPS (shout-out to [MPServ/OrbitServers](https://clients.mpserv.net/cart.php?gid=25){:target="_blank" rel="noreferrer"} for the amazing deal) running Debian 7 (Wheezy) and Nginx.
 * I came to find out that it is quite a bit easier to build with Jekyll using Linux/Unix or OS X than it is with Windows, and I am perfectly comfortable in the *nix environment.
 * My Jekyll assets are stored on the server at *user home*/jekyll, and at build time the generated site is put straight into my Nginx public site root (using the \-\-destination flag).
 * I got tired of using SFTP to move the files over that I had modified, then running the build command from a terminal, then checking for results.
@@ -57,7 +57,7 @@ ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache 
 
 1. Switch to your git directory with all site assets.
 2. Run RSYNC
-    * **With flags** (read more [here](http://linuxcommand.org/man_pages/rsync1.html){:target="_blank"}):
+    * **With flags** (read more [here](http://linuxcommand.org/man_pages/rsync1.html){:target="_blank" rel="noreferrer"}):
         - c : \-\-checksum (Use checksum instead of modified time/date to decide on file's to skip for transfer), *This is important due to how Jekyll's build system regenerates all site pages/posts.*
         - r : \-\-recursive, *Standard, recurses into subdirectories.*
         - v : \-\-verbose, *I like knowing what is going on with the transfer. For large sites, you'd probably want to remove this flag.*
@@ -85,5 +85,5 @@ I would love to hear how I could improve this whole system, or how you've solved
 
 ## More Reading
 
-* Nathan Grigg - [Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank"}
-* ThorneLabs - [Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank"}
+* Nathan Grigg - [Rsyncing Jekyll](http://nathangrigg.net/2012/04/rsyncing-jekyll/){:target="_blank" rel="noreferrer"}
+* ThorneLabs - [Commands Over SSH](http://thornelabs.net/2013/08/21/simple-ways-to-send-multiple-line-commands-over-ssh.html){:target="_blank" rel="noreferrer"}
