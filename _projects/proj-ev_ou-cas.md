@@ -4,13 +4,13 @@ published:    true
 date:         20150308
 short:        "A responsive, CommonSpot-powered site for Ohio University's largest college."
 title:        "Ohio University - College of Arts & Sciences"
-website:      http://www.ohio.edu/cas/
+website:      https://www.ohio.edu/cas/
 image-small:
-  url:        "/uploads/projects/ev_ou-cas/ev-ou-cas-small_1.jpg"
+  url:        "https://willpresley.com/uploads/projects/ev_ou-cas/ev-ou-cas-small_1.jpg"
   title:      "Ohio University - College of Arts & Sciences"
   alt:        "Ohio University - College of Arts & Sciences"
 image-large:
-  url:        "/uploads/projects/ev_ou-cas/ev-ou-cas-large_1.jpg"
+  url:        "https://willpresley.com/uploads/projects/ev_ou-cas/ev-ou-cas-large_1.jpg"
   title:      "Ohio University - College of Arts & Sciences"
   alt:        "Ohio University - College of Arts & Sciences"
   bordered:   true

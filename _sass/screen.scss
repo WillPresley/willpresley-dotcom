@@ -1,16 +1,19 @@
-/*!
-** Project Name:    WillPresley.com
-** Author:          Will Presley
-** Description:     Full SASS for a Jekyll-powered static responsive site.
-** Last modified: 2019/05/21 11:15:18
-*/
+/*
+ * Project Name: WillPresley.com
+ * Author: Will Presley
+ * Created: 2015/02/28 11:28:00
+ * Last modified: 2019/01/06 00:06:12
+ * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
+ */
 // Colors
 $offwhite                   : #F9F9F9;
 $silver                     : #bdc3c7;
-$orange                     : #e74c3c;
+// $orange                     : #e74c3c;
+$orange                     : #d43929;
 $blue                       : #2c3e50;
 $light-grey                 : #D0D0D0;
-$mid-grey                   : #898989;
+// $mid-grey                   : #898989;
+$mid-grey                   : #737373;
 $dark-grey                  : #323232;
 $near-black                 : #222;
 $code-grey                  : #EEE;
@@ -29,7 +32,6 @@ $body-text-color            : $near-black;
     // Transition Prefixer:         @include transition($transition...)
     // Cross-Browser BG-Size:       @include cb-bg-size($width, $height)
     // Cross-Browser Border-Radius: @include borderRadius($size...)
-    // Cross-Browser Opacity:       @include cb-opacity($alpha_val)
     // BBG w Alpha & Fallback:      @include background-opacity($color, $opacity: 0.3)
     // Forces HW Accel:             @include enable-hw-acceleration
     // Fix Flicker:                 @include fix-flicker
@@ -118,7 +120,7 @@ img {
 
 /* General Site */
 .site {
-    font-size: 100%;
+    font-size: 18px;
     text-align: left;
     width: 95%;
     margin: 0.5em auto;
@@ -214,7 +216,7 @@ img {
         }
 
     #disqus_thread {
-        max-width: 95%;
+        // max-width: 95%;
         margin: 0 1.5%;
     }
 }
@@ -242,11 +244,12 @@ ul.posts {
         &.title-item {
             padding-left: 1em;
             text-indent: -1em;
-            font-size: 135%;
+            font-size: 24px;
             margin-bottom: 0.25em;
 
             &:before {
                 content: "\00BB";
+                font-size: 32px;
             }
         }
 
@@ -259,7 +262,7 @@ ul.posts {
         }
 
         .post-meta {
-            font-size: 80%;
+            font-size: 20px;
             color: $mid-grey;
             display: inline-block;
             padding-top: 10px;
@@ -296,11 +299,23 @@ ul.posts {
 
     .image-link {
         display: inline-block;
+        line-height: 0.75;
     }
-}
 
-    .main-content ul,
-    .main-content ol {
+    .fullwidth {
+        width: 100%;
+
+        &img {
+            max-width: unset;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    ul,
+    ol {
         margin: 0.75em 0.5em;
         padding: 0 0 0 1em;
 
@@ -310,30 +325,34 @@ ul.posts {
         }
     }
 
-    .main-content li {
+    li {
         margin-bottom: 0.75em;
     }
 
-    /* standard */
-    .main-content code {
+    code {
         border: 1px solid $light-grey;
-        background-color: $code-grey;
-        padding: 0 0.4em;
-        margin: 0 0.1em;
-    }
-
-    .main-content code {
-        font-size: 95%;
+        // background-color: $code-grey;
+        // padding: 0 0.4em;
+        background-color: #272822;
+        color: #f8f8f2;
+        margin: 0 2px;
+        font-size: 16px;
+        line-height: 1.15;
         display: inline-block;
     }
 
-    .main-content pre code {
+    pre code {
         border: none;
     }
 
-    .main-content p code {
+    p code {
         line-height: 1.25;
     }
+
+    .highlighter-rouge {
+        padding: 0 5px;
+    }
+}
 
 /* Blog by Tags */
 .list-group-link-item {
@@ -605,7 +624,7 @@ figure {
                 a {
 
                     img {
-                        @include cb-opacity( 0.6 );
+                        opacity: 0.6;
                         transition: opacity, $main-animation-timing;
                     }
 
@@ -614,7 +633,7 @@ figure {
                         text-decoration: underline;
 
                         img {
-                            @include cb-opacity( 1.0 );
+                            opacity: 1.0;
                         }
                     }
                 }

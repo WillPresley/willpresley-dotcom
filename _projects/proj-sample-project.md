@@ -6,11 +6,11 @@ short:        "(short description)"
 title:        "(title)"
 website:      http://www.willpresley.com
 image-small:
-  url:        "/uploads/projects/sample/sample-small_1.png"
+  url:        "https://willpresley.com/uploads/projects/sample/sample-small_1.png"
   title:      "(title)"
   alt:        "(title)"
 image-large:
-  url:        "/uploads/projects/sample/sample-large_1.png"
+  url:        "https://willpresley.com/uploads/projects/sample/sample-large_1.png"
   title:      "(title)"
   alt:        "(title)"
   bordered:   false

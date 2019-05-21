@@ -14,12 +14,12 @@ meta-robots: "noodp, noydir"
         {% for project in items %}
         {% if project.published %}
         <li class="project-item">
-            <a class="project-image-link" href="{{ project.url }}">
+            <a class="project-image-link" href="{{site.url}}{{ project.url }}">
                 {% if project.image-small %}
                 <img src="{{ project.image-small.url }}" title="{{ project.image-small.title }}" alt="{{ project.image-small.alt }}" />
                 {% endif %}
             </a>
-            <p><strong><a href="{{ project.url }}">{{ project.title}}</a></strong></p>
+            <p><strong><a href="{{site.url}}{{ project.url }}">{{ project.title}}</a></strong></p>
             <p>{{ project.short }}</p>
         </li>
         {% endif %}

@@ -43,10 +43,10 @@ $prefixes: ( "-webkit-", "" );
 }
 
 // Cross-browser opacity mixin
-@mixin cb-opacity($alpha_val) {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha_val * 100})";
-    opacity: $alpha_val;
-}
+// @mixin cb-opacity($alpha_val) {
+//     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha_val * 100})";
+//     opacity: $alpha_val;
+// }
 
 // Background Alphas
 @mixin background-opacity($color, $opacity: 0.3) {
