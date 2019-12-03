@@ -6,6 +6,10 @@ description: "The personal site of Will Presley, professional web developer, soc
 location: "Athens, Ohio"
 baseurl: ""
 url: "https://willpresley.com"
+author:
+  name: "Will Presley"
+  url: "https://willpresley.com"
+  avatar: "https://gravatar.com/avatar/038f89bfe8b9a129453531a4235f8eea?size=512"
 
 # RSS Feed Settings
 name: "WillPresley.com"

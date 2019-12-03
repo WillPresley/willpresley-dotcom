@@ -8,9 +8,14 @@
     {% if page.meta-description %}<meta name="description" content="{{ page.meta-description }}">{% else %}<meta name="description" content="{{ site.meta-description }}">{% endif %}
     {% if page.meta-robots %}<meta name="robots" content="{{ page.meta-robots }}">{% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#2c3e50">
 
-    <link rel="icon" href="{{site.url}}/images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2c3e50">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Prefetch DNS for Google Webfonts -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -22,6 +27,9 @@
     <link rel="stylesheet" href="{{site.url}}/css/screen.css" type="text/css" media="screen, projection" />
 
     <!-- RSS Feed Information -->
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="//willpresley.com/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- JSON Feed Information -->
+    <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
 
     </head>
