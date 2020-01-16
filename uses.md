@@ -11,7 +11,8 @@ meta-robots: "noodp, noydir"
 
 After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things-i-use/){:target="_blank" rel="noreferrer"} about them, I decided to join the [growing number](https://uses.tech){:target="_blank" rel="noreferrer"} of folks who are sharing lists of _what they use_. Use the links below to jump to a specific section.
 
-[Hardware](#) | [Software](#) | [Websites & Tools](#)
+{:.text-center-desktop}
+**[Hardware](#hardware) \| [Software](#software) \| [Websites](#websites)**
 
 ### Hardware
 
@@ -92,6 +93,125 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * Keyboard: Gboard
 * Messages/SMS: Android Messages (with Android Messages Desktop)
 * Photos: Google Photos, Piktures
+* Password Manager: Bitwarden
 * Other Vital Apps: Greenify, Amazfit Tools, andOTP, Auto Dark Theme, Backdrops, CoSy for Facebook, Pushbullet (free), ScreenCam, Solid Explorer, Simple Scrobbler, Tasker, Twitch 2!, Wallpaper Changer, Wifi Analyzer
+
+</div>
+
+### Software
+
+<div markdown="1" class="uses-list-half">
+
+#### Productivity & Work
+
+* Email: Wavebox Pro
+* Chat: Slack
+* Creative: Adobe Creative Cloud + Inkscape/Gimp
+* Office: LibreOffice
+* File Manager: Total Commander
+* Remote Desktop: AnyDesk
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Other Windows Software I Use
+
+* VMWare Workstation
+* Tweeten
+* Calibre
+* ComicRack + ComicVine Tagger
+* mp3tag
+* Filebot + my own format strings
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Other Development Tools - Windows
+
+* Terminal: Windows Terminal
+    * Font: Fira Code
+    * Shells: WSL (Ubuntu), Powershell Core, CMD
+* Git GUI: Git-Fork
+* Package Manager: Chocolatey
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Other Development Tools - Linux
+
+* *soon*
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Code Editor: VS Code Insiders
+
+* Extensions:
+    * Settings Sync
+    * Alignment
+    * Auto Close Tag
+    * Auto Time Stamp
+    * Autoprefixer
+    * Beautify
+    * Bracket Pair Colorizer
+    * Can I Use
+    * Color Highlight
+    * CSS Peek
+    * JS & CSS Minifier
+    * Live Sass Compiler
+    * Live Server
+    * markdownlint
+    * PHP IntelliSense
+    * Prettier
+    * Python
+    * Remote - WSL
+    * Sass
+    * SCSS Everywhere
+    * Spell Right
+    * SVG
+    * SVG Viewer
+    * Trailing Spaces
+    * WooCommerce - Snippets
+    * Wordpress Snippets
+    * XML Tools
+* Color Theme: Monokai Dark Soda
+* File Icon Theme: Material Icon Theme
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Browser: Google Chrome
+
+* Extensions:
+    * uBlock Origin + Extra + Nano Defender
+    * AutoplayStopper
+    * Bitwarden
+    * Cluster
+    * ColorZilla
+    * Dark Reader
+    * DevTools Author
+    * Dimensions
+    * FluffBusting Purity
+    * GoogleGIFs
+    * Grammarly for Chrome
+    * Just Read
+    * Nimbus Screenshot
+    * Octo Mate
+    * Old Reddit Redirect
+    * Pop up blocker for Chrome - Poper
+    * Pushbullet
+    * Reddit Enhancement Suite
+    * Save to Pocket
+    * Smile Always
+    * Tampermonkey
+    * The Great Suspender
+    * Toolbox for Google Play Store
+    * Tracking Token Stripper
+    * View Image Info
 
 </div>
