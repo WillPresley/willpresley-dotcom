@@ -110,6 +110,9 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * Office: LibreOffice
 * File Manager: Total Commander
 * Remote Desktop: AnyDesk
+* PDF Reader: SumatraPDF
+* Lists & Deadlines: Trello
+* Remote Version Control: BitBucket
 
 </div>
 
@@ -117,12 +120,18 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Other Windows Software I Use
 
-* VMWare Workstation
+* Google Play Music Desktop Player
 * Tweeten
 * Calibre
 * ComicRack + ComicVine Tagger
 * mp3tag
 * Filebot + my own format strings
+* notepad2-mod
+* Notepad++
+* VMWare Workstation
+* dnGrep
+* screen2gif
+* 7-Zip
 
 </div>
 
@@ -135,6 +144,9 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
     * Shells: WSL (Ubuntu), Powershell Core, CMD
 * Git GUI: Git-Fork
 * Package Manager: Chocolatey
+* Image Compression: FileOptimizer
+* SFTP: WinSCP
+* Key Management: PUTTY
 
 </div>
 
