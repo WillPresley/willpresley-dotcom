@@ -150,34 +150,8 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Code Editor: VS Code Insiders
 
-* Extensions:
-    * Settings Sync
-    * Alignment
-    * Auto Close Tag
-    * Auto Time Stamp
-    * Autoprefixer
-    * Beautify
-    * Bracket Pair Colorizer
-    * Can I Use
-    * Color Highlight
-    * CSS Peek
-    * JS & CSS Minifier
-    * Live Sass Compiler
-    * Live Server
-    * markdownlint
-    * PHP IntelliSense
-    * Prettier
-    * Python
-    * Remote - WSL
-    * Sass
-    * SCSS Everywhere
-    * Spell Right
-    * SVG
-    * SVG Viewer
-    * Trailing Spaces
-    * WooCommerce - Snippets
-    * Wordpress Snippets
-    * XML Tools
+* **Extensions**: Settings Sync, Alignment, Auto Close Tag, Auto Time Stamp, Autoprefixer, Beautify, Bracket Pair Colorizer, Can I Use, Color Highlight, CSS Peek, JS & CSS Minifier, Live Sass Compiler, Live Server, markdownlint, PHP IntelliSense, Prettier, Python, Remote - WSL, Sass, SCSS Everywhere, Spell Right, SVG, SVG Viewer, Trailing Spaces, WooCommerce - Snippets, Wordpress Snippets, XML Tools
+* Font: Fira Code
 * Color Theme: Monokai Dark Soda
 * File Icon Theme: Material Icon Theme
 
@@ -187,31 +161,6 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Browser: Google Chrome
 
-* Extensions:
-    * uBlock Origin + Extra + Nano Defender
-    * AutoplayStopper
-    * Bitwarden
-    * Cluster
-    * ColorZilla
-    * Dark Reader
-    * DevTools Author
-    * Dimensions
-    * FluffBusting Purity
-    * GoogleGIFs
-    * Grammarly for Chrome
-    * Just Read
-    * Nimbus Screenshot
-    * Octo Mate
-    * Old Reddit Redirect
-    * Pop up blocker for Chrome - Poper
-    * Pushbullet
-    * Reddit Enhancement Suite
-    * Save to Pocket
-    * Smile Always
-    * Tampermonkey
-    * The Great Suspender
-    * Toolbox for Google Play Store
-    * Tracking Token Stripper
-    * View Image Info
+* **Extensions**: uBlock Origin + Extra + Nano Defender, AutoplayStopper, Bitwarden, Cluster, ColorZilla, Dark Reader, DevTools Author, Dimensions, FluffBusting Purity, GoogleGIFs, Grammarly for Chrome, Just Read, Nimbus Screenshot, Octo Mate, Old Reddit Redirect, Pop up blocker for Chrome - Poper, Pushbullet, Reddit Enhancement Suite, Save to Pocket, Smile Always, Tampermonkey, The Great Suspender, Toolbox for Google Play Store, Tracking Token Stripper, View Image Info
 
 </div>

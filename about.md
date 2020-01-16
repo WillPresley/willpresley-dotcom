@@ -28,4 +28,4 @@ In 2013 I became a professional web developer for **Electronic Vision**, a multi
 
 ## About This Site
 
-I plan on using this site to share all sorts of things: technical posts/articles, photos, personal blogs, my favorite projects I've worked on, and more. I plan on keeping things simple, and you won't really ever see this site get too flashy. See one of my other blog entries for more info on how I build and deploy this blog, and click on the image in the footer to learn more about _Jekyll_, the static-site building software that generates this website.
+I plan on using this site to share all sorts of things: technical posts/articles, photos, personal blogs, my favorite projects I've worked on, and more. I plan on keeping things simple, and you won't really ever see this site get too flashy. See [my blog entry](/blog/push-then-build-jekyll-site/) for more info on how I build and deploy this blog, and click on the image in the footer to learn more about _Jekyll_, the static-site building software that generates this website.
