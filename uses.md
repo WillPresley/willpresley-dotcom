@@ -112,7 +112,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * Remote Desktop: AnyDesk
 * PDF Reader: SumatraPDF
 * Lists & Deadlines: Trello
-* Remote Version Control: BitBucket
+* Screen Capture: screen2gif + ffmpeg
 
 </div>
 
@@ -127,10 +127,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * mp3tag
 * Filebot + my own format strings
 * notepad2-mod
-* Notepad++
-* VMWare Workstation
 * dnGrep
-* screen2gif
 * 7-Zip
 
 </div>
@@ -141,12 +138,14 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 * Terminal: Windows Terminal
     * Font: Fira Code
-    * Shells: WSL (Ubuntu), Powershell Core, CMD
+    * Shells: WSL (Ubuntu, Bash), Powershell Core, CMD
 * Git GUI: Git-Fork
 * Package Manager: Chocolatey
 * Image Compression: FileOptimizer
 * SFTP: WinSCP
 * Key Management: PUTTY
+* Virtualization: VMWare Workstation
+* Remote Version Control: BitBucket
 
 </div>
 
