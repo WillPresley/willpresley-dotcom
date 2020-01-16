@@ -25,7 +25,8 @@
 				"format": "compressed",
 				// "format": "compact",
 				// "format": "nested",
-				"extensionName": ".css",
+                // "extensionName": ".css",
+                "extensionName": ".min.css",
 				"savePath": "~/../css/"
 			}
 		],
