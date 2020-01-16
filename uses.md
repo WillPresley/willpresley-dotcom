@@ -9,7 +9,9 @@ meta-robots: "noodp, noydir"
 
 ### Inspiration
 
-After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things-i-use/){:target="_blank" rel="noreferrer"} about them, I decided to join the [growing number](https://uses.tech){:target="_blank" rel="noreferrer"} of folks who are sharing lists of _what they use_.
+After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things-i-use/){:target="_blank" rel="noreferrer"} about them, I decided to join the [growing number](https://uses.tech){:target="_blank" rel="noreferrer"} of folks who are sharing lists of _what they use_. Use the links below to jump to a specific section.
+
+[Hardware](#) | [Software](#) | [Websites & Tools](#)
 
 ### Hardware
 
@@ -62,5 +64,34 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * RAM: 8gb
 * Storage: 128gb SSD
 * OS: Lubuntu 19.04
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Home Media Server - Ambellina
+
+* Motherboard: [ASUS P8Z77-V LE](https://www.asus.com/Motherboards/P8Z77V_LE/){:target="_blank" rel="noreferrer"}
+* CPU: Intel Core i5 2400
+* RAM: 8gb DDR3 (Samsung 2x4gb)
+* GPU: [EVGA nVidia GeForce GTX 750 Ti](https://www.evga.com/products/specs/gpu.aspx?pn=70b14ba6-5853-4a65-aacf-cff61f466d82){:target="_blank" rel="noreferrer"}
+* Storage: 1x250gb SSD, 27.5tb of HDDs in two-way mirror Storage Space with 1x250gb SSD as write-cache
+* OS: Windows 10 Pro
+* Case: Some generic Rosewill thing
+
+</div>
+
+<div markdown="1" class="uses-list-half">
+
+#### Phone - Google Pixel 3 (128gb) - Verizon
+
+* Root Status: *Not*-rooted
+* Launcher: Nova Launcher Prime
+* Ad-Blocker: Blokada
+* Weather: Dark Sky
+* Keyboard: Gboard
+* Messages/SMS: Android Messages (with Android Messages Desktop)
+* Photos: Google Photos, Piktures
+* Other Vital Apps: Greenify, Amazfit Tools, andOTP, Auto Dark Theme, Backdrops, CoSy for Facebook, Pushbullet (free), ScreenCam, Solid Explorer, Simple Scrobbler, Tasker, Twitch 2!, Wallpaper Changer, Wifi Analyzer
 
 </div>

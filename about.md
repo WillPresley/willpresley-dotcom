@@ -23,9 +23,8 @@ During my last year of high school in Columbus, Ohio and into my first year of c
 
 In 2013 I became a professional web developer for **Electronic Vision**, a multimedia company in Athens with a long and rich history of being the most cutting-edge shop in the area. A large portion of my projects for EV were full web rebuilds for clients in one of a number of platforms including Wordpress, CommonSpot, Moodle, MantisBT, Drupal, and more. In 2016, Electronic Vision became [Red Tail Design Company](https://redtaildesign.com){:target="_blank" rel="noreferrer"}, which I had the fortune of helping start up and continue to help run today. We have refined our craft while expanding into woodworking, laser etching/cutting, and product development for sister company [Ohio is Home](https://ohioishome.com){:target="_blank" rel="noreferrer"}.
 
-My **home** development machine is running Windows 10 machine with an i5-4590, EVGA nVidia GeForce 1050 Ti SC, 16GB of RAM, and a dual monitor setup. I use Windows Subsystem for Linux (WSL) running Ubuntu 18.04 from the command line inside of [ConEmu](https://github.com/Maximus5/ConEmu){:target="_blank" rel="noreferrer"} as my terminal, and also use VMWare Workstation and VirtualBox to emulate a large number of other platforms when needed.
-
-My **work** development machine is also Windows 10, with an i5-4460, ASUS nVidia GeForce 640 GT, 16GB of RAM, and a triple monitor setup. I use Cygwin to emulate or replace a lot of *nix functions, but am slowly migrating over to using WSL at work as well. I keep it familiar with ConEmu as my terminal, and still use VMWare Workstation and VirtualBox to emulate other platforms when needed.
+{:.text-center-desktop}
+**[Check out my /uses](https://willpresley.com/uses){:.button} for mostly up-to-date information on the hardware, software, and tools that I use!**
 
 ## About This Site
 

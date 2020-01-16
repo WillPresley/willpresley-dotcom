@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/16 14:00:57
+ * Last modified: 2020/01/16 15:02:44
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -194,7 +194,10 @@ img {
         color: $mid-grey;
     }
 
-    .img_center {
+    .img-center,
+    .image-center,
+    .txt-center,
+    .text-center {
         text-align: center;
     }
 
@@ -317,9 +320,9 @@ ul.posts {
 
     ul,
     ol {
-        margin: 0.75em 0.5em;
-        padding: 0 0 0 1em;
-        // line-height: 1.25;
+        margin: 15px 10px;
+        padding: 0 0 0 15px;
+        line-height: 1.25;
 
         ul,
         ol {
@@ -328,7 +331,7 @@ ul.posts {
     }
 
     li {
-        // margin-bottom: 0.75em;
+        margin-bottom: 10px;
     }
 
     code {
@@ -571,6 +574,13 @@ figure {
             font-size: 115%;
         }
 
+        .img-center-desktop,
+        .image-center-desktop,
+        .txt-center-desktop,
+        .text-center-desktop {
+            text-align: center;
+        }
+
         #post-tags {
 
             a {
@@ -604,10 +614,10 @@ figure {
         }
     }
 
-    .main-content ul,
-    .main-content ol {
-        margin: 0.75em 2em 0.75em 0.5em;
-    }
+    // .main-content ul,
+    // .main-content ol {
+    //     margin: 0.75em 2em 0.75em 0.5em;
+    // }
 
     .site footer {
 
