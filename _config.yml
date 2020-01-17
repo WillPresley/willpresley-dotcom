@@ -45,6 +45,10 @@ collections:
     refname: proj
     output: true
 
+plugins:
+  - jekyll-target-blank
+  - jekyll-inline-svg
+
 # Sitemap Settings
 sitemap:
   exclude:
@@ -53,5 +57,5 @@ sitemap:
     - "/index.html"
     - "/blog.md"
 
-plugins:
-  - jekyll-target-blank
+svg:
+  optimize: true
