@@ -2,7 +2,7 @@
                 <h2>Tagged With</h2>
                 <p id="post-tags">
                 {% for tag in page.tags %}
-                    <a class="post" href="/blog/tag/{{tag}}">#{{tag}}</a>{% unless forloop.last %}, {% endunless %}
+                    <a class="post" href="/blog/tag/{{tag}}">{{ tag | capitalize_all }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
                 </p>
             </section>{% endif %}
