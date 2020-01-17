@@ -52,3 +52,6 @@ sitemap:
   include_posts:
     - "/index.html"
     - "/blog.md"
+
+plugins:
+  - jekyll-target-blank

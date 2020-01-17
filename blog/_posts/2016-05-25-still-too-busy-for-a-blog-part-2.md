@@ -3,7 +3,7 @@ layout: "post"
 title: "Still Too Busy for a Blog, Part 2"
 location: "Athens, Ohio"
 comments: true
-tags: [meta, life]
+tags: ["meta", "life"]
 ---
 
 Continued from [Part 1]({{site.url}}/blog/still-too-busy-for-a-blog-part-1/)..
