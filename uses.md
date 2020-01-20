@@ -5,6 +5,8 @@ permalink: "/uses/"
 page-id: uses
 meta-description: "A page with the hardware and software that I use, as seen on uses.tech"
 meta-robots: "noodp, noydir"
+comments: true
+date: 2020-01-20
 ---
 
 ### Inspiration

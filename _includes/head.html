@@ -21,10 +21,11 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
     <!-- Google Webfonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Istok+Web:400,700&display=swap' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap' rel='stylesheet' type='text/css'>
 
     <!-- Main (concatenated) CSS -->
     <link rel="stylesheet" href="{{site.url}}/css/screen.min.css?v={{ site.time | date:'%s' }}" type="text/css" media="screen, projection" />
+    {% if page.comments %}<link rel="stylesheet" href="{{site.url}}/css/isso.min.css?v={{ site.time | date:'%s' }}" type="text/css" media="screen, projection" />{% endif %}
 
     <!-- RSS Feed Information -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
