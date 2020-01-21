@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/20 16:42:21
+ * Last modified: 2020/01/21 12:26:53
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -52,7 +52,10 @@ body {
     line-height: 1;
     background-color: $offwhite;
     color: $body-text-color;
-    font: 400 16px/1.6 'Lora', Georgia, serif;
+    // font: 400 16px/1.6 'Lora', Georgia, serif;
+    font-family: $lora;
+    font-size: 16px;
+    line-height: 1.6;
     text-align: center;
 }
 
@@ -85,7 +88,9 @@ img {
     a {
         display: inline-block;
         color: $blue;
-        font: 400 52px/1 'Istok Web', Verdana, Helvetica, sans-serif;
+        font-family: $istok;
+        font-size: 52px;
+        line-height: 1;
         text-decoration: none;
         @include font-smoothing(on);
 
@@ -103,7 +108,11 @@ img {
     position: relative;
 
     a {
-        font: 400 16px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+        // font: 400 16px/1.2 'Istok-Web', Verdana, Helvetica, sans-serif;
+        font-family: $istok;
+        font-size: 16px;
+        line-height: 1.2;
+        font-family: $istok;
         text-decoration: none;
         border-bottom: 1px solid transparent;
 
@@ -211,7 +220,7 @@ img {
         }
     }
 
-    #related {}
+    // #related {}
 
         .related-posts {
 
@@ -240,7 +249,10 @@ img {
 .home-more-link,
 .archive-more-link {
     color: tint( $orange, 20% );
-    font: 400 18px/1.2 'Istok Web', Verdana, Helvetica, sans-serif;
+    // font: 400 18px/1.2 'Istok-Web', Verdana, Helvetica, sans-serif;
+    font-family: $istok;
+    font-size: 18px;
+    line-height: 1.2;
     font-weight: normal;
     vertical-align: middle;
     margin-left: 1em;

@@ -1,14 +1,15 @@
-/*!
+/*
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/20 16:10:22
+ * Last modified: 2020/01/21 12:46:45
  * Description: Typography SCSS for a Jekyll-powered static responsive site.
  */
 
- @font-face {
+@font-face {
     font-family: 'Lora';
-    src: url('../fonts/lora-regular-webfont.woff2') format('woff2'),
+    src: local('Ã¢ËœÂº'),
+         url('../fonts/lora-regular-webfont.woff2') format('woff2'),
          url('../fonts/lora-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -16,39 +17,59 @@
 
     @font-face {
         font-family: 'Lora';
-        src: url('../fonts/lora-bold-webfont.eot');
         src: local('Ã¢ËœÂº'),
-            url('../fonts/lora-bold-webfont.eot?#iefix') format('embedded-opentype'),
-            url('../fonts/lora-bold-webfont.woff2') format('woff2'),
-            url('../fonts/lora-bold-webfont.woff') format('woff'),
-            url('../fonts/lora-bold-webfont.ttf') format('truetype'),
-            url('../fonts/lora-bold-webfont.svg#open_sansregular') format('svg');
+             url('../fonts/lora-bold-webfont.woff2') format('woff2'),
+             url('../fonts/lora-bold-webfont.woff') format('woff');
         font-weight: 700;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'Lora';
-        src: url('../fonts/lora-italic-webfont.eot');
         src: local('Ã¢ËœÂº'),
-            url('../fonts/lora-italic-webfont.eot?#iefix') format('embedded-opentype'),
-            url('../fonts/lora-italic-webfont.woff2') format('woff2'),
-            url('../fonts/lora-italic-webfont.woff') format('woff'),
-            url('../fonts/lora-italic-webfont.ttf') format('truetype'),
-            url('../fonts/lora-italic-webfont.svg#open_sansregular') format('svg');
+             url('../fonts/lora-italic-webfont.woff2') format('woff2'),
+             url('../fonts/lora-italic-webfont.woff') format('woff');
         font-weight: normal;
         font-style: italic;
     }
 
     @font-face {
         font-family: 'Lora';
-        src: url('../fonts/lora-bolditalic-webfont.eot');
         src: local('Ã¢ËœÂº'),
-            url('../fonts/lora-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-            url('../fonts/lora-bolditalic-webfont.woff2') format('woff2'),
-            url('../fonts/lora-bolditalic-webfont.woff') format('woff'),
-            url('../fonts/lora-bolditalic-webfont.ttf') format('truetype'),
-            url('../fonts/lora-bolditalic-webfont.svg#open_sansregular') format('svg');
+             url('../fonts/lora-bolditalic-webfont.woff2') format('woff2'),
+             url('../fonts/lora-bolditalic-webfont.woff') format('woff');
         font-weight: 700;
         font-style: italic;
     }
+
+@font-face {
+    font-family: 'Istok-Web';
+    src: local('Ã¢ËœÂº'),
+         url('../fonts/istokweb-regular-webfont.woff2') format('woff2'),
+         url('../fonts/istokweb-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    @font-face {
+        font-family: 'Istok-Web';
+        src: local('Ã¢ËœÂº'),
+             url('../fonts/istokweb-bold-webfont.woff2') format('woff2'),
+             url('../fonts/istokweb-bold-webfont.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+
+// font stacks
+$system-fonts-sans-serif:   -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$system-fonts-serif:        "Athelas","Cambria",Georgia,Times,"Times New Roman",serif;
+
+$lora:                      'Lora', $system-fonts-serif;
+$istok:                     'Istok-Web', $system-fonts-sans-serif;
+
+$sans-serif:                $istok;
+$serif:                     $lora;
+
+$body-font:                 $serif;
+$header-font:               $sans-serif;
