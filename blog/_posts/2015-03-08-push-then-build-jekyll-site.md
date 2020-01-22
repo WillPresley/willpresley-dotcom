@@ -13,8 +13,8 @@ This entire workflow is probably too specific to be a huge help to anyone out th
 * [Prerequisites](#prerequisites)
 * [About My Setup](#about)
 * [How I Streamlined My Workflow](#streamline)
-    - [My Jekyll Build-Site Bash Script](#the-script)
-    - [What the Script Does](#explanation)
+    * [My Jekyll Build-Site Bash Script](#the-script)
+    * [What the Script Does](#explanation)
 * [The Results](#results)
 
 ## Prerequisites
@@ -58,13 +58,13 @@ ssh -p 9999 user@site.tld 'cd jekyll/; jekyll build --destination <nginx/Apache 
 1. Switch to your git directory with all site assets.
 2. Run RSYNC
     * **With flags** (read more [here](http://linuxcommand.org/man_pages/rsync1.html)):
-        - c : \-\-checksum (Use checksum instead of modified time/date to decide on file's to skip for transfer), *This is important due to how Jekyll's build system regenerates all site pages/posts.*
-        - r : \-\-recursive, *Standard, recurses into subdirectories.*
-        - v : \-\-verbose, *I like knowing what is going on with the transfer. For large sites, you'd probably want to remove this flag.*
-        - z : \-\-compress (Compress file data during transfer), *Great option to send compressed data, saving time/bandwidth.*
-        - e : Specify remote shell. *Use this option to specify a port for the rsync to take place on (same as your SSH port, which you've hopefully changed from the default of 22).*
-        - \-\-delete : Delete files from the remote server that don't exist on the local machine. *There are a lot of other options for this, see the man page link above.*
-        - \-\-exclude : Exclude files or directories. *See the man page link for more options. If you have a lot, you can use a separate file, I only have these few.*
+        * c : \-\-checksum (Use checksum instead of modified time/date to decide on file's to skip for transfer), *This is important due to how Jekyll's build system regenerates all site pages/posts.*
+        * r : \-\-recursive, *Standard, recurses into subdirectories.*
+        * v : \-\-verbose, *I like knowing what is going on with the transfer. For large sites, you'd probably want to remove this flag.*
+        * z : \-\-compress (Compress file data during transfer), *Great option to send compressed data, saving time/bandwidth.*
+        * e : Specify remote shell. *Use this option to specify a port for the rsync to take place on (same as your SSH port, which you've hopefully changed from the default of 22).*
+        * \-\-delete : Delete files from the remote server that don't exist on the local machine. *There are a lot of other options for this, see the man page link above.*
+        * \-\-exclude : Exclude files or directories. *See the man page link for more options. If you have a lot, you can use a separate file, I only have these few.*
     * **With the "." dot**: The first command should have the script in the proper git repository that you want to sync, so nothing else needed here except a period/dot.
     * **user@site.tld**: Replace with your SSH username and IP/hostname/domain.
     * **:jekyll/**: This is the remote location of your <u>pre-build</u> Jekyll assets. In my case it is *\<user home>/jekyll*, so this part is simple. Be sure you include the colon at the beginning!
