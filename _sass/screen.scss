@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/21 14:21:42
+ * Last modified: 2020/01/23 13:54:43
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -751,6 +751,19 @@ figure {
         //         }
         //     // }
         // }
+    }
+
+    .photo-half {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+
+        &.remove-margin {
+
+            p {
+                margin: 0;
+            }
+        }
     }
 }
 
