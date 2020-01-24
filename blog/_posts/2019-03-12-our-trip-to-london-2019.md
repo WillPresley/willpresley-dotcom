@@ -198,18 +198,6 @@ Click/tap on a photo to view it full-size.
 
 <div markdown="1" class="photo-half remove-margin">
 
-[![London Trip 2019]({{site.url}}/uploads/2019-03/chelsea/thumbs/london-trip-2019-chelsea_014_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_014.jpg){: target="_blank" .image-link .fullwidth}
-
-</div>
-
-<div markdown="1" class="photo-half remove-margin">
-
-[![London Trip 2019]({{site.url}}/uploads/2019-03/chelsea/thumbs/london-trip-2019-chelsea_015_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_015.jpg){: target="_blank" .image-link .fullwidth}
-
-</div>
-
-<div markdown="1" class="photo-half remove-margin">
-
 [![London Trip 2019]({{site.url}}/uploads/2019-03/chelsea/thumbs/london-trip-2019-chelsea_016_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_016.jpg){: target="_blank" .image-link .fullwidth}
 
 </div>
@@ -226,4 +214,16 @@ Click/tap on a photo to view it full-size.
 
 </div>
 
-[![Meeting Paul Canoville and Pat Nevin!]({{site.url}}/uploads/2019-03/london-trip-2019-chelsea_019.jpg "Meeting Paul Canoville and Pat Nevin!")]({{site.url}}/uploads/2019-03/london-trip-2019-chelsea_019.jpg){: target="_blank" .image-link .fullwidth}
+<div markdown="1" class="photo-half remove-margin">
+
+[![London Trip 2019]({{site.url}}/uploads/2019-03/chelsea/thumbs/london-trip-2019-chelsea_014_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_014.jpg){: target="_blank" .image-link .fullwidth}
+
+</div>
+
+<div markdown="1" class="photo-half remove-margin">
+
+[![London Trip 2019]({{site.url}}/uploads/2019-03/chelsea/thumbs/london-trip-2019-chelsea_015_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_015.jpg){: target="_blank" .image-link .fullwidth}
+
+</div>
+
+[![Meeting Paul Canoville and Pat Nevin!]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_019.jpg "Meeting Paul Canoville and Pat Nevin!")]({{site.url}}/uploads/2019-03/chelsea/london-trip-2019-chelsea_019.jpg){: target="_blank" .image-link .fullwidth}
