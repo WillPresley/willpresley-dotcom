@@ -20,15 +20,19 @@ Click/tap on a photo to view it full-size.
 
 ### Sight Seeing
 
-<div markdown="1" class="photo-half remove-margin">
+<div markdown="1" class="photo-half remove-top-margin with-caption">
 
 [![London Trip 2019]({{site.url}}/uploads/2019-03/thumbs/london-trip-2019_001_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/london-trip-2019_001.jpg){: target="_blank" .image-link .fullwidth}
 
+The first pub we stopped to wasn't even English, it was Octoberfest on Fulham Road.
+
 </div>
 
-<div markdown="1" class="photo-half remove-margin">
+<div markdown="1" class="photo-half remove-top-margin with-caption">
 
 [![London Trip 2019]({{site.url}}/uploads/2019-03/thumbs/london-trip-2019_002_thumb.jpg "London Trip 2019")]({{site.url}}/uploads/2019-03/london-trip-2019_002.jpg){: target="_blank" .image-link .fullwidth}
+
+Piccadilly Circus lived up to its reputation, and was easily the most packed place we were the entire trip.
 
 </div>
 
