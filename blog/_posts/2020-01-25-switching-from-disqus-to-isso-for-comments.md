@@ -30,6 +30,8 @@ The more I looked into Isso, and based on some of the glowing recommendations ab
 * **Free** - I have had exactly [*one* comment](https://willpresley.com/blog/push-then-build-jekyll-site/#isso-thread) on this site in its five years of existence, so paying any amount to provide comments was quickly deemed not worth it.
 * **Open Source** - [https://github.com/posativ/isso/](https://github.com/posativ/isso/)
 * **Under active, quality development** - [https://github.com/posativ/isso/commits/master](https://github.com/posativ/isso/commits/master)
+* **Lightweight & Fast** -
+* **Respect Privacy** - Preferably while still allowing anonymous commenting.
 * **Ability to moderate comments** - Some folks knocked Isso for its lack of an admin panel/moderation queue early in its life, but it has one now, and it works well.
 * **Migration** - Very easy to [import comments](https://posativ.org/isso/docs/quickstart/#migration) (even just one!) from a [Disqus export](https://help.disqus.com/en/articles/1717164-comments-export).
 

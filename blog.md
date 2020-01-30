@@ -3,6 +3,7 @@ layout: page
 title: Blog
 permalink: /blog/
 page-id: blog
+add-counter: true
 ---
 
 ## Last 10 Posts <a class="archive-more-link" href="{{site.url}}/blog/archive/">[more]</a>

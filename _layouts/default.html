@@ -20,7 +20,9 @@
             gtag('config', 'UA-60499701-1');
         </script>
 
+        {% if page.comments != true and page.add-counter == true %}
         <!-- Isso Comment Count -->
-        <script data-isso="https://comments.willpresley.com/" src="https://comments.willpresley.com/js/count.min.js"></script>
+        <script async data-isso="https://comments.willpresley.com/" src="https://comments.willpresley.com/js/count.min.js"></script>
+        {% endif %}
     </body>
 </html>
