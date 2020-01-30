@@ -15,7 +15,8 @@
                     </div>
                 </div>
                 <div class="credits">
-                    <p>&copy; {{ site.time | date: '%Y' }} <a href="{{site.url}}/index.html" title="Return to Homepage.">Will Presley</a><br />
-                    Made with &hearts; & <a href="http://jekyllrb.com/" title="Jekyll" target="_blank" rel="noreferrer">{% svg /images/jekyll-logo-red-black.svg height=36 %}</a> in Athens, Ohio</p>
+                    <p class="credit-links">Dark / Light <strong>|</strong> <a title="RSS Feed: {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a> / <a title="JSON Feed: {{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" target="_blank">JSON</a></p>
+                    <p>&copy; {{ site.time | date: '%Y' }} <a href="{{site.url}}/index.html" title="Return to Homepage.">{{ site.author.name }}</a><br />
+                    Made with &hearts; & <a href="http://jekyllrb.com/" title="Jekyll" target="_blank" rel="noreferrer">{% svg /images/jekyll-logo-red-black.svg height=36 %}</a> in {{ site.location }}</p>
                 </div>
             </footer>

@@ -17,7 +17,9 @@ Not really, but I have been genuinely awful about keeping up this blog, but a pl
 
 ### Nelsonville Music Festival 2016
 
-[![Nelsonville Music Festival 2016]({{site.url}}/uploads/2016-12/nmf-2016.jpg "Nelsonville Music Festival 2016")]({{site.url}}/uploads/2016-12/nmf-2016.jpg){: target="_blank" .image-link .fullwidth}
+[![Water Witches at NMF 2016]({{site.url}}/uploads/2016-12/nmf-2016.jpg "Water Witches at NMF 2016")]({{site.url}}/uploads/2016-12/nmf-2016.jpg){: target="_blank" .image-link .fullwidth}
+
+Water Witches at NMF 2016
 
 ### Bonnaroo 2016
 
