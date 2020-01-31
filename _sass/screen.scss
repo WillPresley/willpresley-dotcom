@@ -2,29 +2,12 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/30 12:02:14
+ * Last modified: 2020/01/31 15:00:12
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
-// Colors
-$offwhite                   : #F9F9F9;
-$silver                     : #bdc3c7;
-// $orange                     : #e74c3c;
-$orange                     : #d43929; //https://croncolor.com/color-tool?color=d43929
-$blue                       : #2c3e50;
-$light-grey                 : #D0D0D0;
-// $mid-grey                   : #898989;
-$mid-grey                   : #737373;
-$dark-grey                  : #323232;
-$near-black                 : #222;
-$code-grey                  : #EEE;
-
-// Variables
-$main-animation-timing      : 0.25s;
-$orange-link-darken         : 10%;
-$body-text-color            : $near-black;
-
 // Imports
+@import 'variables';
 @import 'normalize';
 @import 'media-queries';
 @import 'mixins';
@@ -51,6 +34,7 @@ html {
 body {
     line-height: 1;
     background-color: $offwhite;
+    // background-color: $white;
     color: $body-text-color;
     // font: 400 16px/1.6 'Lora', Georgia, serif;
     font-family: $lora;
@@ -493,6 +477,21 @@ ul.posts {
         display: inline-block;
         width: 49%;
         text-align: right;
+    }
+
+    .color-scheme-toggles input[type=radio] {
+        opacity: 0;
+        position: absolute;
+
+        +label {
+            font-size: .833rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1.25rem;
+            cursor: pointer;
+            background-color: #fff;
+        }
     }
 
     .credits {

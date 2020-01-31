@@ -1,0 +1,44 @@
+/*
+ * Project Name: WillPresley.com Variables
+ * Author: Will Presley
+ * Created: 2020/01/20 11:28:00
+ * Last modified: 2020/01/31 15:13:24
+ * Description: SCSS variables
+ */
+
+// Standard colors (immutable)
+$white                      : #fff;
+$black                      : #000;
+
+
+// Colors
+$offwhite                   : #F9F9F9;
+$silver                     : #bdc3c7;
+
+
+// $orange                     : #e74c3c; // Original orange, far too light
+// $orange                  : #a62c1c; // Fully accessible 7:1 version of orange
+$orange                     : #d43929; // https://croncolor.com/color-tool?color=d43929
+    $orange-light           : #ea9c94;
+    $orange-dark            : #aa2e21;
+
+
+$blue                       : #2c3e50;
+
+
+$light-grey                 : #D0D0D0;
+// $mid-grey                   : #898989;
+$mid-grey                   : #737373;
+$dark-grey                  : #323232;
+$near-black                 : #222;
+$code-grey                  : #EEE;
+
+
+// DARK THEME COLORS
+
+
+
+// Variables
+$main-animation-timing      : 0.25s;
+$orange-link-darken         : 10%;
+$body-text-color            : $near-black;

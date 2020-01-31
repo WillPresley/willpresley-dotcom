@@ -1,19 +1,22 @@
+$gutter-size: 32px;
+
 .highlight {
 
     .gutter,
     .rouge-gutter {
-        width: 22px;
+        width: $gutter-size;
         vertical-align: top;
         border-right: 1px solid rgba(white, 0.55);
         opacity: 0.55;
     }
 
     pre.lineno {
-        padding-top: 6px;
+        padding-top: 7px;
         // border: none;
         // opacity: 0.7;
         // color: $mid-grey;
-        width: 22px;
+        width: $gutter-size;
+        text-align: right;
     }
 
     .lineno {

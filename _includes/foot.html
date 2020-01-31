@@ -15,7 +15,12 @@
                     </div>
                 </div>
                 <div class="credits">
-                    <p class="credit-links">Dark / Light <strong>|</strong> <a title="RSS Feed: {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a> / <a title="JSON Feed: {{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" target="_blank">JSON</a></p>
+                    <div class="color-scheme-toggles" role="group" title="select a color scheme">
+                        <input data-color-theme-toggle type="radio" name="scheme" id="dark" value="dark" aria-label="dark color scheme"> <label for="dark">dark</label>
+                        <input data-color-theme-toggle type="radio" name="scheme" id="system" value="system" aria-label="system color scheme" checked="system"> <label for="system">system</label>
+                        <input data-color-theme-toggle type="radio" name="scheme" id="light" value="light" aria-label="light color scheme"> <label for="light">light</label>
+                    </div>
+                    <p class="credit-links"><a title="RSS Feed: {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a> / <a title="JSON Feed: {{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" target="_blank">JSON</a></p>
                     <p>&copy; {{ site.time | date: '%Y' }} <a href="{{site.url}}/index.html" title="Return to Homepage.">{{ site.author.name }}</a><br />
                     Made with &hearts; & <a href="http://jekyllrb.com/" title="Jekyll" target="_blank" rel="noreferrer">{% svg /images/jekyll-logo-red-black.svg height=36 %}</a> in {{ site.location }}</p>
                 </div>

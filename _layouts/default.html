@@ -1,28 +1,32 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
     {% include head.html %}
+
     <body>
         <div class="site">
             {% include nav.html %}
             {{ content }}
             {% include foot.html %}
         </div>
-
-        <!-- Moderizr Custom Build -->
-        <script async src="{{site.url}}/js/modernizr-custom.min.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60499701-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-60499701-1');
-        </script>
-
-        {% if page.comments != true and page.add-counter == true %}
-        <!-- Isso Comment Count -->
-        <script async data-isso="https://comments.willpresley.com/" src="https://comments.willpresley.com/js/count.min.js"></script>
-        {% endif %}
     </body>
+
+    <!-- Theme Switch -->
+    <script>const themeSwitches=document.querySelectorAll("[data-color-theme-toggle]");function removeColorThemeLocalStorage(){localStorage.removeItem("color-theme")}function saveColorTheme(colorTheme){"system"!==colorTheme?localStorage.setItem("color-theme",colorTheme):removeColorThemeLocalStorage()}function applyColorTheme(){const localStorageColorTheme=localStorage.getItem("color-theme"),colorTheme=localStorageColorTheme||null;colorTheme&&document.documentElement.setAttribute("data-color-theme",colorTheme)}function themeSwitchHandler(){themeSwitches.forEach(themeSwitch=>{const el=themeSwitch;el.value===localStorage.getItem("color-theme")&&(el.checked=!0),el.addEventListener("change",()=>{"system"!==el.value?(saveColorTheme(el.value),applyColorTheme(el.value)):(removeColorThemeLocalStorage(),document.documentElement.removeAttribute("data-color-theme"))})}),applyColorTheme()}document.addEventListener("DOMContentLoaded",()=>{themeSwitchHandler(),applyColorTheme()});</script>
+
+    <!-- Moderizr Custom Build -->
+    <script async src="{{site.url}}/js/modernizr-custom.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60499701-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-60499701-1');
+    </script>
+
+    {% if page.comments != true and page.add-counter == true %}
+    <!-- Isso Comment Count -->
+    <script async data-isso="https://comments.willpresley.com/" src="https://comments.willpresley.com/js/count.min.js"></script>
+    {% endif %}
 </html>
