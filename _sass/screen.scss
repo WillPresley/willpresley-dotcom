@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/02/02 23:21:17
+ * Last modified: 2020/02/02 23:48:33
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -890,13 +890,9 @@ figure {
     }
 }
 
-// html[data-theme='dark'] {
 body#dark {
-
-    // body {
-        background-color: $dark-theme-background;
-        color: $dark-theme-body-text;
-    // }
+    background-color: $dark-theme-background;
+    color: $dark-theme-body-text;
 
     a {
         color: $dark-theme-green;
@@ -956,16 +952,6 @@ body#dark {
 
     @include min-screen(768px)  {
 
-        // .title {
-
-        //     a {
-
-        //         &:hover {
-        //             color: lighten( $dark-theme-teal, 10% );
-        //         }
-        //     }
-        // }
-
         .horiz-nav {
 
             a {
@@ -978,96 +964,153 @@ body#dark {
     }
 }
 
-// @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 
-//     body {
-//         background-color: $dark-theme-background;
-//         color: $dark-theme-light-gray;
-//     }
+    body {
+        background-color: $dark-theme-background;
+        color: $dark-theme-body-text;
 
-//     .title {
+        a {
+            color: $dark-theme-green;
 
-//         a {
-//             color: $dark-theme-teal;
+            &:hover, &:active, &:focus {
+                color: lighten( $dark-theme-green, 10% );
+            }
+        }
 
-//             strong {
-//                 color: $dark-theme-light-gray;
-//             }
-//         }
-//     }
+        .title {
 
-//     .site {
+            a {
+                color: $dark-theme-teal;
 
-//         h1, h2, h3, h4, h5, h6 {
-//             color: $dark-theme-teal;
-//         }
+                strong {
+                    color: $dark-theme-light-gray;
+                }
+            }
+        }
 
-//         h3 {
-//             color: $dark-theme-light-gray;
-//         }
+        .site {
 
-//         footer {
-//             color: $dark-theme-light-gray;
-//         }
-//     }
+            h1, h2, h3, h4, h5, h6 {
+                color: $dark-theme-teal;
+            }
 
-//     @include min-screen(768px)  {
+            h3 {
+                color: $dark-theme-light-gray;
+            }
 
-//         .title {
+            footer {
+                color: $dark-theme-light-gray;
 
-//             a {
+                .credits {
+                    color: darken( $dark-theme-body-text, 10% );
 
-//                 &:hover {
-//                     color: lighten( $dark-theme-teal, 10% );
-//                 }
-//             }
-//         }
-//     }
-// }
+                    p a svg {
+                        filter: invert(1);
+                    }
+                }
+            }
 
-// html[data-color-theme='light'] {
+            .meta {
+                color: darken( $dark-theme-body-text, 10% );
+            }
+        }
 
-//     body {
-//         background-color: $offwhite;
-//         color: $body-text-color;
-//     }
+        ul.posts {
 
-//     .title {
+            li {
 
-//         a {
-//             color: $blue;
+                .post-meta {
+                    color: darken( $dark-theme-body-text, 10% );
+                }
+            }
+        }
 
-//             strong {
-//                 color: $orange;
-//             }
-//         }
-//     }
+        @include min-screen(768px)  {
 
-//     .site {
+            .horiz-nav {
 
-//         h1, h2, h3, h4, h5, h6 {
-//             color: $blue;
-//         }
+                a {
 
-//         h3 {
-//             color: $orange;
-//         }
+                    &:hover {
+                        border-bottom: 1px solid darken( $dark-theme-green, $orange-link-darken );
+                    }
+                }
+            }
+        }
+    }
+}
 
-//         footer {
-//             color: $body-text-color;
-//         }
-//     }
+body#light {
+    background-color: $offwhite;
+    color: $body-text-color;
 
-//     @include min-screen(768px)  {
+    a {
+        color: $orange;
 
-//         .title {
+        &:hover, &:active, &:focus {
+            color: darken( $orange, $orange-link-darken );
+        }
+    }
 
-//             a {
+    .title {
 
-//                 &:hover {
-//                     color: lighten( $blue, 10% );
-//                 }
-//             }
-//         }
-//     }
-// }
+        a {
+            color: $blue;
+
+            strong {
+                color: $orange;
+            }
+        }
+    }
+
+    .site {
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $blue;
+        }
+
+        h3 {
+            color: $orange;
+        }
+
+        footer {
+            color: $mid-grey;
+
+            .credits {
+                color: $mid-grey;
+
+                p a svg {
+                    filter: invert(0);
+                }
+            }
+        }
+
+        .meta {
+            color: $mid-grey;
+        }
+    }
+
+    ul.posts {
+
+        li {
+
+            .post-meta {
+                color: $mid-grey;
+            }
+        }
+    }
+
+    @include min-screen(768px)  {
+
+        .horiz-nav {
+
+            a {
+
+                &:hover {
+                    border-bottom: 1px solid darken( $orange, $orange-link-darken );
+                }
+            }
+        }
+    }
+}

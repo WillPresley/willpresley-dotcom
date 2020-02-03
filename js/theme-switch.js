@@ -14,7 +14,7 @@
     }
     function theme(query){
         const userOption=localStorage.getItem('t');
-        document.body.id=userOption===null?(query.matches?'dark':''):(userOption==='d'?'dark':'');
+        document.body.id=userOption===null?(query.matches?'dark':'light'):(userOption==='d'?'dark':'');
     }
     mql.addListener(theme);
     theme(mql);
