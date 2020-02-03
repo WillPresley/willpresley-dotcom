@@ -8,8 +8,10 @@ tags: [cygwin, jekyll]
 
 This entire workflow is probably too specific to be a huge help to anyone out there. Because the whole thing took me a little while to put together for myself, I thought maybe someone out there had a similar setup to mine, so I wanted to share in case it could help.
 
+{:.hide-from-rss}
 ## Jump Ahead
 
+{:.hide-from-rss}
 * [Prerequisites](#prerequisites)
 * [About My Setup](#about)
 * [How I Streamlined My Workflow](#streamline)

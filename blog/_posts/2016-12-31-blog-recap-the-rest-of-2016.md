@@ -10,7 +10,7 @@ tags: ["meta", "life"]
 
 Not really, but I have been genuinely awful about keeping up this blog, but a plan of mine for 2020 is to fix that! I felt really weird just jump-starting after nearly 5 years into new stuff, so there will be a few yearly recaps (that are mainly comprised of images) first! They will get rational dates instead of all being January 2020.
 
-{:.text-center}
+{:.text-center .hide-from-rss}
 **[June](#june) \| [July](#july) \| [August](#august) \| [September](#september) \| [October](#october) \| [November](#november) \| [December](#december)**
 
 ## June
