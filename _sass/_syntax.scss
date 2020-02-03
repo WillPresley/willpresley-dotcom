@@ -23,6 +23,10 @@ $gutter-size: 32px;
         @include unselectable();
     }
 
+    code {
+        transition: background $main-animation-timing $main-animation-function;
+    }
+
     table {
         table-layout: fixed;
         width: 100%;
