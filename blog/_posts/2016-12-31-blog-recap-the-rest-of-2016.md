@@ -2,6 +2,7 @@
 layout: "post"
 title: "Blog Recap - The Rest of 2016"
 location: "Athens, Ohio"
+date: 2016-12-31 9am
 comments: true
 tags: ["meta", "life"]
 ---

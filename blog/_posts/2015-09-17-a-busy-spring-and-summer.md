@@ -2,6 +2,7 @@
 layout: "post"
 title: "A Busy Spring and Summer"
 location: "Athens, Ohio"
+date: 2015-09-17 9am
 comments: true
 tags: [meta, life]
 ---

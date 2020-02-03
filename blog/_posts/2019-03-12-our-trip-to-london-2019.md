@@ -2,6 +2,7 @@
 layout: "post"
 title: "Our Trip to London - 2019"
 location: "London, England"
+date: 2019-03-12 9am
 comments: true
 tags: ["meta", "life"]
 ---

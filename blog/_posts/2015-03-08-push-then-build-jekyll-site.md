@@ -2,6 +2,7 @@
 layout: "post"
 title: "Building Jekyll Sites Locally, Using Rsync to Remotely Build & Deploy"
 location: "Athens, Ohio"
+date: 2015-03-08 9am
 comments: true
 tags: [cygwin, jekyll]
 ---

@@ -19,6 +19,12 @@ module Jekyll
             file_path = Pathname.new(fixed_input)
             Digest::SHA256.base64digest File.read file_path
         end
+
+        def sha1(input)
+            fixed_input = input.to_s
+            file_path = Pathname.new(fixed_input)
+            Digest::SHA1.base64digest File.read file_path
+        end
     end
 
     module GetTextHash
@@ -35,6 +41,11 @@ module Jekyll
         def sha256text(input)
             fixed_input = input.to_s
             Digest::SHA256.base64digest fixed_input.strip
+        end
+
+        def sha1text(input)
+            fixed_input = input.to_s
+            Digest::SHA1.base64digest fixed_input.strip
         end
     end
 end

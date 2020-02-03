@@ -2,6 +2,7 @@
 layout: "post"
 title: "Still Too Busy for a Blog, Part 2"
 location: "Athens, Ohio"
+date: 2016-05-25 9am
 comments: true
 tags: ["meta", "life"]
 ---

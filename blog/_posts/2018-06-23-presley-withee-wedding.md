@@ -2,6 +2,7 @@
 layout: "post"
 title: "Presley - Withee Wedding | June 22nd, 2018"
 location: "Athens, Ohio"
+date: 2018-06-23 9am
 comments: true
 tags: ["meta", "life"]
 ---

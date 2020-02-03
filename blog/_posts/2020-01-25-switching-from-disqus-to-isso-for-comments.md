@@ -2,6 +2,7 @@
 layout: "post"
 title: "Joining the Club: Switching from Disqus to Isso for Comments"
 location: "Athens, Ohio"
+date: 2020-01-25 9am
 comments: true
 tags: ["meta", "privacy", "website"]
 ---

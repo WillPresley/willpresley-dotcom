@@ -2,6 +2,7 @@
 layout: "post"
 title: "Welcome to WillPresley.com!"
 location: "Athens, Ohio"
+date: 2015-03-07 9am
 comments: true
 tags: [meta]
 ---
