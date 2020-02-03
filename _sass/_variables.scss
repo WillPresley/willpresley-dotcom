@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com Variables
  * Author: Will Presley
  * Created: 2020/01/20 11:28:00
- * Last modified: 2020/01/31 15:13:24
+ * Last modified: 2020/02/02 23:08:04
  * Description: SCSS variables
  */
 
@@ -35,10 +35,18 @@ $code-grey                  : #EEE;
 
 
 // DARK THEME COLORS
+$dark-theme-background      : #222831;
+$dark-theme-gray            : #393e46;
+// $dark-theme-teal            : #00adb5;
+$dark-theme-teal            : #00c8d1;
+$dark-theme-green           : #00D186;
+$dark-theme-light-gray      : $code-grey;
 
+    $dark-theme-body-text   : #CED4DD;
 
 
 // Variables
-$main-animation-timing      : 0.25s;
+$main-animation-timing      : 0.2s;
+$main-animation-function    : ease-in-out;
 $orange-link-darken         : 10%;
 $body-text-color            : $near-black;

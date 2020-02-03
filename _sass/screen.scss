@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/31 15:00:12
+ * Last modified: 2020/02/02 23:21:17
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -41,6 +41,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
+    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,6 +55,7 @@ p {
 
 a {
     color: $orange;
+    transition: color $main-animation-timing $main-animation-function;
 
     // &:visited {
     //     color: $orange;
@@ -76,6 +78,7 @@ img {
         font-size: 52px;
         line-height: 1;
         text-decoration: none;
+        transition: color $main-animation-timing $main-animation-function;
         @include font-smoothing(on);
 
         strong {
@@ -120,11 +123,12 @@ img {
     width: 95%;
     margin: 0.5em auto;
     line-height: 1.5;
-    transition: width $main-animation-timing ease-in-out;
+    transition: width $main-animation-timing $main-animation-function;
 
     h1, h2, h3, h4, h5, h6 {
         color: $blue;
         line-height: 1.1;
+        transition: color $main-animation-timing $main-animation-function;
     }
 
     h1 {
@@ -186,6 +190,7 @@ img {
 
     .meta {
         color: $mid-grey;
+        transition: color $main-animation-timing $main-animation-function;
     }
 
     .img-center,
@@ -278,6 +283,7 @@ ul.posts {
         .post-meta {
             font-size: 20px;
             color: $mid-grey;
+            transition: color $main-animation-timing $main-animation-function;
             display: inline-block;
             padding-top: 10px;
             text-indent: 0;
@@ -446,7 +452,8 @@ ul.posts {
 /* Site Footer */
 .site footer {
     font-size: 95%;
-    color: $dark-grey;
+    color: $body-text-color;
+    transition: color $main-animation-timing $main-animation-function;
     // border-top: 1px solid $light-grey;
     width: 100%;
     margin-top: 1.5em;
@@ -479,19 +486,24 @@ ul.posts {
         text-align: right;
     }
 
-    .color-scheme-toggles input[type=radio] {
-        opacity: 0;
-        position: absolute;
+    // .color-scheme-toggles input[type=radio] {
+    //     opacity: 0;
+    //     position: absolute;
 
-        +label {
-            font-size: .833rem;
-            height: 2rem;
-            display: inline-flex;
-            align-items: center;
-            padding: 0 1.25rem;
-            cursor: pointer;
-            background-color: #fff;
-        }
+    //     +label {
+    //         font-size: .833rem;
+    //         height: 2rem;
+    //         display: inline-flex;
+    //         align-items: center;
+    //         padding: 0 1.25rem;
+    //         cursor: pointer;
+    //         background-color: #fff;
+    //     }
+    // }
+
+    .theme-switch-link {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     .credits {
@@ -585,8 +597,8 @@ figure {
 }
 
 @include min-screen(768px)  {
+
     a {
-        transition: color, $main-animation-timing;
 
         &:hover {
             color: darken( $orange, $orange-link-darken );
@@ -601,11 +613,11 @@ figure {
     }
 
     .title {
-        transition: opacity $main-animation-timing;
 
         a {
             font-size: 70px;
             opacity: 1.0;
+            transition: opacity $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
 
             &:hover {
                 color: $blue;
@@ -877,3 +889,185 @@ figure {
         }
     }
 }
+
+// html[data-theme='dark'] {
+body#dark {
+
+    // body {
+        background-color: $dark-theme-background;
+        color: $dark-theme-body-text;
+    // }
+
+    a {
+        color: $dark-theme-green;
+
+        &:hover, &:active, &:focus {
+            color: lighten( $dark-theme-green, 10% );
+        }
+    }
+
+    .title {
+
+        a {
+            color: $dark-theme-teal;
+
+            strong {
+                color: $dark-theme-light-gray;
+            }
+        }
+    }
+
+    .site {
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $dark-theme-teal;
+        }
+
+        h3 {
+            color: $dark-theme-light-gray;
+        }
+
+        footer {
+            color: $dark-theme-light-gray;
+
+            .credits {
+                color: darken( $dark-theme-body-text, 10% );
+
+                p a svg {
+                    filter: invert(1);
+                }
+            }
+        }
+
+        .meta {
+            color: darken( $dark-theme-body-text, 10% );
+        }
+    }
+
+    ul.posts {
+
+        li {
+
+            .post-meta {
+                color: darken( $dark-theme-body-text, 10% );
+            }
+        }
+    }
+
+    @include min-screen(768px)  {
+
+        // .title {
+
+        //     a {
+
+        //         &:hover {
+        //             color: lighten( $dark-theme-teal, 10% );
+        //         }
+        //     }
+        // }
+
+        .horiz-nav {
+
+            a {
+
+                &:hover {
+                    border-bottom: 1px solid darken( $dark-theme-green, $orange-link-darken );
+                }
+            }
+        }
+    }
+}
+
+// @media (prefers-color-scheme: dark) {
+
+//     body {
+//         background-color: $dark-theme-background;
+//         color: $dark-theme-light-gray;
+//     }
+
+//     .title {
+
+//         a {
+//             color: $dark-theme-teal;
+
+//             strong {
+//                 color: $dark-theme-light-gray;
+//             }
+//         }
+//     }
+
+//     .site {
+
+//         h1, h2, h3, h4, h5, h6 {
+//             color: $dark-theme-teal;
+//         }
+
+//         h3 {
+//             color: $dark-theme-light-gray;
+//         }
+
+//         footer {
+//             color: $dark-theme-light-gray;
+//         }
+//     }
+
+//     @include min-screen(768px)  {
+
+//         .title {
+
+//             a {
+
+//                 &:hover {
+//                     color: lighten( $dark-theme-teal, 10% );
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// html[data-color-theme='light'] {
+
+//     body {
+//         background-color: $offwhite;
+//         color: $body-text-color;
+//     }
+
+//     .title {
+
+//         a {
+//             color: $blue;
+
+//             strong {
+//                 color: $orange;
+//             }
+//         }
+//     }
+
+//     .site {
+
+//         h1, h2, h3, h4, h5, h6 {
+//             color: $blue;
+//         }
+
+//         h3 {
+//             color: $orange;
+//         }
+
+//         footer {
+//             color: $body-text-color;
+//         }
+//     }
+
+//     @include min-screen(768px)  {
+
+//         .title {
+
+//             a {
+
+//                 &:hover {
+//                     color: lighten( $blue, 10% );
+//                 }
+//             }
+//         }
+//     }
+// }

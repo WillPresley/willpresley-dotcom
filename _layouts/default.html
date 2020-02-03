@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
+
     {% include head.html %}
 
     <body>
@@ -11,7 +12,7 @@
     </body>
 
     <!-- Theme Switch -->
-    <script>const themeSwitches=document.querySelectorAll("[data-color-theme-toggle]");function removeColorThemeLocalStorage(){localStorage.removeItem("color-theme")}function saveColorTheme(colorTheme){"system"!==colorTheme?localStorage.setItem("color-theme",colorTheme):removeColorThemeLocalStorage()}function applyColorTheme(){const localStorageColorTheme=localStorage.getItem("color-theme"),colorTheme=localStorageColorTheme||null;colorTheme&&document.documentElement.setAttribute("data-color-theme",colorTheme)}function themeSwitchHandler(){themeSwitches.forEach(themeSwitch=>{const el=themeSwitch;el.value===localStorage.getItem("color-theme")&&(el.checked=!0),el.addEventListener("change",()=>{"system"!==el.value?(saveColorTheme(el.value),applyColorTheme(el.value)):(removeColorThemeLocalStorage(),document.documentElement.removeAttribute("data-color-theme"))})}),applyColorTheme()}document.addEventListener("DOMContentLoaded",()=>{themeSwitchHandler(),applyColorTheme()});</script>
+    <script>const mql=window.matchMedia("(prefers-color-scheme: dark)");function toggleT(){var value=this.id;"s"==value?localStorage.removeItem("t"):localStorage.setItem("t",value),theme(mql)}function theme(query){const userOption=localStorage.getItem("t");document.body.id=null===userOption?query.matches?"dark":"":"d"===userOption?"dark":""}mql.addListener(theme),theme(mql),document.addEventListener("DOMContentLoaded",()=>{document.getElementById("s").addEventListener("click",toggleT,!1),document.getElementById("d").addEventListener("click",toggleT,!1),document.getElementById("l").addEventListener("click",toggleT,!1)});</script>
 
     <!-- Moderizr Custom Build -->
     <script async src="{{site.url}}/js/modernizr-custom.min.js"></script>

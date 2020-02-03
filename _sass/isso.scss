@@ -2,9 +2,12 @@
  * Project Name: WillPresley.com Isso Comments
  * Author: Will Presley
  * Created: 2020/01/20 11:28:00
- * Last modified: 2020/01/21 14:10:28
+ * Last modified: 2020/02/02 23:11:55
  * Description: SCSS for Isso Comment System
  */
+
+// Imports
+@import 'variables';
 
 #isso-thread {
     padding: 0;
@@ -269,6 +272,7 @@
                     border-radius: 2px;
                     border: 1px solid #CCC;
                     background-color: #DDD;
+                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
                     cursor: pointer;
                     outline: 0;
                     line-height: 1.4em;
@@ -295,6 +299,7 @@
                     max-width: 100%;
                     border-radius: 3px;
                     background-color: #fff;
+                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
                     line-height: 1.4em;
                     border: 1px solid rgba(0, 0, 0, 0.2);
                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -308,6 +313,7 @@
             padding: .4em .8em;
             border-radius: 3px;
             background-color: #fff;
+            transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
             border: 1px solid rgba(0, 0, 0, 0.2);
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
@@ -315,6 +321,7 @@
         .preview {
             display: none;
             background-color: #f8f8f8;
+            transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
             background: repeating-linear-gradient(
                 -45deg,
                 #f8f8f8,
@@ -340,6 +347,63 @@
             padding-bottom: 10px;
             font-size: 0.90em;
             padding-top: .3em;
+        }
+    }
+}
+
+$isso-input-bg-color: lighten( $dark-theme-background, 7.5% );
+body#dark {
+
+    .isso-postbox {
+
+        > .form-wrapper {
+
+            .auth-section {
+
+                .post-action {
+
+                    > input {
+                        border: 1px solid #CCC;
+                        background-color: darken( $dark-theme-background, 4% );
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+                        &:hover {
+                            background-color: darken( $dark-theme-background, 8% );
+                        }
+
+                        &:active {
+                            background-color: darken( $dark-theme-background, 12% );
+                        }
+                    }
+                }
+
+                .input-wrapper {
+
+                    input {
+                        background-color: $isso-input-bg-color;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+
+            .textarea,
+            .preview {
+                background-color: $isso-input-bg-color;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+
+            .preview {
+                background-color: #f8f8f8;
+                background: repeating-linear-gradient(
+                    -45deg,
+                    #f8f8f8,
+                    #f8f8f8 10px,
+                    #fff 10px,
+                    #fff 20px
+                );
+            }
         }
     }
 }
