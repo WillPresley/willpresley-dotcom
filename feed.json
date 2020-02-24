@@ -22,7 +22,7 @@ layout: null
             {% if post.excerpt %}"summary": {{ post.excerpt | strip_html | truncate:140 | jsonify }},{% else %}"summary": {{ post.content | strip_html | truncate:140 | jsonify }},{% endif %}
             "content_text": {{ post.content | strip_html | strip_newlines | jsonify }},
             "content_html": {{ post.content | strip_newlines | jsonify }},
-            "url": "{{ post.url | absolute_url }}?utm_source=jsonFeed&utm_medium=jsonFeed&utm_campaign={{ post.title | replace: ',','' | replace: ' ', '' | handleize | xml_escape }}",
+            "url": "{{ post.url | absolute_url }}",
             {% if post.image.size > 1 %}"image": {{ post.image | jsonify }},{% endif %}{% if post.link.size > 1 %}"external_url": "{{ post.link }}",{% endif %}{% if post.banner.size > 1 %}"banner_image": "{{ post.banner }}",{% endif %}{% if post.tags.size > 1 %}"tags": {{ post.tags | jsonify }},{% endif %}{% if post.enclosure.size > 1 %}"attachments": [ { "url": "{{ post.enclosure }}", "mime_type": "{{ post.enclosure_type }}", "size_in_bytes": "{{ post.enclosure_length }}" },{% endif %}
             "date_published": "{{ post.date | date_to_xmlschema }}",
             "date_modified": "{{ post.date | date_to_xmlschema }}",
