@@ -6,20 +6,20 @@ meta-robots: "noodp, noydir"
 add-counter: true
 ---
 <main id="home">
-                <h1>Blog <a class="home-more-link" href="{{site.url}}/blog/">[more]</a></h1>
+                <h2>Blog <a class="home-more-link" href="{{site.url}}/blog/">[more]</a></h2>
                 <ul class="posts postlist-short">
                     {% for post in site.posts limit:5 %}<li class="title-item"><span class="post-title"><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />
                     <span class="post-meta"><span class="date">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B " }}{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}</span>{% if post.comments %} &ndash; <a href="{{ post.url }}#isso-thread" class="comments-link""></a>{% endif %}</span></li>{% endfor %}
                 </ul>
 
-                <h1>Projects <a class="home-more-link" href="{{site.url}}/projects/">[more]</a></h1>
+                <h2>Projects <a class="home-more-link" href="{{site.url}}/projects/">[more]</a></h2>
                 <ul class="posts postlist-short">
                     {% assign items = site.projects | sort: 'date' | reverse %}
                     {% for project in items limit:5 %}{% if project.published %}<li class="title-item"><span class="post-title"><a href="{{ project.url }}" class="page-link">{{ project.title }}</a></span><br />
                     <span class="post-meta">{{ project.short }}</span></li>{% endif %}{% endfor %}
                 </ul>
 
-                <h1>Other</h1>
+                <h2>Other</h2>
                 <ul class="posts postlist-short">
                     <li class="title-item"><span class="post-title"><a href="/uses/" class="post-link">What I Use</a></span><br />
                     <span class="post-meta"><span class="date">A /uses/ page, as seen on <a href="https://uses.tech">uses.tech</a></span></span></li>
