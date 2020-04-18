@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/04/18 00:39:20
+ * Last modified: 2020/04/18 00:53:31
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -226,6 +226,7 @@ img {
     #post-tags {
         margin: 0 1.65%;
         font-size: 20px;
+        font-size: 1.25rem;
 
         a {
             text-decoration: none;
@@ -264,6 +265,7 @@ img {
     // font: 400 18px/1.2 'Istok-Web', Verdana, Helvetica, sans-serif;
     font-family: $istok;
     font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.2;
     font-weight: normal;
     // vertical-align: middle;
@@ -291,11 +293,13 @@ ul.posts {
             padding-left: 1em;
             text-indent: -1em;
             font-size: 24px;
+            font-size: 1.5rem;
             margin-bottom: 0.25em;
 
             &:before {
                 content: "\00BB";
                 font-size: 32px;
+                font-size: 2rem;
             }
         }
 
@@ -309,6 +313,7 @@ ul.posts {
 
         .post-meta {
             font-size: 20px;
+            font-size: 1.25rem;
             color: $mid-grey;
             transition: color $main-animation-timing $main-animation-function;
             display: inline-block;
@@ -386,6 +391,7 @@ ul.posts {
         color: #f8f8f2;
         margin: 0 2px;
         font-size: 16px;
+        font-size: 1rem;
         line-height: 1.15;
         display: inline-block;
     }
@@ -480,6 +486,7 @@ ul.posts {
 /* Site Footer */
 .site footer {
     font-size: 95%;
+    font-size: 1.07rem;
     color: $body-text-color;
     transition: color $main-animation-timing $main-animation-function;
     // border-top: 1px solid $light-grey;
@@ -493,6 +500,7 @@ ul.posts {
 
     h4 {
         font-size: 140%;
+        font-size: 1.5rem;
         display: inline-block;
         // text-transform: lowercase;
         border-bottom: 1px solid $light-grey;
@@ -600,12 +608,14 @@ figure {
 /* Media Queries */
 /* START MINS */
 @include min-screen(350px)  {
+
     .horiz-nav a {
         font-size: 18px;
     }
 }
 
 @include min-screen(480px)  {
+
     .horiz-nav a {
         font-size: 22px;
     }
