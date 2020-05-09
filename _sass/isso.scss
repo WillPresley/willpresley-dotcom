@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com Isso Comments
  * Author: Will Presley
  * Created: 2020/01/20 11:28:00
- * Last modified: 2020/02/03 11:07:58
+ * Last modified: 2020/05/09 01:34:35
  * Description: SCSS for Isso Comment System
  */
 
@@ -16,6 +16,11 @@
 
     .isso-comment-header a {
         text-decoration: none;
+
+        time {
+            font-size: 0.85em;
+            // vertical-align: text-bottom;
+        }
     }
 
     * {
@@ -88,8 +93,8 @@
     text-decoration: none;
 
     &:hover {
-        color: #111111 !important;
-        text-shadow: #aaaaaa 0 0 1px !important;
+        color: #111111;
+        text-shadow: #aaaaaa 0 0 1px;
     }
 }
 
@@ -106,8 +111,8 @@
     > div.avatar {
         display: block;
         float: left;
-        width: 7%;
-        margin: 3px 15px 0 0;
+        width: 5%;
+        margin: 3px 10px 0 0;
 
         > svg {
             max-width: 48px;
@@ -137,12 +142,12 @@
             a.permalink,
             .note,
             a.parent {
-                color: gray !important;
+                color: gray;
                 font-weight: normal;
-                text-shadow: none !important;
+                text-shadow: none;
 
                 &:hover {
-                    color: #606060 !important;
+                    color: #606060;
                 }
             }
 
@@ -152,7 +157,7 @@
 
             .author {
                 font-weight: bold;
-                color: #555;
+                color: #777;
             }
         }
 
@@ -173,6 +178,10 @@
             p {
                 margin-top: 0.2em;
 
+                &:first-child {
+                    margin-top: 0;
+                }
+
                 &:last-child {
                     margin-bottom: 0.2em;
                 }
@@ -191,7 +200,7 @@
 
         > .isso-comment-footer {
             font-size: 0.80em;
-            color: gray !important;
+            color: gray;
             clear: left;
 
             a {
@@ -199,8 +208,8 @@
                 text-decoration: none;
 
                 &:hover {
-                    color: #111111 !important;
-                    text-shadow: #aaaaaa 0 0 1px !important;
+                    color: #111111;
+                    text-shadow: #aaaaaa 0 0 1px;
                 }
             }
 
@@ -236,7 +245,7 @@
     }
 
     .isso-follow-up {
-        padding-left: calc(7% + 20px);
+        padding-left: calc(2.5% + 20px);
     }
 }
 
