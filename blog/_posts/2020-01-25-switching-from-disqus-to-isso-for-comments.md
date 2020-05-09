@@ -16,7 +16,7 @@ At this point I considered just removing comments altogether, as others have don
 * **Kev Quirk** - [Removing Comments](https://kevq.uk/removing-comments) -- 2019/11/19
 * **Seth Godin** - [Why I don't have comments](https://seths.blog/2006/06/why_i_dont_have/) -- **2006**/06/03
 
-I just couldn't bring myself to to not have an option (aside from email or social media) for someone to interact with a piece of content on my site, so I looked for alternatives. Two stood out head and shoulders above the rest: [Commento](https://commento.io/) and [Isso](https://posativ.org/isso/). Here are some of the great posts by others who went through the same search before I did:
+I just couldn't bring myself to not have an option (aside from email or social media) for someone to interact with a piece of content on my site, so I looked for alternatives. Two stood out head and shoulders above the rest: [Commento](https://commento.io/) and [Isso](https://posativ.org/isso/). Here are some of the great posts by others who went through the same search before I did:
 
 * **Victor Zhou** - [Why I Replaced Disqus and You Should Too](https://dev.to/vzhou842/why-i-replaced-disqus-and-you-should-too-2o0e)
 * **Vincent Bernat** - [A More Privacy-Friendly Blog](https://vincent.bernat.ch/en/blog/2018-more-privacy-blog)
