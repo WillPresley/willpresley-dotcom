@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/01/21 12:46:45
+ * Last modified: 2020/05/12 15:57:01
  * Description: Typography SCSS for a Jekyll-powered static responsive site.
  */
 
@@ -13,6 +13,7 @@
          url('../fonts/lora-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
     @font-face {
@@ -22,6 +23,7 @@
              url('../fonts/lora-bold-webfont.woff') format('woff');
         font-weight: 700;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -31,6 +33,7 @@
              url('../fonts/lora-italic-webfont.woff') format('woff');
         font-weight: normal;
         font-style: italic;
+        font-display: swap;
     }
 
     @font-face {
@@ -40,6 +43,7 @@
              url('../fonts/lora-bolditalic-webfont.woff') format('woff');
         font-weight: 700;
         font-style: italic;
+        font-display: swap;
     }
 
 @font-face {
@@ -49,6 +53,7 @@
          url('../fonts/istokweb-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
     @font-face {
@@ -58,6 +63,7 @@
              url('../fonts/istokweb-bold-webfont.woff') format('woff');
         font-weight: 700;
         font-style: normal;
+        font-display: swap;
     }
 
 
