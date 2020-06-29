@@ -6,7 +6,7 @@ meta-robots: "noodp, noydir"
 add-counter: true
 ---
 <main id="home">
-                <h2>Blog <a class="home-more-link" href="{{site.url}}/blog/">[more]</a></h2>
+                <a name="top"></a><h2>Blog <a class="home-more-link" href="{{site.url}}/blog/">[more]</a></h2>
                 <ul class="posts postlist-short">
                     {% for post in site.posts limit:5 %}<li class="title-item"><span class="post-title"><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></span><br />
                     <span class="post-meta"><span class="date">{% assign d = post.date | date: "%-d" %}{{ post.date | date: "%B " }}{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ post.date | date: "%Y" }}</span>{% if post.comments %} &ndash; <a href="{{ post.url }}#isso-thread" class="comments-link""></a>{% endif %}</span></li>{% endfor %}

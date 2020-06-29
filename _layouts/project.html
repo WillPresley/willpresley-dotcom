@@ -3,7 +3,7 @@ layout: default
 ---
 <main class="main-content page project"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
     {% if page.image-large %}
-    <div class="project-image-large">
+    <a name="top"></a><div class="project-image-large">
         <img src="{{ page.image-large.url }}" title="{{ page.image-large.title }}" alt="{{ page.image-large.alt }}"{% if page.image-large.bordered %} class="bordered"{% endif %} />
     </div>
     {% endif %}

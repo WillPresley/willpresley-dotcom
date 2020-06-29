@@ -7,7 +7,7 @@ meta-description: "A portfolio of projects I have worked on for my day-job, for 
 meta-robots: "noodp, noydir"
 ---
 <main class="main-content page portfolio"{% if page.page-id %} id="{{ page.page-id }}"{% endif %}>
-    <h1>{{ page.title }}</h1>
+    <a name="top"></a><h1>{{ page.title }}</h1>
     <p>Projects are listed newest-first. Click on the image or title to learn more!</p>
     <ul class="project-list">
         {% assign items = site.projects | sort: 'date' | reverse %}

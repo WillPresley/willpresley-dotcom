@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/04/18 00:53:31
+ * Last modified: 2020/06/29 10:45:05
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -26,6 +26,7 @@ html {
     box-sizing: border-box;
     overflow-y: scroll; // Stupid scrollbars
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
