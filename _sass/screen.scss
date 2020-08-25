@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2020/06/29 14:02:16
+ * Last modified: 2020/06/30 12:04:34
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -140,6 +140,7 @@ img {
     a {
         // font: 400 16px/1.2 'Istok-Web', Verdana, Helvetica, sans-serif;
         font-family: $istok;
+        font-size: 1rem;
         // font-size: 16px;
         line-height: 1.2;
         font-family: $istok;
@@ -153,7 +154,7 @@ img {
 
     .menu-separator {
         font-size: 20px;
-        font-size: 1.25rem;
+        font-size: 1rem;
         position: relative;
         top: -2px;
         // color: $light-grey;
@@ -880,9 +881,10 @@ figure {
         font-size: 72px;
     }
 
-    // .site {
-    //     width: 75%;
-    // }
+    .site {
+        // width: 75%;
+        max-width: 940px;
+    }
 }
 
 @include min-screen(1240px)  {
@@ -890,10 +892,11 @@ figure {
         font-size: 76px;
     }
 
-    .site {
-        width: 65%;
-        max-width: 1300px;
-    }
+    // .site {
+    //     // width: 65%;
+    //     // max-width: 1300px;
+    //     width: 940px;
+    // }
 }
 
 /* START MAXES */
