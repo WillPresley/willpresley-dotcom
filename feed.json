@@ -2,7 +2,7 @@
 layout: null
 ---
 {
-    "version": "https://jsonfeed.org/version/1",
+    "version": "https://jsonfeed.org/version/1.1",
     "title": "{{ site.title | xml_escape }}",
     "home_page_url": "{{ "/" | absolute_url }}",
     "feed_url": "{{ "/feed.json" | absolute_url }}",
@@ -10,11 +10,13 @@ layout: null
     "icon": "{{ "/apple-touch-icon.png" | absolute_url }}",
     "favicon": "{{ "/favicon.ico" | absolute_url }}",
     "expired": false,
-    {% if site.author %}"author": {% if site.author.name %} {
-        "name": "{{ site.author.name }}",
-        "url": {% if site.author.url %}"{{ site.author.url }}"{% else %}null{% endif %},
-        "avatar": {% if site.author.avatar %}"{{ site.author.avatar }}"{% else %}null{% endif %}
-    },{% else %}"{{ site.author }}",{% endif %}{% endif %}
+    {% if site.author %}"authors": [
+        {
+            "name": "{{ site.author.name }}",
+            "url": {% if site.author.url %}"{{ site.author.url }}"{% else %}null{% endif %},
+            "avatar": {% if site.author.avatar %}"{{ site.author.avatar }}"{% else %}null{% endif %}
+        }
+    ],{% endif %}
     "items": [{% for post in site.posts limit:36 %}
         {
             "id": "{{ post.url | absolute_url | sha1text }}",
