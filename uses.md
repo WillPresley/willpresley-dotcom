@@ -6,7 +6,7 @@ page-id: uses
 meta-description: "A page with the hardware and software that I use, as seen on uses.tech"
 meta-robots: "noodp, noydir"
 comments: true
-date: 2020-01-20
+date: 2020-10-01
 ---
 
 ### Inspiration
@@ -24,7 +24,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 * Motherboard: [MSI Z97 PC Mate](https://us.msi.com/Motherboard/Z97-PC-Mate/Overview)
 * CPU: Intel Core i5 4590
-* RAM: 16gb DDR3 (Crucial Ballistix Sport 2x8gb)
+* RAM: 32gb DDR3 (Crucial Ballistix Sport 2x8gb)
 * GPU: [EVGA nVidia Geforce GTX 1050 Ti](https://www.evga.com/articles/01063/evga-geforce-gtx-1050-ti-and-1050/)
 * Storage: 2x500gb SSD, 1x1tb HDD
 * OS: Windows 10 Pro
@@ -95,7 +95,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * Root Status: *Not*-rooted
 * Launcher: [Nova Launcher](https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher) [Prime](https://play.google.com/store/apps/details?id=com.teslacoilsw.launcher.prime)
 * Ad-Blocker: [Blokada](https://blokada.org/index.html)
-* Weather: [Dark Sky](https://play.google.com/store/apps/details?id=net.darksky.darksky)
+* Weather: [Today Weather](https://play.google.com/store/apps/details?id=mobi.lockdown.weather)
 * Keyboard: [Gboard](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)
 * Messages/SMS: [Android Messages](https://play.google.com/store/apps/details?id=com.google.android.apps.messaging) (with [Android Messages Desktop](https://github.com/chrisknepper/android-messages-desktop))
 * Photos: [Google Photos](https://play.google.com/store/apps/details?id=com.google.android.apps.photos), [Piktures](https://play.google.com/store/apps/details?id=com.diune.pictures)
@@ -126,7 +126,8 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Other Windows Software I Use
 
-* [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)
+* [PlexAmp](https://plexamp.com/)
+* [YouTube Music Desktop App](https://github.com/ytmdesktop/ytmdesktop)
 * [Tweeten](https://tweetenapp.com/)
 * [Calibre](https://calibre-ebook.com/)
 * [ComicRack](http://comicrack.cyolito.com/) + [ComicVine Tagger](https://github.com/cbanack/comic-vine-scraper) (or [ComicTagger](https://github.com/comictagger/comictagger))
@@ -159,7 +160,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Other Development Tools - Linux
 
-* *soon*
+* *Someday I'll get this together, but mostly iTerm2, nano, Firefox*
 
 </div>
 
@@ -178,6 +179,6 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 
 #### Browser: Google Chrome
 
-* **Extensions**: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) + [Extra](https://chrome.google.com/webstore/detail/ublock-origin-extra/pgdnlhfefecpicbbihgmbmffkjpaplco) + [Nano Defender](https://chrome.google.com/webstore/detail/nano-defender/ggolfgbegefeeoocgjbmkembbncoadlb), [AutoplayStopper](https://chrome.google.com/webstore/detail/autoplaystopper/ejddcgojdblidajhngkogefpkknnebdh), [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb), [Cluster](https://chrome.google.com/webstore/detail/cluster-window-tab-manage/aadahadfdmiibmdhfmpbeeebejmjnkef), [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp), [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), [DevTools Author](https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi), [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj), [FluffBusting Purity](https://chrome.google.com/webstore/detail/fbfluffbustingpurity/nmkinhboiljjkhaknpaeaicmdjhagpep), [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen), [Just Read](https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod), [Nimbus Screenshot](https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bpconcjcammlapcogcnnelfmaeghhagj), [Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf), [Old Reddit Redirect](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje), [Pop up blocker for Chrome - Poper](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche), [Pushbullet](https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj), [Smile Always](https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf), [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg), [Toolbox for Google Play Store](https://chrome.google.com/webstore/detail/toolbox-for-google-play-s/fepaalfjfchbdianlgginbmpeeacahoo), [Tracking Token Stripper](https://chrome.google.com/webstore/detail/tracking-token-stripper/kcpnkledgcbobhkgimpbmejgockkplob), [View Image Info](https://chrome.google.com/webstore/detail/view-image-info-propertie/jldjjifbpipdmligefcogandjojpdagn)
+* **Extensions**: [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm) + [Extra](https://chrome.google.com/webstore/detail/ublock-origin-extra/pgdnlhfefecpicbbihgmbmffkjpaplco) + [Nano Defender](https://chrome.google.com/webstore/detail/nano-defender/ggolfgbegefeeoocgjbmkembbncoadlb), [AutoplayStopper](https://chrome.google.com/webstore/detail/autoplaystopper/ejddcgojdblidajhngkogefpkknnebdh), [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb), [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp), [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), [DevTools Author](https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi), [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj), [FluffBusting Purity](https://chrome.google.com/webstore/detail/fbfluffbustingpurity/nmkinhboiljjkhaknpaeaicmdjhagpep), [Grammarly for Chrome](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen), [Just Read](https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod), [Nimbus Screenshot](https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bpconcjcammlapcogcnnelfmaeghhagj), [Octo Mate](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf), [Old Reddit Redirect](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje), [PopUpOFF](https://chrome.google.com/webstore/detail/popupoff-popup-and-overla/ifnkdbpmgkdbfklnbfidaackdenlmhgh), [Pushbullet](https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd), [Reddit Enhancement Suite](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb), [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj), [Smile Always](https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf), [Tab Session Manager](https://chrome.google.com/webstore/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae/), [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg), [Toolbox for Google Play Store](https://chrome.google.com/webstore/detail/toolbox-for-google-play-s/fepaalfjfchbdianlgginbmpeeacahoo), [Toucan - Spanish](https://chrome.google.com/webstore/detail/toucan/lokjgaehpcnlmkebpmjiofccpklbmoci)[Tracking Token Stripper](https://chrome.google.com/webstore/detail/tracking-token-stripper/kcpnkledgcbobhkgimpbmejgockkplob), [View Image Info](https://chrome.google.com/webstore/detail/view-image-info-propertie/jldjjifbpipdmligefcogandjojpdagn)
 
 </div>
