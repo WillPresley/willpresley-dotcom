@@ -82,7 +82,7 @@ After seeing [a post by Jan-Lukas Else](https://jlelse.blog/micro/2020/01/things
 * CPU: Intel Core i5 2400
 * RAM: 8gb DDR3 (Samsung 2x4gb)
 * GPU: [EVGA nVidia GeForce GTX 750 Ti](https://www.evga.com/products/specs/gpu.aspx?pn=70b14ba6-5853-4a65-aacf-cff61f466d82)
-* Storage: 1x250gb SSD, 27.5tb of HDDs in two-way mirror Storage Space with 1x250gb SSD as write-cache
+* Storage: 1x250gb SSD, 34.7tb of HDDs in two-way mirror Storage Space (similar-ish to RAID-10) with 1x250gb SSD as write-cache
 * OS: Windows 10 Pro
 * Case: Some generic Rosewill thing
 
