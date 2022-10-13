@@ -6,11 +6,11 @@
 	],
 	"settings": {
 		"liveSassCompile.settings.autoprefix": [
-			"> 1%",
+			"> 0.5%",
+            "not dead",
 			"last 3 versions",
 			"Firefox ESR",
-			"IE >= 10",
-			"iOS >= 7"
+            "iOS >= 14"
 		],
 		"liveSassCompile.settings.excludeList": [
 			"**/node_modules/**",

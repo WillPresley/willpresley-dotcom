@@ -1,0 +1,20 @@
+{
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+        "color-hex-case": "upper",
+        "function-parentheses-space-inside": "always",
+        "max-nesting-depth": 4,
+        "indentation": 4,
+        "rule-empty-line-before": [
+            "always-multi-line",
+            {
+                "ignore": "after-comment"
+            }
+        ],
+        "scss/dollar-variable-colon-space-after": "at-least-one-space",
+        "selector-max-compound-selectors": 6,
+        "selector-max-id": 1,
+        "selector-no-qualifying-type": null,
+        "string-quotes": "double"
+    }
+}

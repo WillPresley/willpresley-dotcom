@@ -2,17 +2,17 @@
  * Project Name: WillPresley.com Isso Comments
  * Author: Will Presley
  * Created: 2020/01/20 11:28:00
- * Last modified: 2020/05/09 01:34:35
+ * Last modified: 2022/10/13 12:36:14
  * Description: SCSS for Isso Comment System
  */
 
 // Imports
-@import 'variables';
-@import 'media-queries';
+@import "variables";
+@import "media-queries";
 
 #isso-thread {
-    padding: 0;
     margin: 0;
+    padding: 0;
 
     .isso-comment-header a {
         text-decoration: none;
@@ -24,8 +24,8 @@
     }
 
     * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        box-sizing: border-box;
         box-sizing: border-box;
     }
 
@@ -48,44 +48,46 @@
         }
     }
 
-    .textarea-wrapper {
+    .isso-textarea-wrapper {
         padding: 0 1.5%;
     }
 
-    .textarea {
-        min-height: 58px;
+    .isso-textarea {
+        // min-height: 58px;
         outline: 0;
+        resize: none;
+        width: 100%;
 
-        &.placeholder {
-            color: #757575;
-        }
+        // &.placeholder {
+        //     color: #757575;
+        // }
     }
 
-    .textarea:focus,
+    .isso-textarea:focus,
     input:focus {
-        border-color: rgba(0, 0, 0, 0.8);
+        border-color: rgba( 0, 0, 0, 0.8 );
     }
 }
 
 #isso-root {
 
-    .preview {
+    .isso-preview {
 
         .isso-comment {
-            padding-top: 0;
             margin: 0;
+            padding-top: 0;
         }
     }
 
     .isso-comment {
+        margin: 0.95em auto;
         max-width: 68em;
         padding-top: 0.95em;
-        margin: 0.95em auto;
     }
 }
 
 .isso-follow-up .isso-comment {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba( 0, 0, 0, 0.1 );
 }
 
 .isso-feedlink {
@@ -93,8 +95,8 @@
     text-decoration: none;
 
     &:hover {
-        color: #111111;
-        text-shadow: #aaaaaa 0 0 1px;
+        color: #111;
+        text-shadow: #AAA 0 0 1px;
     }
 }
 
@@ -105,25 +107,25 @@
     }
 
     &:not(:first-of-type) {
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba( 0, 0, 0, 0.1 );
     }
 
-    > div.avatar {
+    > div.isso-avatar {
         display: block;
         float: left;
-        width: 5%;
         margin: 3px 10px 0 0;
+        width: 5%;
 
         > svg {
-            max-width: 48px;
+            border: 1px solid rgba( 0, 0, 0, 0.2 );
+            border-radius: 0;
+            box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
             max-height: 48px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            border-radius: 3px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            max-width: 48px;
         }
     }
 
-    > div.text-wrapper {
+    > div.isso-text-wrapper {
         display: block;
 
         > .isso-comment-header,
@@ -134,46 +136,46 @@
         > .isso-comment-header {
             font-size: 0.85em;
 
-            .spacer {
+            .isso-spacer {
                 padding: 0 6px;
             }
 
-            .spacer,
-            a.permalink,
-            .note,
-            a.parent {
-                color: gray;
+            .isso-spacer,
+            a.isso-permalink,
+            .isso-note,
+            a.isso-parent {
+                color: $grey;
                 font-weight: normal;
                 text-shadow: none;
 
                 &:hover {
-                    color: #606060;
+                    color: $mid-grey;
                 }
             }
 
-            .note {
+            .isso-note {
                 float: right;
             }
 
-            .author {
+            .isso-author {
+                color: $mid-grey;
                 font-weight: bold;
-                color: #777;
             }
         }
 
-        > .textarea-wrapper {
+        > .isso-textarea-wrapper {
 
-            .textarea,
-            .preview {
+            .isso-textarea,
+            .isso-preview {
+                border: 1px solid #F0F0F0;
+                border-radius: 0;
+                box-shadow: 0 0 2px #888;
                 margin-top: 0.2em;
                 width: 100%;
-                border: 1px solid #f0f0f0;
-                border-radius: 2px;
-                box-shadow: 0 0 2px #888;
             }
         }
 
-        > div.text {
+        > div.isso-text {
 
             p {
                 margin-top: 0.2em;
@@ -199,39 +201,39 @@
         }
 
         > .isso-comment-footer {
-            font-size: 0.80em;
-            color: gray;
             clear: left;
+            color: $grey;
+            font-size: 0.8em;
 
             a {
                 font-weight: bold;
                 text-decoration: none;
 
                 &:hover {
-                    color: #111111;
-                    text-shadow: #aaaaaa 0 0 1px;
+                    color: #111;
+                    text-shadow: #AAA 0 0 1px;
                 }
             }
 
             > a {
                 position: relative;
-                top: .2em;
+                top: 0.2em;
 
                 + a {
                     padding-left: 1em;
                 }
             }
 
-            .votes {
-                color: gray;
+            .isso-votes {
+                color: $grey;
             }
 
-            .upvote,
-            .downvote {
+            .isso-upvote,
+            .isso-downvote {
 
                 svg {
                     position: relative;
-                    top: .2em;
+                    top: 0.2em;
                 }
             }
         }
@@ -239,31 +241,31 @@
 
     &.isso-no-votes {
 
-        span.votes {
+        span.isso-votes {
             display: none;
         }
     }
 
     .isso-follow-up {
-        padding-left: calc(2.5% + 20px);
+        padding-left: calc( 2.5% + 20px );
     }
 }
 
 .isso-postbox {
-    max-width: 68em;
-    margin: 0 auto 1em;
     clear: right;
+    margin: 0 auto 1em;
+    max-width: 68em;
 
-    &.preview-mode {
+    &.isso-preview-mode {
 
-        > .form-wrapper {
+        > .isso-form-wrapper {
 
             input[name="preview"],
-            .textarea {
+            .isso-textarea {
                 display: none;
             }
 
-            .preview {
+            .isso-preview {
                 display: block;
             }
 
@@ -273,28 +275,28 @@
         }
     }
 
-    > .form-wrapper {
+    > .isso-form-wrapper {
         display: block;
         padding: 0;
 
-        .auth-section {
+        .isso-auth-section {
             display: block;
 
-            .post-action {
+            .isso-post-action {
                 display: inline-block;
                 float: right;
                 margin: 0 0 0 5px;
 
                 > input {
-                    padding: calc(.3em - 1px);
-                    border-radius: 2px;
-                    border: 1px solid #CCC;
                     background-color: #DDD;
-                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
+                    border: 1px solid #CCC;
+                    border-radius: 0;
+                    box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
                     cursor: pointer;
-                    outline: 0;
                     line-height: 1.4em;
-                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    outline: 0;
+                    padding: calc( 0.3em - 1px );
+                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
 
                     &:hover {
                         background-color: #CCC;
@@ -306,47 +308,52 @@
                 }
             }
 
-            .input-wrapper {
+            .isso-input-wrapper {
                 display: inline-block;
-                position: relative;
-                max-width: 25%;
                 margin: 0;
+                max-width: 25%;
+                position: relative;
+
+                label {
+                    display: block;
+                    font-size: 16px;
+                    font-style: italic;
+                    line-height: 1.1;
+                }
 
                 input {
-                    padding: .3em 10px;
-                    max-width: 100%;
-                    border-radius: 3px;
-                    background-color: #fff;
-                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
+                    background-color: #FFF;
+                    border: 1px solid rgba( 0, 0, 0, 0.2 );
+                    border-radius: 0;
+                    box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
                     line-height: 1.4em;
-                    border: 1px solid rgba(0, 0, 0, 0.2);
-                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    max-width: 100%;
+                    padding: 0.3em 10px;
+                    transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
                 }
             }
         }
 
-        .textarea,
-        .preview {
-            margin: 0 0 .3em;
-            padding: .4em .8em;
-            border-radius: 3px;
-            background-color: #fff;
+        .isso-textarea,
+        .isso-preview {
+            background-color: #FFF;
+            border: 1px solid rgba( 0, 0, 0, 0.2 );
+            border-radius: 0;
+            box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
+            margin: 0 0 0.3em;
+            padding: 0.4em 0.8em;
             transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
 
-        .preview {
+        .isso-preview {
+            background: repeating-linear-gradient( -45deg,
+            #F8F8F8,
+            #F8F8F8 10px,
+            #FFF 10px,
+            #FFF 20px );
+            background-color: #F8F8F8;
             display: none;
-            background-color: #f8f8f8;
             transition: background-color $main-animation-timing $main-animation-function, color $main-animation-timing $main-animation-function;
-            background: repeating-linear-gradient(
-                -45deg,
-                #f8f8f8,
-                #f8f8f8 10px,
-                #fff 10px,
-                #fff 20px
-            );
         }
 
         input[name="edit"] {
@@ -354,36 +361,37 @@
         }
 
         input[type=checkbox] {
-            vertical-align: middle;
-            position: relative;
             bottom: 1px;
             margin-left: 0;
+            position: relative;
+            vertical-align: middle;
         }
 
-        .notification-section {
+        .isso-notification-section {
             display: none;
+            font-size: 0.9em;
             padding-bottom: 10px;
-            font-size: 0.90em;
-            padding-top: .3em;
+            padding-top: 0.3em;
         }
     }
 }
 
 $isso-input-bg-color: lighten( $dark-theme-background, 7.5% );
+
 body#dark {
 
     .isso-postbox {
 
-        > .form-wrapper {
+        > .isso-form-wrapper {
 
-            .auth-section {
+            .isso-auth-section {
 
-                .post-action {
+                .isso-post-action {
 
                     > input {
-                        border: 1px solid #CCC;
                         background-color: darken( $dark-theme-background, 4% );
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                        border: 1px solid #CCC;
+                        box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
 
                         &:hover {
                             background-color: darken( $dark-theme-background, 8% );
@@ -395,32 +403,30 @@ body#dark {
                     }
                 }
 
-                .input-wrapper {
+                .isso-input-wrapper {
 
                     input {
                         background-color: $isso-input-bg-color;
-                        border: 1px solid rgba(0, 0, 0, 0.2);
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba( 0, 0, 0, 0.2 );
+                        box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
                     }
                 }
             }
 
-            .textarea,
-            .preview {
+            .isso-textarea,
+            .isso-preview {
                 background-color: $isso-input-bg-color;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba( 0, 0, 0, 0.2 );
+                box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.1 );
             }
 
-            .preview {
-                background-color: #f8f8f8;
-                background: repeating-linear-gradient(
-                    -45deg,
-                    #f8f8f8,
-                    #f8f8f8 10px,
-                    #fff 10px,
-                    #fff 20px
-                );
+            .isso-preview {
+                background: repeating-linear-gradient( -45deg,
+                #F8F8F8,
+                #F8F8F8 10px,
+                #FFF 10px,
+                #FFF 20px );
+                background-color: #F8F8F8;
             }
         }
     }
@@ -428,41 +434,68 @@ body#dark {
 
 @include max-screen(600px) {
 
-    .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
-        display: block;
-        max-width: 100%;
-        margin: 0 0 .3em;
-    }
-    .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-        width: 100%;
-    }
-}
+    .isso-postbox > .isso-form-wrapper > .isso-auth-section {
+        text-align: center;
 
-@include screen(601px, 939px) {
+        .isso-input-wrapper {
+            display: block;
+            margin: 0 0 0.5rem;
+            max-width: 100%;
+            text-align: left;
 
-    .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
-        max-width: 23%;
-    }
-}
+            input {
+                width: 100%;
+            }
+        }
 
-@include min-screen(940px) {
-
-    .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
-        margin: 0 7.5px 0 0;
-
-        &:nth-of-type(3) {
-            margin: 0;
+        .isso-post-action {
+            float: unset;
         }
     }
 }
 
-@include min-screen(1240px) {
+@include min-screen(601px) {
 
-    .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
-        margin: 0 15px 0 0;
+    .isso-postbox > .isso-form-wrapper > .isso-auth-section {
+        display: flex;
+        justify-content: space-between;
 
-        &:nth-of-type(3) {
-            margin: 0;
+        .isso-input-wrapper {
+            // margin: 0 7.5px 0 0;
+            max-width: 23%;
+        }
+
+        .isso-post-action {
+            margin-top: auto;
         }
     }
 }
+
+// @include screen(601px, 939px) {
+
+//     .isso-postbox > .isso-form-wrapper > .isso-auth-section .isso-input-wrapper {
+//         max-width: 23%;
+//     }
+// }
+
+// @include min-screen(940px) {
+
+//     .isso-postbox > .isso-form-wrapper > .isso-auth-section .isso-input-wrapper {
+//         margin: 0 7.5px 0 0;
+
+//         &:nth-of-type(3) {
+//             margin: 0;
+//         }
+//     }
+// }
+
+// @include min-screen(1240px) {
+
+//     .isso-postbox > .isso-form-wrapper > .isso-auth-section .isso-input-wrapper {
+//         margin: 0 15px 0 0;
+
+//         &:nth-of-type(3) {
+//             margin: 0;
+//         }
+//     }
+// }

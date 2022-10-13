@@ -2,54 +2,55 @@
  * Project Name: WillPresley.com Variables
  * Author: Will Presley
  * Created: 2020/01/20 11:28:00
- * Last modified: 2020/06/29 13:55:37
+ * Last modified: 2022/10/13 11:56:20
  * Description: SCSS variables
  */
 
 // Standard colors (immutable)
-$white                      : #fff;
-$black                      : #000;
+$white: #FFF;
+$black: #000;
 
 
 // Colors
-$offwhite                   : #F9F9F9;
-$silver                     : #bdc3c7;
+$offwhite:  #F9F9F9;
+$silver:    #BDC3C7;
 
 
 // $orange                     : #e74c3c; // Original orange, far too light
 // $orange                  : #a62c1c; // Fully accessible 7:1 version of orange
-$orange                     : #d43929; // https://croncolor.com/color-tool?color=d43929
-    $orange-light           : #ea9c94;
-    $orange-dark            : #aa2e21;
+$orange:        #D43929; // https://croncolor.com/color-tool?color=d43929
+$orange-light:  #EA9C94;
+$orange-dark:   #AA2E21;
 
 
-$blue                       : #2c3e50;
-    $blue-light             : lighten( $blue, 10% );
-    $blue-dark              : darken( $blue, 10% );
+$blue:          #2C3E50;
+$blue-light:    lighten( $blue, 10% );
+$blue-dark:     darken( $blue, 10% );
 
 
-$light-grey                 : #D0D0D0;
+$light-grey:    #D0D0D0;
 // $mid-grey                   : #898989;
-$mid-grey                   : #737373;
-$dark-grey                  : #323232;
-$near-black                 : #222;
-$code-grey                  : #EEE;
+$mid-grey:      #737373;
+$grey:          #808080;
+$dark-grey:     #323232;
+$near-black:    #222;
+$code-grey:     #EEE;
 
 
 // DARK THEME COLORS
 // $dark-theme-background      : #222831;
-$dark-theme-background      : #1e1f21;
-$dark-theme-gray            : #393e46;
+$dark-theme-background:     #1E1F21;
+$dark-theme-gray: #393E46;
 // $dark-theme-teal            : #00adb5;
-$dark-theme-teal            : #00c8d1;
-$dark-theme-green           : #00D186;
-$dark-theme-light-gray      : $code-grey;
+$dark-theme-teal:           #00C8D1;
+$dark-theme-green:          #00D186;
+$dark-theme-light-gray:     $code-grey;
 
-    $dark-theme-body-text   : #CED4DD;
+$dark-theme-body-text:      #CED4DD;
 
 
 // Variables
-$main-animation-timing      : 0.2s;
-$main-animation-function    : ease-in-out;
-$orange-link-darken         : 10%;
-$body-text-color            : $near-black;
+$main-animation-timing:     0.2s;
+$main-animation-function:   ease-in-out;
+$orange-link-darken:        10%;
+$body-text-color:           $near-black;
