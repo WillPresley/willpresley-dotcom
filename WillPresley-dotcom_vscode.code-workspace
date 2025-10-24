@@ -30,6 +30,29 @@
 				"savePath": "~/../css/"
 			}
 		],
-		"liveSassCompile.settings.generateMap": false,
+        "liveSassCompile.settings.generateMap": false,
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#de5f52",
+            "activityBar.background": "#de5f52",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#5ee06a",
+            "activityBarBadge.foreground": "#15202b",
+            "commandCenter.border": "#e7e7e799",
+            "panel.border": "#de5f52",
+            "sash.hoverBorder": "#de5f52",
+            "sideBar.border": "#de5f52",
+            "statusBar.background": "#d43929",
+            "statusBar.foreground": "#e7e7e7",
+            "statusBarItem.hoverBackground": "#de5f52",
+            "statusBarItem.remoteBackground": "#d43929",
+            "statusBarItem.remoteForeground": "#e7e7e7",
+            "tab.activeBorder": "#de5f52",
+            "titleBar.activeBackground": "#d43929",
+            "titleBar.activeForeground": "#e7e7e7",
+            "titleBar.inactiveBackground": "#d4392999",
+            "titleBar.inactiveForeground": "#e7e7e799"
+        },
+        "peacock.color": "#D43929",
 	}
 }
