@@ -1,4 +1,4 @@
-$gutter-size: 32px;
+$gutter-size: 36px;
 
 .highlight {
 
@@ -17,6 +17,7 @@ $gutter-size: 32px;
         // color: $mid-grey;
         width: $gutter-size;
         text-align: right;
+        overflow-x: hidden;
     }
 
     .lineno {
