@@ -15,6 +15,8 @@ I wanted a way to forcefully disable this behavior, but only on domains that ann
 
 Getting it to actually work, however, was a surprisingly deep rabbit hole.
 
+---
+
 ## The Anatomy of a Hijack
 
 Modern custom scrolling sites don't just intercept your mouse wheel. They usually deploy a two-pronged attack:
@@ -24,6 +26,8 @@ Modern custom scrolling sites don't just intercept your mouse wheel. They usuall
 
 If you just stop their JavaScript from running, the page freezes entirely because the CSS is still hiding the native scrollbar. You have to attack both simultaneously.
 
+---
+
 ## The Challenges
 
 My initial attempts at a userscript failed for a few interesting reasons:
@@ -31,6 +35,8 @@ My initial attempts at a userscript failed for a few interesting reasons:
 * **The Sandbox Problem:** Tampermonkey scripts run in an isolated environment. If you try to override native browser functions (like neutering `preventDefault()`) from within the userscript, it only affects your script. The website's library, running in the main page context, ignores your override and continues to hijack the wheel.
 * **The Event Paradox:** If you use `event.stopImmediatePropagation()` to catch the scroll wheel event before the site's script sees it, you *also* blind the browser. The browser's native engine relies on that event traveling down the DOM tree to know which specific container you are trying to scroll.
 * **The CSS Nuance:** Aggressively forcing `overflow: auto` on every single `div` on the page destroys complex layouts, ripping sticky headers and mobile menus out of place.
+
+---
 
 ## The Solution: Bypassing the Sandbox
 
@@ -41,6 +47,8 @@ This injected script does two things:
 2. It declaws `preventDefault` specifically for keyboard navigation (Arrow keys, Spacebar, Page Up/Down), ensuring you can still read articles normally.
 
 Simultaneously, the userscript injects a surgical CSS block targeting the specific wrapper IDs and data-attributes used by the most common smooth-scrolling libraries (GSAP, Locomotive, ASScroll, Luxy, Butter), forcing them back to standard static positioning.
+
+---
 
 ## The Userscript
 
@@ -184,6 +192,8 @@ Here is the final, optimized script. It includes safeguards to prevent running i
 Once installed, it sits entirely dormant with zero performance overhead. When you hit a site that refuses to let you scroll normally, just open the Tampermonkey extension menu, click **Fix site scrolling**, and the page will reload with standard, native behavior restored.
 
 [![An example of the userscript in action in Google Chrome]({{site.url}}/uploads/2026-05/scroll-hijack-fix_blog.png "An example of the userscript in action in Google Chrome")]({{site.url}}/uploads/2026-05/scroll-hijack-fix_blog.png){: target="_blank" .image-link}
+
+---
 
 ## A Note on Web Standards
 
