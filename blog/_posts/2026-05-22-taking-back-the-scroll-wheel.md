@@ -58,64 +58,53 @@ Here is the final, optimized script. It includes safeguards to prevent running i
 // ==UserScript==
 // @name         Scroll Hijacking Fixer (Selective)
 // @namespace    https://willpresley.com/
-// @version      1.6
-// @description  Selectively disable scroll hijacking on specific domains via the Tampermonkey menu.
+// @version      1.7
+// @description  Selectively disable scroll hijacking on specific domains.
 // @author       Billy Presley
+// @license      Apache-2.0
 // @match        *://*/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
 // @grant        GM_addStyle
 // @run-at       document-start
+// @updateURL    https://gist.github.com/WillPresley/ec209f684ac856cc63316f47880bd515/raw/userscript_scroll-hijack-fixer.user.js
+// @downloadURL  https://gist.github.com/WillPresley/ec209f684ac856cc63316f47880bd515/raw/userscript_scroll-hijack-fixer.user.js
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-    // Do not run inside iframes (ads, embedded videos, widgets).
+    // 1. GUARD: Do not run inside iframes.
     if (window.top !== window.self) return;
 
-    // Strip 'www.' so 'www.site.com' and 'site.com' share the same fix.
+    // 2. NORMALIZE: Strip 'www.' so subdomains share the same fix.
     const currentDomain = window.location.hostname.replace(/^www\./, '');
-
     let fixedDomains = GM_getValue('saved_scroll_fixes', []);
 
     const applyScrollFix = () => {
 
         // --- JS FIX: INJECT INTO MAIN PAGE CONTEXT ---
         const pageContextLogic = `(function() {
-
-            // Force 'passive: true' on all scrolling events to stop the site from canceling native scrolling.
             const originalAdd = EventTarget.prototype.addEventListener;
             EventTarget.prototype.addEventListener = function(type, listener, options) {
                 if (['wheel', 'mousewheel', 'DOMMouseScroll', 'touchstart', 'touchmove'].includes(type)) {
                     let newOptions = { passive: true };
-                    if (typeof options === 'boolean') {
-                        newOptions.capture = options;
-                    } else if (options && typeof options === 'object') {
-                        newOptions = Object.assign({}, options, { passive: true });
-                    }
+                    if (typeof options === 'boolean') newOptions.capture = options;
+                    else if (options && typeof options === 'object') newOptions = Object.assign({}, options, { passive: true });
                     return originalAdd.call(this, type, listener, newOptions);
                 }
                 return originalAdd.call(this, type, listener, options);
             };
 
-            // Neuter preventDefault for keyboard scrolling (Arrow keys, Space, Page Up/Down)
             const originalPreventDefault = Event.prototype.preventDefault;
             Event.prototype.preventDefault = function() {
-                if (this.type === 'keydown') {
-                    const keys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', ' ', 'Home', 'End'];
-                    if (keys.includes(this.key)) return;
-                }
-                // Fallback for wheel/touch events if the passive override above misses something
-                if (['wheel', 'mousewheel', 'DOMMouseScroll', 'touchmove'].includes(this.type)) {
-                    return;
-                }
+                if (this.type === 'keydown' && ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', ' ', 'Home', 'End'].includes(this.key)) return;
+                if (['wheel', 'mousewheel', 'DOMMouseScroll', 'touchmove'].includes(this.type)) return;
                 originalPreventDefault.call(this);
             };
         })();`;
 
-        // Inject the logic immediately into the page root before any other scripts load.
         const scriptEl = document.createElement('script');
         scriptEl.textContent = pageContextLogic;
         if (document.documentElement) {
@@ -123,75 +112,44 @@ Here is the final, optimized script. It includes safeguards to prevent running i
             scriptEl.remove();
         }
 
-        // --- CSS FIX: DISMANTLE PHYSICAL WRAPPERS ---
+        // --- CSS FIX: SURGICAL WRAPPER REMOVAL ---
         const cssOverride = `
-            html, body {
-                overflow: auto !important;
-                overflow-x: hidden !important;
-                height: auto !important;
-                overscroll-behavior: auto !important;
-            }
-
-            #page {
-                overflow: visible !important;
-            }
-
-            /* Strip the artificial wrapper rules safely */
-            #smooth-wrapper,
-            #smooth-content,
-            [data-scroll-container],
-            [asscroll-container],
-            [data-scrollbar],
-            #luxy,
-            #butter {
-                overflow: visible !important;
-                transform: none !important;
-                position: static !important;
-                height: auto !important;
-                min-height: 0 !important;
-                max-height: none !important;
-                width: auto !important;
+            html, body { overflow: auto !important; overflow-x: hidden !important; height: auto !important; overscroll-behavior: auto !important; }
+            #page { overflow: visible !important; }
+            #smooth-wrapper, #smooth-content, [data-scroll-container], [asscroll-container], [data-scrollbar], #luxy, #butter {
+                overflow: visible !important; transform: none !important; position: static !important; height: auto !important; min-height: 0 !important; max-height: none !important; width: auto !important;
             }
         `;
 
         document.addEventListener("DOMContentLoaded", () => {
-            if (typeof GM_addStyle !== 'undefined') {
-                GM_addStyle(cssOverride);
-            } else {
+            if (typeof GM_addStyle !== 'undefined') GM_addStyle(cssOverride);
+            else {
                 const style = document.createElement('style');
                 style.textContent = cssOverride;
                 document.head.appendChild(style);
             }
         });
-
-        console.log(\`[Scroll Fixer] Sandbox bypassed & surgical CSS applied for \${currentDomain}\`);
     };
 
     const isDomainFixed = fixedDomains.includes(currentDomain);
+    if (isDomainFixed) applyScrollFix();
 
-    if (isDomainFixed) {
-        applyScrollFix();
-
-        GM_registerMenuCommand(\`❌ Remove fix for \${currentDomain}\`, () => {
-            fixedDomains = fixedDomains.filter(domain => domain !== currentDomain);
-            GM_setValue('saved_scroll_fixes', fixedDomains);
-            window.location.reload();
-        });
-
-    } else {
-        GM_registerMenuCommand(\`✅ Fix site scrolling (\${currentDomain})\`, () => {
-            fixedDomains.push(currentDomain);
-            GM_setValue('saved_scroll_fixes', fixedDomains);
-            window.location.reload();
-        });
-    }
-
+    GM_registerMenuCommand(isDomainFixed ? `❌ Remove fix for ${currentDomain}` : `✅ Fix site scrolling (${currentDomain})`, () => {
+        if (isDomainFixed) fixedDomains = fixedDomains.filter(d => d !== currentDomain);
+        else fixedDomains.push(currentDomain);
+        GM_setValue('saved_scroll_fixes', fixedDomains);
+        window.location.reload();
+    });
 })();
 
 ```
 Once installed, it sits entirely dormant with zero performance overhead. When you hit a site that refuses to let you scroll normally, just open the Tampermonkey extension menu, click **Fix site scrolling**, and the page will reload with standard, native behavior restored.
 
 [![An example of the userscript in action in Google Chrome]({{site.url}}/uploads/2026-05/scroll-hijack-fix_blog.png "An example of the userscript in action in Google Chrome")]({{site.url}}/uploads/2026-05/scroll-hijack-fix_blog.png){: target="_blank" .image-link}
+
+### Getting Updates
+
+This script is hosted on GitHub. If I release improvements or add support for new smooth-scrolling libraries, your browser will automatically detect the changes and update the script for you. You can also view the latest source code or contribute directly via the [GitHub Gist](https://gist.github.com/WillPresley/ec209f684ac856cc63316f47880bd515).
 
 ---
 
