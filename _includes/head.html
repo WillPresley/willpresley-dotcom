@@ -3,7 +3,12 @@
     <script>const mql=window.matchMedia("(prefers-color-scheme: dark)");function toggleT(){var value=this.id;"s"==value?localStorage.removeItem("t"):localStorage.setItem("t",value),theme(mql)}function theme(query){const userOption=localStorage.getItem("t");document.body.id=null===userOption?query.matches?"dark":"light":"d"===userOption?"dark":"light"}mql.addListener(theme),theme(mql);</script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="/fonts/lora-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/lora-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/istokweb-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/istokweb-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
 
     <title>{{ page.title }} &ndash; WillPresley.com</title>
 

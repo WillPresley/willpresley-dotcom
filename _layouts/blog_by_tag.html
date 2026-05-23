@@ -3,7 +3,7 @@ layout: default
 title: "Tag Archive"
 ---
 <main class="main-content tag-archive page"{% if site.tags[page.tag] %} id="{{ page.tag }}"{% endif %}>
-    <a name="top"></a><h1>Posts with Tag: {{ page.tag }}</h1>
+    <a name="top"></a><h1>Posts with Tag: <em>{{ page.tag }}</em></h1>
     <div>
         {% if site.tags[page.tag] %}
             {% for post in site.tags[page.tag] %}
