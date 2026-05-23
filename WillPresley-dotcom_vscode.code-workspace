@@ -6,15 +6,15 @@
 	],
 	"settings": {
 		"liveSassCompile.settings.autoprefix": [
-			"> 0.5%",
+			"> 0.25%",
             "not dead",
 			"last 3 versions",
 			"Firefox ESR",
-            "iOS >= 14"
+            "iOS >= 15"
 		],
 		"liveSassCompile.settings.excludeList": [
-			"**/node_modules/**",
-			".vscode/**",
+			"/**/node_modules/**",
+			"/.vscode/**",
 		],
 		"liveSassCompile.settings.formats":[
 			{
@@ -27,10 +27,11 @@
 				// "format": "nested",
                 // "extensionName": ".css",
                 "extensionName": ".min.css",
-				"savePath": "~/../css/"
+				"savePath": "~/../css"
 			}
 		],
         "liveSassCompile.settings.generateMap": false,
+        "peacock.color": "#D43929",
         "workbench.colorCustomizations": {
             "activityBar.activeBackground": "#de5f52",
             "activityBar.background": "#de5f52",
@@ -53,6 +54,6 @@
             "titleBar.inactiveBackground": "#d4392999",
             "titleBar.inactiveForeground": "#e7e7e799"
         },
-        "peacock.color": "#D43929",
+        "peacock.remoteColor": "#D43929",
 	}
 }
