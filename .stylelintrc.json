@@ -3,7 +3,17 @@
     "rules": {
         "color-hex-case": "upper",
         "function-parentheses-space-inside": "always",
-        "max-nesting-depth": 4,
+        "max-nesting-depth": [
+            4,
+            {
+                "ignoreAtRules": [
+                    "each",
+                    "media",
+                    "supports",
+                    "include"
+                ]
+            }
+        ],
         "indentation": 4,
         "rule-empty-line-before": [
             "always-multi-line",

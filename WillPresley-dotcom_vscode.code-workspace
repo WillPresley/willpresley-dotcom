@@ -1,35 +1,36 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"liveSassCompile.settings.autoprefix": [
-			"> 0.25%",
+    "folders": [
+        {
+            "path": ".",
+        },
+    ],
+    "settings": {
+        "files.autoSave": "off",
+        "liveSassCompile.settings.autoprefix": [
+            "> 0.25%",
             "not dead",
-			"last 3 versions",
-			"Firefox ESR",
-            "iOS >= 15"
-		],
-		"liveSassCompile.settings.excludeList": [
-			"/**/node_modules/**",
-			"/.vscode/**",
-		],
-		"liveSassCompile.settings.formats":[
-			{
-				// README on format styles:
-				//	https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
-				//	https://web.archive.org/web/20161018191549/https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
-				// "format": "expanded",
-				"format": "compressed",
-				// "format": "compact",
-				// "format": "nested",
+            "last 3 versions",
+            "Firefox ESR",
+            "iOS >= 15",
+        ],
+        "liveSassCompile.settings.excludeList": [
+            "/**/node_modules/**",
+            "/.vscode/**",
+        ],
+        "liveSassCompile.settings.formats": [
+            {
+                // README on format styles:
+                //	https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
+                //	https://web.archive.org/web/20161018191549/https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
+                // "format": "expanded",
+                "format": "compressed",
+                // "format": "compact",
+                // "format": "nested",
                 // "extensionName": ".css",
                 "extensionName": ".min.css",
-				"savePath": "~/../css"
-			}
-		],
+                "savePath": "~/../css",
+            },
+        ],
         "liveSassCompile.settings.generateMap": false,
         "peacock.color": "#D43929",
         "workbench.colorCustomizations": {
@@ -62,8 +63,8 @@
             "commandCenter.foreground": "#e7e7e7",
             "statusBar.debuggingBackground": "#d43929",
             "statusBar.debuggingForeground": "#e7e7e7",
-            "statusBar.inactiveBackground": "#d43929"
+            "statusBar.inactiveBackground": "#d43929",
         },
         "peacock.remoteColor": "#D43929",
-	}
+    },
 }

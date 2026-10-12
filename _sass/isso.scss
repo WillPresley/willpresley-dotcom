@@ -55,14 +55,8 @@
         .isso-text-wrapper {
             padding-top: 0.3em;
 
-            .isso-text {
-
-                p {
-
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
+            .isso-text p:first-child {
+                margin-top: 0;
             }
         }
     }

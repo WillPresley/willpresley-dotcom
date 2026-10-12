@@ -45,6 +45,7 @@ temp/
 .svn
 *.codekit
 *.scssc
+node_modules/
 
 # Project files
 *.sublime-project

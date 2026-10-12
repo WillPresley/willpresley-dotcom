@@ -2,7 +2,7 @@
  * Project Name: WillPresley.com
  * Author: Will Presley
  * Created: 2015/02/28 11:28:00
- * Last modified: 2026/10/12 15:41:23
+ * Last modified: 2026/10/12 16:10:05
  * Description: Full SASS/CSS for a Jekyll-powered static responsive site.
  */
 
@@ -437,7 +437,7 @@ ul.posts {
     }
 
     pre code {
-        border: none;
+        border: 0;
     }
 
     p code {
@@ -805,27 +805,21 @@ figure {
             }
         }
 
-        .credits {
+        .credits a {
 
-            p {
+            img,
+            svg {
+                opacity: 0.6;
+                transition: opacity, $main-animation-timing;
+            }
 
-                a {
+            &:hover {
+                color: darken( $mid-grey, 12% );
+                text-decoration: underline;
 
-                    img,
-                    svg {
-                        opacity: 0.6;
-                        transition: opacity, $main-animation-timing;
-                    }
-
-                    &:hover {
-                        color: darken( $mid-grey, 12% );
-                        text-decoration: underline;
-
-                        img,
-                        svg {
-                            opacity: 1;
-                        }
-                    }
+                img,
+                svg {
+                    opacity: 1;
                 }
             }
         }
@@ -963,27 +957,12 @@ figure {
     }
 }
 
-/* stylelint-disable-next-line media-feature-name-no-vendor-prefix */
+/* stylelint-disable-next-line media-feature-name-no-vendor-prefix -- Disable this rule for now */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     /* Retina-specific stuff here */
 
-    .site {
-
-        .footer {
-
-            .credits {
-
-                p {
-
-                    a {
-
-                        svg {
-                            margin-top: -3px;
-                        }
-                    }
-                }
-            }
-        }
+    .site .footer .credits a svg {
+        margin-top: -3px;
     }
 }
 
@@ -1046,7 +1025,7 @@ body#dark {
             .credits {
                 color: darken( $dark-theme-body-text, 10% );
 
-                p a svg {
+                svg {
                     filter: invert( 1 );
                 }
             }
@@ -1131,7 +1110,7 @@ body#dark {
                 .credits {
                     color: darken( $dark-theme-body-text, 10% );
 
-                    p a svg {
+                    svg {
                         filter: invert( 1 );
                     }
                 }
@@ -1227,7 +1206,7 @@ body#light {
             .credits {
                 color: $mid-grey;
 
-                p a svg {
+                svg {
                     filter: invert( 0 );
                 }
             }

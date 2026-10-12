@@ -3,7 +3,16 @@ name: Code Quality
 on:
     push:
         branches: ["main", "master"]
+    pull_request:
+        branches: ["main", "master"]
     workflow_dispatch:
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions:
+    contents: read
 
 jobs:
     lint:
@@ -23,14 +32,9 @@ jobs:
             - name: Install Stylelint
               run: npm install --no-save stylelint@14 stylelint-config-sass-guidelines@9 stylelint-scss@4 stylelint-order@5 postcss-scss@4
 
-            # Vendored/third-party SCSS is excluded
+            # Vendored/third-party SCSS is excluded via .stylelintignore
             - name: Lint SCSS
-              run: >
-                  npx stylelint "_sass/**/*.scss"
-                  --custom-syntax postcss-scss
-                  --ignore-pattern "_sass/_normalize.scss"
-                  --ignore-pattern "_sass/_syntax.scss"
-                  --ignore-pattern "_sass/isso-original-css.scss"
+              run: npx stylelint "_sass/**/*.scss" --custom-syntax postcss-scss
 
             # Minified files are build output, so only hand-written JS is checked
             - name: Check JS Syntax
@@ -52,9 +56,13 @@ jobs:
 
             - name: Check Ruby Plugin Syntax
               run: |
-                  for f in _plugins/*.rb; do
-                    ruby -c "$f"
-                  done
+                  if command -v ruby >/dev/null 2>&1; then
+                    for f in _plugins/*.rb; do
+                      ruby -c "$f"
+                    done
+                  else
+                    echo "Ruby not present on this runner; plugin syntax will be verified in the build job"
+                  fi
 
     build:
         name: Jekyll Build Check
@@ -69,10 +77,17 @@ jobs:
               with:
                   ruby-version: "3.3"
 
+            - name: Check Ruby Plugin Syntax (Ruby 3.3)
+              run: |
+                  for f in _plugins/*.rb; do
+                    ruby -c "$f"
+                  done
+
             # The repo has no Gemfile (the server keeps its own), so one is generated outside the workspace
             - name: Install Jekyll & Plugin Gems
               run: |
-                  cat > "$RUNNER_TEMP/Gemfile" <<'EOF'
+                  TEMP_DIR="${RUNNER_TEMP:-/tmp}"
+                  cat > "$TEMP_DIR/Gemfile" <<'EOF'
                   source "https://rubygems.org"
                   gem "jekyll", "~> 4.3"
                   gem "kramdown-parser-gfm"
@@ -83,16 +98,22 @@ jobs:
                   gem "jekyll-target-blank"
                   gem "jekyll-inline-svg"
                   EOF
-                  echo "BUNDLE_GEMFILE=$RUNNER_TEMP/Gemfile" >> "$GITHUB_ENV"
-                  BUNDLE_GEMFILE="$RUNNER_TEMP/Gemfile" bundle install --jobs 4
+                  echo "BUNDLE_GEMFILE=$TEMP_DIR/Gemfile" >> "$GITHUB_ENV"
+                  BUNDLE_GEMFILE="$TEMP_DIR/Gemfile" bundle install --jobs 4
 
             # head.html hashes CSS via the hardcoded server path /home/will/jekyll, so the checkout is linked there
             - name: Link Checkout to Server Path
               run: |
-                  SUDO=""; [ "$(id -u)" -ne 0 ] && SUDO="sudo"
-                  $SUDO mkdir -p /home/will
-                  $SUDO ln -sfn "$PWD" /home/will/jekyll
+                  if [ "$(id -u)" -eq 0 ]; then
+                    mkdir -p /home/will
+                    ln -sfn "$PWD" /home/will/jekyll
+                  elif command -v sudo >/dev/null 2>&1; then
+                    sudo mkdir -p /home/will
+                    sudo ln -sfn "$PWD" /home/will/jekyll
+                  fi
 
             # _config.yml 'source' is a server path, so the checkout is passed explicitly
             - name: Build Site
-              run: bundle exec jekyll build --source . --destination "$RUNNER_TEMP/_site" --trace
+              run: |
+                  TEMP_DIR="${RUNNER_TEMP:-/tmp}"
+                  bundle exec jekyll build --source . --destination "$TEMP_DIR/_site" --trace

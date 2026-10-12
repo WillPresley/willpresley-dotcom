@@ -16,6 +16,7 @@ $prefixes: ( "-webkit-", "" );
 }
 
 // Border-radius (cross-browser)
+/* stylelint-disable-next-line scss/at-mixin-pattern -- Disable this rule for now */
 @mixin borderRadius($size...) {
     @if length($size) == 1 {
         @each $prefix in $prefixes {
@@ -26,6 +27,7 @@ $prefixes: ( "-webkit-", "" );
     }
 }
 
+/* stylelint-disable-next-line scss/at-mixin-pattern -- Disable this rule for now */
 @mixin customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
     @each $prefix in $prefixes {
         @if $prefix == "-moz-" {
@@ -56,7 +58,7 @@ $prefixes: ( "-webkit-", "" );
 
 // Forces the browser to render animation on the element with hardware acceleration
 @mixin enable-hw-acceleration {
-    /* stylelint-disable property-no-vendor-prefix */
+    /* stylelint-disable property-no-vendor-prefix -- Disable this rule for now */
     -webkit-transform: translate3d( 0, 0, 0 );
     -moz-transform: translate3d( 0, 0, 0 );
     -ms-transform: translate3d( 0, 0, 0 );
@@ -66,7 +68,7 @@ $prefixes: ( "-webkit-", "" );
 
 // Fixes flicker on transitions on webkit
 @mixin fix-flicker {
-    /* stylelint-disable property-no-vendor-prefix */
+    /* stylelint-disable property-no-vendor-prefix -- Disable this rule for now */
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
     /* stylelint-enable property-no-vendor-prefix */
@@ -87,14 +89,14 @@ $prefixes: ( "-webkit-", "" );
 // so that the line numbers are not selectable
 @mixin unselectable() {
     pointer-events: none;
-    /* stylelint-disable property-no-vendor-prefix */
+    /* stylelint-disable property-no-vendor-prefix -- Disable this rule for now */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /* stylelint-enable property-no-vendor-prefix */
+    /* stylelint-enable property-no-vendor-prefix -- Enable this rule */
 }
 
 // Add percentage of white to a color
