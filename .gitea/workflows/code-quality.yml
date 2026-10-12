@@ -95,6 +95,7 @@ jobs:
                   gem "webrick"
                   gem "rexml"
                   gem "nokogiri"
+                  gem "classifier-reborn"
                   gem "jekyll-target-blank"
                   gem "jekyll-inline-svg"
                   EOF
