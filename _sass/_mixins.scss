@@ -10,9 +10,9 @@ $prefixes: ( "-webkit-", "" );
 
 // Background-size (cross-browser)
 @mixin cb-bg-size($width, $height) {
-  @each $prefix in $prefixes {
-    #{$prefix}background-size: $width $height;
-  }
+    @each $prefix in $prefixes {
+        #{$prefix}background-size: $width $height;
+    }
 }
 
 // Border-radius (cross-browser)
@@ -51,21 +51,25 @@ $prefixes: ( "-webkit-", "" );
 // Background Alphas
 @mixin background-opacity($color, $opacity: 0.3) {
     background: $color;
-    background: rgba($color, $opacity);
+    background: rgba( $color, $opacity );
 }
 
 // Forces the browser to render animation on the element with hardware acceleration
 @mixin enable-hw-acceleration {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-transform: translate3d( 0, 0, 0 );
+    -moz-transform: translate3d( 0, 0, 0 );
+    -ms-transform: translate3d( 0, 0, 0 );
+    transform: translate3d( 0, 0, 0 );
+    /* stylelint-enable property-no-vendor-prefix */
 }
 
 // Fixes flicker on transitions on webkit
 @mixin fix-flicker {
+    /* stylelint-disable property-no-vendor-prefix */
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
+    /* stylelint-enable property-no-vendor-prefix */
 }
 
 // Font smoothing
@@ -82,30 +86,32 @@ $prefixes: ( "-webkit-", "" );
 
 // so that the line numbers are not selectable
 @mixin unselectable() {
+    pointer-events: none;
+    /* stylelint-disable property-no-vendor-prefix */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    pointer-events: none;
+    /* stylelint-enable property-no-vendor-prefix */
 }
 
 // Add percentage of white to a color
-@function tint($color, $percent){
+@function tint($color, $percent) {
     @return mix(white, $color, $percent);
 }
 
 // Add percentage of black to a color
-@function shade($color, $percent){
+@function shade($color, $percent) {
     @return mix(black, $color, $percent);
 }
 
 %clearfix {
 
-    &:after {
+    &::after {
+        clear: both;
         content: "";
         display: table;
-        clear: both;
     }
 }

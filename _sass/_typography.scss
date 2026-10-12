@@ -7,60 +7,60 @@
  */
 
 @font-face {
-    font-family: 'Lora';
-    src: url('../fonts/lora-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: normal;
+    src: url( "../fonts/lora-regular-webfont.woff2" ) format( "woff2" );
 }
-
-    @font-face {
-        font-family: 'Lora';
-        src: url('../fonts/lora-bold-webfont.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Lora';
-        src: url('../fonts/lora-italic-webfont.woff2') format('woff2');
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Lora';
-        src: url('../fonts/lora-bolditalic-webfont.woff2') format('woff2');
-        font-weight: 700;
-        font-style: italic;
-        font-display: swap;
-    }
 
 @font-face {
-    font-family: 'Istok-Web';
-    src: url('../fonts/istokweb-regular-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
+    font-family: "Lora";
+    font-style: normal;
+    font-weight: 700;
+    src: url( "../fonts/lora-bold-webfont.woff2" ) format( "woff2" );
 }
 
-    @font-face {
-        font-family: 'Istok-Web';
-        src: url('../fonts/istokweb-bold-webfont.woff2') format('woff2');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-    }
+@font-face {
+    font-display: swap;
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: normal;
+    src: url( "../fonts/lora-italic-webfont.woff2" ) format( "woff2" );
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Lora";
+    font-style: italic;
+    font-weight: 700;
+    src: url( "../fonts/lora-bolditalic-webfont.woff2" ) format( "woff2" );
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Istok-Web";
+    font-style: normal;
+    font-weight: normal;
+    src: url( "../fonts/istokweb-regular-webfont.woff2" ) format( "woff2" );
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Istok-Web";
+    font-style: normal;
+    font-weight: 700;
+    src: url( "../fonts/istokweb-bold-webfont.woff2" ) format( "woff2" );
+}
 
 
 // font stacks
 $system-fonts-sans-serif:   -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $system-fonts-serif:        "Athelas","Cambria",Georgia,Times,"Times New Roman",serif;
 
-$lora:                      'Lora', $system-fonts-serif;
-$istok:                     'Istok-Web', $system-fonts-sans-serif;
+$lora:                      "Lora", $system-fonts-serif;
+$istok:                     "Istok-Web", $system-fonts-sans-serif;
 
 $sans-serif:                $istok;
 $serif:                     $lora;
