@@ -63,7 +63,7 @@
             "commandCenter.foreground": "#e7e7e7",
             "statusBar.debuggingBackground": "#d43929",
             "statusBar.debuggingForeground": "#e7e7e7",
-            "statusBar.inactiveBackground": "#d43929",
+            "statusBar.inactiveBackground": "#d43929"
         },
         "peacock.remoteColor": "#D43929",
     },
