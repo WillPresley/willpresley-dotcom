@@ -1,0 +1,91 @@
+name: Code Quality
+
+on:
+    push:
+        branches: ["main", "master"]
+    workflow_dispatch:
+
+jobs:
+    lint:
+        name: Lint SCSS, JS, JSON & Ruby
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js LTS
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "lts/*"
+
+            # Repo has no package.json; tooling is installed ephemerally on the runner only
+            - name: Install Stylelint
+              run: npm install --no-save stylelint@14 stylelint-config-sass-guidelines@9 stylelint-scss@4 stylelint-order@5 postcss-scss@4
+
+            # Vendored/third-party SCSS is excluded
+            - name: Lint SCSS
+              run: >
+                  npx stylelint "_sass/**/*.scss"
+                  --custom-syntax postcss-scss
+                  --ignore-pattern "_sass/_normalize.scss"
+                  --ignore-pattern "_sass/_syntax.scss"
+                  --ignore-pattern "_sass/isso-original-css.scss"
+
+            # Minified files are build output, so only hand-written JS is checked
+            - name: Check JS Syntax
+              run: |
+                  for f in js/theme-switch.js js/wp-dotcom-isso-scripts.js js/wp-dotcom-scripts.js; do
+                    echo "Checking $f"
+                    node --check "$f"
+                  done
+
+            - name: Validate JSON Files
+              run: |
+                  for f in feed.json site.webmanifest; do
+                    echo "Validating $f"
+                    [ -f "$f" ] || continue
+                    # feed.json is a Liquid template; only validate plain JSON files
+                    if grep -q '{%\|{{' "$f"; then echo "Skipping Liquid template $f"; continue; fi
+                    node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))"
+                  done
+
+            - name: Check Ruby Plugin Syntax
+              run: |
+                  for f in _plugins/*.rb; do
+                    ruby -c "$f"
+                  done
+
+    build:
+        name: Jekyll Build Check
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Ruby
+              uses: ruby/setup-ruby@v1
+              with:
+                  ruby-version: "3.3"
+
+            # The repo has no Gemfile (the server keeps its own), so one is generated outside the workspace
+            - name: Install Jekyll & Plugin Gems
+              run: |
+                  cat > "$RUNNER_TEMP/Gemfile" <<'EOF'
+                  source "https://rubygems.org"
+                  gem "jekyll", "~> 4.3"
+                  gem "kramdown-parser-gfm"
+                  gem "rouge"
+                  gem "webrick"
+                  gem "rexml"
+                  gem "nokogiri"
+                  gem "jekyll-target-blank"
+                  gem "jekyll-inline-svg"
+                  EOF
+                  echo "BUNDLE_GEMFILE=$RUNNER_TEMP/Gemfile" >> "$GITHUB_ENV"
+                  BUNDLE_GEMFILE="$RUNNER_TEMP/Gemfile" bundle install --jobs 4
+
+            # _config.yml 'source' is a server path, so the checkout is passed explicitly
+            - name: Build Site
+              run: bundle exec jekyll build --source . --destination "$RUNNER_TEMP/_site" --trace
